@@ -1,0 +1,12 @@
+$primary: #004161;
+
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Regular.ttf");
+  src: url([[font:theme|Roboto-Regular.ttf]]) format("truetype");
+}
+@font-face {
+  font-family: bootstrap-icons;
+  src: url("../icons/fonts/bootstrap-icons.woff");
+  src: url([[font:theme|bootstrap-icons.woff]]) format("woff");
+}

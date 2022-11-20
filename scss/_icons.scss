@@ -1,0 +1,55 @@
+.icon-wrapper {
+  font-family: bootstrap-icons;
+  //font-size: 1.5rem;
+  color: #004161;
+  display: flex;
+  align-items: center;
+}
+.news-icon {
+  &::before {
+    content: "\F4A3";
+    font-size: 1.5rem;
+  }
+}
+.start-icon {
+  &::before {
+    content: "\F231";
+    color: white;
+    font-size: 1.25rem;
+  }
+}
+.badges-icon {
+  &::before {
+    content: "\F5E6";
+    font-size: 1.25rem;
+  }
+}
+.award-icon {
+  &::before {
+    content: "\F153";
+    font-size: 1.25rem;
+  }
+}
+.chat-icon {
+  position: relative;
+
+  transform: translateY(-0.2rem);
+  &::before {
+    content: "\F253";
+    font-size: 1.25rem;
+    //background-color: white;
+  }
+  &::after {
+    content: "\F25B";
+    position: absolute;
+    font-size: 0.9em;
+    top: 0.39em;
+    left: 0.29em;
+  }
+}
+.participant-icon {
+  &::before {
+    content: "\F4CF";
+    font-size: 1.2rem;
+  }
+}

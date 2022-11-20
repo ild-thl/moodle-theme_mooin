@@ -56,8 +56,14 @@ if ($ADMIN->fulltree) {
     $title = get_string('presetfiles', 'theme_mooin');
     $description = get_string('presetfiles_desc', 'theme_mooin');
 
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'preset', 0,
-        array('maxfiles' => 20, 'accepted_types' => array('.scss')));
+    $setting = new admin_setting_configstoredfile(
+        $name,
+        $title,
+        $description,
+        'preset',
+        0,
+        array('maxfiles' => 20, 'accepted_types' => array('.scss'))
+    );
     $page->add($setting);
 
     // Variable $brand-color.
@@ -76,14 +82,24 @@ if ($ADMIN->fulltree) {
     $page = new admin_settingpage('theme_mooin_advanced', get_string('advancedsettings', 'theme_mooin'));
 
     // Raw SCSS to include before the content.
-    $setting = new admin_setting_configtextarea('theme_mooin/scsspre',
-        get_string('rawscsspre', 'theme_mooin'), get_string('rawscsspre_desc', 'theme_mooin'), '', PARAM_RAW);
+    $setting = new admin_setting_configtextarea(
+        'theme_mooin/scsspre',
+        get_string('rawscsspre', 'theme_mooin'),
+        get_string('rawscsspre_desc', 'theme_mooin'),
+        '',
+        PARAM_RAW
+    );
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Raw SCSS to include after the content.
-    $setting = new admin_setting_configtextarea('theme_mooin/scss', get_string('rawscss', 'theme_mooin'),
-        get_string('rawscss_desc', 'theme_mooin'), '', PARAM_RAW);
+    $setting = new admin_setting_configtextarea(
+        'theme_mooin/scss',
+        get_string('rawscss', 'theme_mooin'),
+        get_string('rawscss_desc', 'theme_mooin'),
+        '',
+        PARAM_RAW
+    );
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 

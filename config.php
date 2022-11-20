@@ -18,7 +18,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $THEME->name = 'mooin';
-$THEME->sheets = [];
+$THEME->sheets = ['bootstrap-icons.css'];
 $THEME->editor_sheets = [];
 $THEME->parents = ['boost'];
 $THEME->enable_dock = false;
@@ -26,7 +26,7 @@ $THEME->yuicssmodules = array();
 $THEME->requiredblocks = '';
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 $THEME->hidefromselector = false;
-$THEME->scss = function($theme) {
+$THEME->scss = function ($theme) {
     return theme_mooin_get_main_scss_content($theme);
 };
 // Override Renderer.
