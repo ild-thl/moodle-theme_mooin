@@ -2,23 +2,33 @@
 @import "./buttons";
 @import "./text-layouts";
 @import "./icons";
+@import "./variables";
+@import "./topics";
 
-body {
-  background-color: #eeeeee;
+body,
+#region-main,
+.course-content {
+  background-color: $background-color;
 }
-#region-main {
-  background-color: #eeeeee;
-  //display: none;
+
+.count-container {
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.75rem;
+  border-radius: 50% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.hidden {
+  display: none;
+}
+
 #region-main-box {
   padding: 0;
 }
 .navmenu {
   display: none !important;
-}
-
-.course-content {
-  background-color: #eeeeee;
 }
 
 .wrapper {
@@ -27,36 +37,48 @@ body {
   margin: 0 auto;
   gap: 1.5rem;
 
-  p {
-    margin: 0;
-  }
   .main-container {
     background-color: white;
     max-width: 50rem;
-    padding: 0 1rem;
     height: fit-content;
+    padding: 0 1rem;
+
     @include media-breakpoint-up(md) {
-      border-radius: 0.625rem;
       padding: 0 2rem;
+      border-radius: 0.625rem;
+      width: 50rem;
     }
   }
   .side-right {
-    @extend .float-md-right;
+    margin-left: auto;
+    margin-right: 0;
     max-width: 25rem;
 
     .container {
       padding: 1rem;
     }
+
+    @include media-breakpoint-up(md) {
+      width: 25rem;
+    }
   }
   .course-title-header {
     text-align: center;
   }
-
   .container {
     padding: 1.5rem 0rem;
   }
+
+  .news,
+  .course-progress,
+  .badges-mobile-btn,
+  .community-mobile-btn,
+  .badges,
+  .list-titles > li {
+    border-bottom: $border-style;
+  }
+
   .news {
-    border-bottom: 1px solid #e7e7e7;
     @include media-breakpoint-up(md) {
       border-bottom: none;
     }
@@ -64,7 +86,7 @@ body {
   .news-card {
     padding: 0.5rem;
     @include media-breakpoint-up(md) {
-      border: 1px solid #e7e7e7;
+      border: $border-style;
       border-radius: 0.25rem;
     }
     .news-card-inner {
@@ -72,31 +94,25 @@ body {
     }
   }
   .course-progress {
-    border-bottom: 1px solid #e7e7e7;
     @include media-breakpoint-up(md) {
-      border-top: 1px solid #e7e7e7;
+      border-top: $border-style;
     }
   }
-  .badges-mobile-btn {
-    border-bottom: 1px solid #e7e7e7;
-  }
-  .community-mobile-btn {
-    border-bottom: 1px solid #e7e7e7;
-  }
+
   .badges {
     background-color: white;
-    border-bottom: 1px solid #e7e7e7;
+
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
     .badges-card {
       margin-bottom: 1rem;
       padding: 0.5rem;
-      border: 1px solid #e7e7e7;
+      border: $border-style;
       border-radius: 0.25rem;
     }
     .certificate-card {
       padding: 0.5rem;
-      border: 1px solid #e7e7e7;
+      border: $border-style;
       border-radius: 0.25rem;
     }
   }
@@ -110,12 +126,12 @@ body {
   }
   .forum-card-inner {
     padding: 0.5rem;
-    border: 1px solid #e7e7e7;
+    border: $border-style;
     border-radius: 0.25rem;
   }
   .participant-card-inner {
     padding: 0.5rem;
-    border: 1px solid #e7e7e7;
+    border: $border-style;
     border-radius: 0.25rem;
   }
 
@@ -129,49 +145,5 @@ body {
     flex: 1;
   }
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  .list-titles > li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #e7e7e7;
-    &:last-child {
-      border: none;
-    }
-    a {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-    }
-    a[aria-expanded="true"] .list-marker {
-      transform: rotate(90deg);
-      transition: 0.3s ease-in-out;
-    }
-    a[aria-expanded="false"] .list-marker {
-      transform: rotate(0deg);
-      transition: 0.3s ease-in-out;
-    }
-    .list-title {
-      color: #373a3c;
-    }
-  }
-  .list-subtitles {
-    padding-left: 1rem;
-    .active {
-      background-color: #ccd9df;
-      border-radius: 0.125rem;
-    }
-    li {
-      font-size: 0.875rem;
-      color: #004161;
-      display: flex;
-      align-items: center;
-      padding-left: 0.25rem;
-      min-height: 1.5rem;
-      @include media-breakpoint-up(md) {
-        min-height: 3rem;
-      }
-    }
-  }
+
 }
