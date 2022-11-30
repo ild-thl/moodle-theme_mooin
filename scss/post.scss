@@ -19,9 +19,34 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #ff0000 !important;
+  font-weight: 700 !important;
 }
+.count-discussion {
+  position: absolute;
+  left:0.8rem;
+  margin-top:-0.6rem;
+}
+
+.count-certificate {
+  position: absolute;
+  left:0.6rem;
+  margin-top:-0.6rem;
+}
+
+.icon-batch {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-right: 0.4rem;
+}
+
+
 .hidden {
   display: none;
+}
+.stretched-link-container {
+  position: relative;
 }
 
 #region-main-box {
@@ -144,6 +169,4 @@ body,
   .even-columns > * {
     flex: 1;
   }
-
-
 }
