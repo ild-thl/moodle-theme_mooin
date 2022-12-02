@@ -1,11 +1,21 @@
-p,
-h1,
-h2,
-h3 {
-  margin: 0;
+.format-mooin {
+  p,
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
 }
+
+
 body {
   font-family: "Roboto";
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
 }
 .fw-600 {
   font-weight: 600;
@@ -44,9 +54,23 @@ h3 {
   color: #3582b1;
   line-height: 1.125rem;
 
+  a {
+    font-size: 0.75rem;
+    text-decoration: underline;
+    color: #3582b1;
+    line-height: 1.125rem;
+  }
+
   @include media-breakpoint-up(md) {
     font-size: 1rem;
     line-height: 1.5rem;
+
+    a {
+      font-size: 1rem;
+      text-decoration: underline;
+      color: #3582b1;
+      line-height: 1.5rem;
+    }
   }
 }
 .secondary-link {
