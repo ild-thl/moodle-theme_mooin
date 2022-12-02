@@ -1,18 +1,26 @@
-.icon-wrapper {
-  //font-family: bootstrap-icons;
-  //font-size: 1.5rem;
-  color: #004161;
-  display: flex;
-  align-items: center;
-}
+// .icon-wrapper {
+//   //font-family: bootstrap-icons;
+//   //font-size: 1.5rem;
+//   color: #004161;
+//   display: flex;
+//   align-items: center;
+// }
 .news-icon {
   &::before {
+    font-family: bootstrap-icons;
     content: "\F4A3";
     font-size: 1.5rem;
+    color: $primary;
+    padding-right: 0.5rem;
+
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.25rem;
+      padding-left: 0.5rem;
+    }
   }
 }
 .start-icon {
-
   &::after {
     font-family: bootstrap-icons;
     content: "\F231";
@@ -21,7 +29,6 @@
   }
 }
 .start-icon-topics {
-
   &::before {
     font-family: bootstrap-icons;
     content: "\F231";
@@ -37,6 +44,8 @@
     font-family: bootstrap-icons;
     content: "\F5E6";
     font-size: 1.25rem;
+    color: $primary;
+
     //padding-right: 0.2rem;
   }
 }
@@ -47,6 +56,7 @@
   &::before {
     font-family: bootstrap-icons;
     content: "\F153";
+    color: $primary;
     font-size: 1.25rem;
   }
 }
@@ -57,14 +67,13 @@
   font-size: 1.25rem;
   margin-right: 0.5rem;
 
-
   //transform: translateY(-0.2rem);
   &::before {
     font-family: bootstrap-icons;
     //position: absolute;
     content: "\F253";
-    padding-right: 2rem;
-
+    //padding-right: 2rem;
+    color: $primary;
 
     //background-color: white;
   }
@@ -75,8 +84,10 @@
     font-size: 0.83em;
     left: 0.37em;
     top: 0.27em;
+    color: $primary;
     @include media-breakpoint-up(md) {
-      top: 0.15em;
+      top: 0.10em;
+      left: 0.35em;
     }
   }
 }
@@ -86,6 +97,7 @@
     content: "\F4CF";
     font-size: 1.2rem;
     margin-right: 0.5rem;
+    color: $primary;
   }
 }
 .list-marker {
