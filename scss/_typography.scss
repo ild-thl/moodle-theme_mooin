@@ -1,11 +1,11 @@
-.format-mooin {
-  p,
-  h1,
-  h2,
-  h3 {
-    margin: 0;
-  }
-}
+// .format-mooin {
+//   p,
+//   h1,
+//   h2,
+//   h3 {
+//     margin: 0;
+//   }
+// }
 
 
 body {
@@ -42,12 +42,28 @@ h3 {
 .caption {
   font-size: 0.75rem;
   line-height: 1.125rem;
+  margin: 0;
 
   @include media-breakpoint-up(md) {
     line-height: 1.5rem;
   }
 }
 
+.hyphens {
+  //Test
+  hyphens: auto;
+}
+
+p {
+  font-size: 1rem;
+  a {
+    color: $primary;
+  }
+}
+
+a {
+  color: #0F6CBF;
+}
 .primary-link {
   font-size: 0.75rem;
   text-decoration: underline;
