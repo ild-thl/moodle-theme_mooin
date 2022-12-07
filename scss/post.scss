@@ -156,12 +156,14 @@
   }
 }
 .course-image {
-  width: 100%;
-  height: auto;
+  object-fit: cover;
+  width: 100vw;
+  //height: 17.5rem;
   //max-width: auto;
   //max-height: 17.5rem;
   @include media-breakpoint-up(md) {
-    //max-width: 100%;
+    max-width: 100%;
+    height: auto;
 
     border-top-left-radius: 0.625rem;
     border-top-right-radius: 0.625rem;
