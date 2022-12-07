@@ -119,11 +119,21 @@
 .stretched-link-container {
   position: relative;
 }
-
+.inner-wrapper {
+  transform: translateY(-2rem);
+  @include media-breakpoint-up(md) {
+    transform: translateY(0);
+  }
+}
 .course-title-header {
   max-width: 50rem;
+  height: 25rem;
   position: relative;
   text-align: center;
+
+  @include media-breakpoint-up(md) {
+    height: 17.5rem;
+  }
 }
 .title-overlay {
   position: absolute;
@@ -133,6 +143,11 @@
   background: rgba(255, 255, 255, 0.73);
   padding: 1rem;
 
+  p,
+  h2 {
+    margin: 0;
+  }
+
   @include media-breakpoint-up(md) {
     bottom: 0;
     transform: translateY(0);
@@ -141,12 +156,14 @@
   }
 }
 .course-image {
-  width: 100%;
+  width: auto;
+  height: 100%;
   //max-width: auto;
   //height: 17.5rem;
   @include media-breakpoint-up(md) {
     //max-width: 100%;
-
+    width: 100%;
+    height: auto;
     border-top-left-radius: 0.625rem;
     border-top-right-radius: 0.625rem;
   }
