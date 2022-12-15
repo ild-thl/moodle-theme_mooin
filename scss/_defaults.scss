@@ -1,10 +1,4 @@
-#page-badges-overview,
-#page-badges-index {
-  #region-main,
-  #region-main-box {
-    background: white;
-  }
-}
+//Setting backgroundcolor to gray
 #page-course-view-mooin,
 #page-course-format-mooin-badges,
 #page-course-format-mooin-certificates,
@@ -14,6 +8,138 @@
     background: $background-color;
   }
 }
+
+//Adding white backgroundcolor when needed
+#page-badges-overview,
+#page-badges-index {
+  #region-main,
+  #region-main-box {
+    background: white;
+  }
+}
+
+//Lektionsseite padding rechts !Experimentell
+.contentwithoutlink,
+.path-site li.activity > div,
+.path-course-view li.activity > div {
+  padding-right: 0 !important;
+}
+
+.navigationtitle {
+  .mdl-right,
+  .mdl-left {
+    //display: none;
+  }
+}
+.rarrow {
+  font-family: bootstrap-icons;
+  &::before {
+    font-family: bootstrap-icons;
+    content: "\F231";
+    color: white;
+    font-size: 1.25rem;
+  }
+}
+.mdl-bottom {
+  display: flex !important;
+  > span {
+    &:empty {
+      visibility: hidden;
+    }
+    font-weight: 500 !important;
+    font-size: 0.75rem;
+    line-height: 1.3125rem;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    width: 50%;
+    height: 2.3125rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    a {
+      text-decoration: none;
+    }
+  }
+  .mdl-right {
+    position: relative;
+    color: white;
+    background-color: #004161;
+
+    a {
+      color: white;
+      display: flex;
+      align-items: center;
+      @extend .stretched-link;
+    }
+  }
+  .mdl-left {
+    position: relative;
+    color: #004161;
+    border-color: #004161;
+    background-color: #ffffff;
+    border: 1px solid #004161;
+    a {
+      color: #004161;
+      display: flex;
+      align-items: center;
+      @extend .stretched-link;
+    }
+  }
+}
+// .mdl-right {
+//   font-weight: 500;
+//   font-size: 0.75rem;
+//   line-height: 1.3125rem;
+//   text-transform: uppercase;
+//   border-radius: 0.4rem;
+//   width: 50%;
+//   height: 2.3125rem;
+//   color: white;
+//   background-color: #004161;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//   text-decoration: none;
+//   a {
+//     text-decoration: none;
+//   }
+//   a {
+//     color: white;
+//   }
+// }
+// .mdl-left {
+//   font-weight: 500;
+//   font-size: 0.75rem;
+//   line-height: 1.3125rem;
+//   text-transform: uppercase;
+//   border-radius: 0.4rem;
+//   width: 50%;
+//   height: 2.3125rem;
+//   color: #004161;
+//   border-color: #004161;
+//   background-color: #ffffff;
+//   border: 1px solid #004161;
+
+//   a {
+//     color: #004161;
+//   }
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//   text-decoration: none;
+//   a {
+//     text-decoration: none;
+//   }
+//  :empty {
+//   display: none;
+//  }
+// }
+
 #page-header {
   background: white;
 }
@@ -38,7 +164,8 @@ body,
 #region-main-box {
   //background-color: $background-color;
   padding: 0;
-  @include media-breakpoint-up(md) {
+
+  @include media-breakpoint-up(lg) {
     padding: 1rem;
   }
 }
