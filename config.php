@@ -32,4 +32,12 @@ $THEME->scss = function ($theme) {
 // Override Renderer.
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 
+$THEME->rarrow ='&#xF231';
+$THEME->larrow ='&#xF22D';
+$THEME->uarrow ='&#xF235';
+$THEME->darrow ='&#xF229';
+
+
+
+
 $CFG->cachejs = false;
