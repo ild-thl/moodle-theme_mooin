@@ -8,15 +8,102 @@
 @import "./defaults";
 @import "./badges";
 
-//TEST
+//TEST------------------------------------------------------------------------------------------------
 
 // .course-content .single-section .navigationtitle {
-// max-width: 62rem;
-//   transition: 0.5s;
-//   background-color: red;
+//   display: flex;
+//   flex-direction: column;
+//   width: 1000px;
+//   transition: height 1s ease-in-out;
+//   border-bottom: $border-style;
+//   background-color: white;
+//   position: fixed;
+//   top: 2rem;
+//   z-index: 3000;
 // }
 
+.mooin-progress-bar {
+  position: absolute;
+  margin: 0 8rem;
+  transition: 0.5s ease-in-out;
+  bottom: 1rem;
+  width: calc(100% - 16rem);
+  //width: 100%;
+}
+.fa-home::before {
+  font-family: "bootstrap-icons";
+  content: "\F422";
+}
+.fa-tachometer::before {
+  font-family: "bootstrap-icons";
+  content: "\F57F";
+}
+.fa-graduation-cap::before {
+  font-family: "bootstrap-icons";
+  content: "\F6FD";
+}
+.fa-shield::before {
+  font-family: "bootstrap-icons";
+  content: "\F5E6";
+}
+.fa-users::before {
+  font-family: "bootstrap-icons";
+  content: "\F4CF";
+}
+.list-group {
+  .list-group-item {
+    border: none;
 
+    &.active {
+      background-color: #d9d9d9;
+      color: black;
+    }
+  }
+}
+
+// CSS Solution for short Breadcrumb
+#page-badges-overview {
+  .breadcrumb {
+    li:nth-child(-n + 2) {
+      display: none;
+    }
+    li:nth-child(3) {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+// Trying to change the Order of Boosts Flatnavigation Groups  -- Accessibility concerns?
+#page-course-view-mooin {
+  #nav-drawer {
+    display: flex;
+    flex-direction: column;
+    .list-group {
+      //display: flex;
+    }
+
+    .list-group:nth-child(2) {
+      order: -1;
+    }
+  }
+}
+
+// .fade-out {
+//   /* Set the initial opacity to 1 */
+//   opacity: 1;
+
+//   /* Transition the opacity to 0 over a period of 1 second */
+//   transition: opacity 0.5s;
+// }
+
+// .fade-out.fade-out-active {
+//   /* Set the opacity to 0 when the .fade-out-active class is applied */
+//   opacity: 0;
+// }
+
+//-------------------------------------------------------------------------------------------------
 
 .border-card {
   padding: 0.5rem;
@@ -91,6 +178,7 @@
     transform: translateY(0);
   }
 }
+
 .course-title-header {
   overflow: hidden;
   max-width: 50rem;
@@ -119,12 +207,17 @@
   }
 
   .title-overlay {
-    position: absolute;
+    position: fixed;
     bottom: 50%;
     transform: translateY(+50%);
     width: 100%;
     background: rgba(255, 255, 255, 0.73);
     padding: 1rem;
+    /* Set the initial opacity to 1 */
+    opacity: 1;
+
+    /* Transition the opacity to 0 over a period of 1 second */
+    transition: opacity 0.5s;
 
     p,
     h2 {
@@ -132,15 +225,20 @@
     }
 
     @include media-breakpoint-up(md) {
+      position: absolute;
       bottom: 0;
       transform: translateY(0);
       padding: 1rem 0;
       border-radius: 1.875rem 1.875rem 0 0;
     }
   }
+  .fade-out-active {
+    opacity: 0;
+    @include media-breakpoint-up(md) {
+      opacity: 1;
+    }
+  }
 }
-
-
 
 .wrapper {
   @extend .d-md-flex;
