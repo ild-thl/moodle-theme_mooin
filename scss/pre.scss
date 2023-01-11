@@ -4,19 +4,19 @@ $enable-rfs: false;
 
 @font-face {
   font-family: Roboto;
-  src: url("../fonts/Roboto-Regular.ttf");
+  //src: url("../fonts/Roboto-Regular.ttf");
   src: url([[font:theme|Roboto-Regular.ttf]]) format("truetype");
 }
 @font-face {
   font-family: Roboto;
-  src: url("../fonts/Roboto-Bold.ttf");
+ // src: url("../fonts/Roboto-Bold.ttf");
   src: url([[font:theme|Roboto-Bold.ttf]]) format("truetype");
   font-weight: bold;
 }
 @font-face {
   font-family: Roboto;
-  src: url("../fonts/Roboto-Medium.ttf");
-  src: url([[font:theme|Roboto-Bold.ttf]]) format("truetype");
+  //src: url("../fonts/Roboto-Medium.ttf");
+  src: url([[font:theme|Roboto-Medium.ttf]]) format("truetype");
   font-weight: 500;
 }
 @font-face {

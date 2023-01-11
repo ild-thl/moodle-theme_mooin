@@ -18,7 +18,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $THEME->name = 'mooin';
-$THEME->sheets = ['bootstrap-icons.css'];
+$THEME->sheets = ['bootstrap-icons'];
 $THEME->editor_sheets = [];
 $THEME->parents = ['boost'];
 $THEME->enable_dock = false;
@@ -32,6 +32,7 @@ $THEME->scss = function ($theme) {
 // Override Renderer.
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 
+
 $THEME->rarrow ='&#xF231';
 $THEME->larrow ='&#xF22D';
 $THEME->uarrow ='&#xF235';
@@ -40,4 +41,6 @@ $THEME->darrow ='&#xF229';
 
 
 
+
+//delete later
 $CFG->cachejs = false;

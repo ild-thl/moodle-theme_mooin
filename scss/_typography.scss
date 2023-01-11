@@ -44,11 +44,13 @@ h3 {
   font-size: 0.75rem;
   line-height: 1.125rem;
   margin: 0;
+  //text-transform: capitalize;
 
   @include media-breakpoint-up(md) {
     line-height: 1.5rem;
   }
 }
+
 
 .hyphens {
   //Test

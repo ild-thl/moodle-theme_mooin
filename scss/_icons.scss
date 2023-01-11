@@ -102,6 +102,7 @@
 }
 .list-marker {
   &::before {
+    font-family: bootstrap-icons;
     content: "\F231";
     font-size: 0.8rem;
     color: black;

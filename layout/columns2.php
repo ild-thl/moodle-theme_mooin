@@ -54,8 +54,10 @@ $templatecontext = [
 ];
 
 $nav = $PAGE->flatnav;
+//$nav->remove('calendar');
 $templatecontext['flatnavigation'] = $nav;
 $templatecontext['firstcollectionlabel'] = $nav->get_collectionlabel();
-$PAGE->requires->js_call_amd('theme_mooin/test', 'init');
+//Evtl ins Kursformat verschieben
+//$PAGE->requires->js_call_amd('theme_mooin/test', 'init');
 echo $OUTPUT->render_from_template('theme_boost/columns2', $templatecontext);
 

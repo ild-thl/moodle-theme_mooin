@@ -7,6 +7,7 @@
 @import "./topics";
 @import "./defaults";
 @import "./badges";
+@import "./bootstrap-icons";
 
 //TEST------------------------------------------------------------------------------------------------
 
@@ -21,6 +22,22 @@
 //   top: 2rem;
 //   z-index: 3000;
 // }
+
+.progressbar {
+  width: 100%;
+  background-color: #c5ddd3;
+  box-shadow: inset 0px -1px 3px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  height: 1rem;
+
+  .progressbar-inner {
+    height: 100%;
+    width: 5%;
+    background: rgba(56, 148, 107, 0.5);
+    box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.15);
+    border-radius: 8px 0px 0px 8px;
+  }
+}
 
 .mooin-progress-bar {
   position: absolute;
@@ -121,6 +138,11 @@
   align-items: center;
   background-color: #ff0000 !important;
   font-weight: 700 !important;
+
+  @include media-breakpoint-up(md) {
+    width: 1.3rem;
+  height: 1.3rem;
+  }
 }
 .count-discussion {
   position: absolute;
@@ -182,18 +204,36 @@
 .course-title-header {
   overflow: hidden;
   max-width: 50rem;
+  //height: 768px;
   height: 100vw;
-  position: relative;
+  position: sticky;
+  top: 2rem;
   text-align: center;
 
   @include media-breakpoint-up(md) {
     height: fit-content;
+    position: relative;
+    top: unset;
+  }
+
+  .bi-gear-fill {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+    ::before {
+      content: "";
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      background-color: black;
+    }
   }
 
   .course-image {
     object-fit: cover;
     width: 100%;
-    position: fixed;
+    //position: fixed;
     //height: 17.5rem;
     //max-width: auto;
     //max-height: 17.5rem;
@@ -207,9 +247,9 @@
   }
 
   .title-overlay {
-    position: fixed;
-    bottom: 50%;
-    transform: translateY(+50%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
     background: rgba(255, 255, 255, 0.73);
     padding: 1rem;
@@ -226,6 +266,7 @@
 
     @include media-breakpoint-up(md) {
       position: absolute;
+      top: unset;
       bottom: 0;
       transform: translateY(0);
       padding: 1rem 0;
@@ -261,6 +302,13 @@
       max-width: 50rem;
     }
 
+    .container-md {
+      padding: 0 1rem;
+      @include media-breakpoint-up(md) {
+        padding: 0 2rem;
+      }
+    }
+
     .seperator {
       border-bottom: 1px solid #e7e7e7;
       margin: 0 1rem;
@@ -269,13 +317,13 @@
       // display: none;
 
       @include media-breakpoint-up(md) {
-        margin: 0 2rem;
+        //margin: 0 1rem;
       }
     }
   }
 
   .container {
-    padding: 1.5rem 1rem 1rem 1rem;
+    padding: 1.5rem 0rem 1rem 0rem;
     @include media-breakpoint-up(md) {
       padding: 1.5rem 2rem;
     }
@@ -426,10 +474,11 @@
     }
     .news-card {
       max-height: 16.5rem;
+      margin: 1rem 0;
     }
   }
   .forum-card {
-    padding: 1rem 0;
+    //padding: 1rem 0;
   }
   .forum-card-inner {
     padding: 0.5rem;
@@ -444,6 +493,9 @@
       width: 1.3rem !important;
       height: 1.3rem !important;
     }
+    li {
+      list-style: none;
+    }
   }
 
   .even-columns {
@@ -454,5 +506,20 @@
   }
   .even-columns > * {
     flex: 1;
+  }
+  .two-thirds {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    :first-child {
+      flex: 1;
+      @include media-breakpoint-up(md) {
+        flex: 2;
+      }
+    }
+    :nth-child(2) {
+      flex: 1;
+    }
   }
 }
