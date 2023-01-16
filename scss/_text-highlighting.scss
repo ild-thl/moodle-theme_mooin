@@ -5,18 +5,21 @@
   border: 0.3rem solid $color;
 
   @include media-breakpoint-up(md) {
-    max-width: 25rem;
+    //max-width: 25rem;
     width: fit-content;
   }
 
-  h2{
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     hyphens: auto;
     line-height: 3rem;
   }
   p {
     //display: inline;
   }
-
 
   // p {
   //   padding-inline: 1rem;
@@ -36,7 +39,6 @@
     margin-top: 0;
     background: $color;
     transform: translate(-1.25rem, -0.25rem);
-
   }
 
   // &::before {

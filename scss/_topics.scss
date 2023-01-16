@@ -7,13 +7,13 @@
   border: none;
 }
 
-.topics {
-
-  h2 {
+.topicsOut {
+  //padding: 0;
+  h3 {
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.5rem;
-    color: #373A3C;
+    color: #373a3c;
   }
 
   a {
@@ -25,6 +25,10 @@
   .current {
     background: #ccd9df;
     border-radius: 2px;
-    //transform: matrix(1, 0, 0, -1, 0, 0);
+
+    &::before {
+      content: "";
+      border-left: none;
+    }
   }
 }
