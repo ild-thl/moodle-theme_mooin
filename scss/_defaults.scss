@@ -11,6 +11,7 @@
 // Background Color Navdrawer
 #nav-drawer {
   background-color: $background-color;
+  border-right: $border-style;
 }
 //Removing the padding-top in the lessons
 #page-course-view-mooin #region-main {
@@ -68,26 +69,44 @@
   z-index: 2;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
   transition: height 0.5s ease-in-out;
-}
 
-.navigationtitle {
   .mdl-right,
   .mdl-left {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    a{
+    a {
       display: flex;
       align-items: center;
+
+      .rarrow,
+      .larrow {
+        font-size: 3rem;
+      }
+      .larrow {
+       display: none;
+      }
     }
   }
+  .mdl-left {
+    a {
+      &::before{
+        font-family: 'bootstrap-icons';
+        content: '\F230';
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+.navigationtitle {
 }
 .arrow,
 .rarrow,
 .larrow,
 .uarrow,
 .darrow {
-  font-family: 'bootstrap-icons';
+  font-family: "bootstrap-icons";
   font-size: 1.5rem;
 }
 
