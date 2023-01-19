@@ -23,23 +23,5 @@
     line-height: 1.5rem;
   }
 
-  .current {
-    background: #ccd9df;
-    border-radius: 2px;
-    .content {
-      align-items: center;
-      display: flex;
-      h3 {
-        flex: 2;
-      }
-      a {
-        flex: 1;
-      }
-    }
 
-    &::before {
-      content: "";
-      border-left: none;
-    }
-  }
 }
