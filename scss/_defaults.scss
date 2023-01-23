@@ -110,6 +110,14 @@
   font-size: 1.5rem;
 }
 
+.course-content ul.topics li.section .content, .course-content ul.weeks li.section .content {
+  display: flex;
+}
+
+.section .label .mod-indent-outer {
+  padding-left: 0;
+}
+
 .mdl-bottom {
   display: flex !important;
   > span {
