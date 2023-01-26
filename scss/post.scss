@@ -8,6 +8,7 @@
 @import "./defaults";
 @import "./badges";
 @import "./certificates";
+@import "./forum-view";
 @import "./bootstrap-icons";
 
 //TEST------------------------------------------------------------------------------------------------
@@ -79,8 +80,8 @@
   }
 }
 
-// CSS Solution for short Breadcrumb
-#page-badges-overview {
+//CSS Solution for short Breadcrumb
+#page-badges-overview, #page-badges-view {
   .breadcrumb {
     li:nth-child(-n + 2) {
       display: none;
@@ -93,17 +94,20 @@
   }
 }
 
+//Changes Breakpoint for overlapping navdrawer
+body.drawer-open-left {
+  @include media-breakpoint-down(lg) {
+      margin-left: 0;
+  }
+}
 // Trying to change the Order of Boosts Flatnavigation Groups  -- Accessibility concerns?
 #page-course-view-mooin {
   #nav-drawer {
-    display: flex;
-    flex-direction: column;
-    .list-group {
-      //display: flex;
-    }
+    // display: flex;
+    // flex-direction: column;
 
     .list-group:nth-child(2) {
-      order: -1;
+      //order: -1;
     }
   }
 }
@@ -128,7 +132,7 @@
   border: $border-style;
   border-radius: 0.25rem;
 }
-.navbar .count-container{
+.navbar .count-container {
   width: 1rem;
   height: 1rem;
 }
@@ -145,9 +149,27 @@
 
   @include media-breakpoint-up(md) {
     width: 1.3rem;
-  height: 1.3rem;
+    height: 1.3rem;
   }
 }
+
+.count-container-nonews {
+  width: 1rem;
+  height: 1rem;
+  font-size: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //background-color: #ff0000 !important;
+  font-weight: 400 !important;
+
+  @include media-breakpoint-up(md) {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+}
+
 .count-discussion {
   position: absolute;
   left: 0.8rem;
@@ -251,8 +273,13 @@
   }
 
   .title-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 50%;
+    height: 10rem;
+    justify-content: center;
     transform: translateY(-50%);
     width: 100%;
     background: rgba(255, 255, 255, 0.73);
@@ -275,6 +302,7 @@
       transform: translateY(0);
       padding: 1rem 0;
       border-radius: 1.875rem 1.875rem 0 0;
+      height: auto;
     }
   }
   .fade-out-active {
