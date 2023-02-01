@@ -1,13 +1,63 @@
 .course-content ul.topics li.section,
 .course-content ul.weeks li.section {
   margin: 0;
-  padding: 0.5rem 0;
+  padding: 0;
+}
+.course-content .section-summary .section-title {
+  margin: 0;
 }
 .course-content .section-summary {
   border: none;
 }
+.course-content ul li.section.main {
+  border-bottom: none;
+}
+
+.aabtn.focus,
+.aabtn:focus,
+.btn-link.focus,
+.btn-link:focus,
+.nav-link.focus,
+.nav-link:focus,
+.editor_atto_toolbar button.focus,
+.editor_atto_toolbar button:focus,
+[role="button"].focus,
+[role="button"]:focus,
+.list-group-item-action.focus,
+.list-group-item-action:focus,
+input[type="checkbox"].focus,
+input[type="checkbox"]:focus,
+input[type="radio"].focus,
+input[type="radio"]:focus,
+input[type="file"].focus,
+input[type="file"]:focus,
+input[type="image"].focus,
+input[type="image"]:focus,
+.sr-only-focusable.focus,
+.sr-only-focusable:focus,
+a.dropdown-toggle.focus,
+a.dropdown-toggle:focus,
+.modal-dialog[tabindex="0"].focus,
+.modal-dialog[tabindex="0"]:focus,
+.moodle-dialogue-base .closebutton.focus,
+.moodle-dialogue-base .closebutton:focus,
+button.close.focus,
+button.close:focus,
+.form-autocomplete-selection.focus,
+.form-autocomplete-selection:focus,
+[role="treeitem"]:not([aria-expanded="true"]).focus,
+[role="treeitem"]:not([aria-expanded="true"]):focus {
+  outline: 0;
+  box-shadow: none;
+}
 
 .topicsOut {
+  padding-top: 1rem;
+  .container-md {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
   //padding: 0;
   h2,
   h3 {
@@ -17,11 +67,81 @@
     color: #373a3c;
   }
 
+
+
   a {
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.5rem;
+    padding-left: 0.2rem;
+  }
+  .section {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+  }
+  .sectiondraggable {
+    display: block;
+  }
+  .section .side {
+    margin-top: 0;
   }
 
+  .chapter:first-of-type {
+    border-top: none;
+  }
+  .chapter {
+    //height: 1.5rem;
+    border-top: $border-style;
+    //padding: 0.5rem 0;
 
+    a {
+      //height: 1.5rem;
+      text-decoration: none;
+      display: flex;
+      //align-items: center;
+      h3 {
+        padding-left: 0.5rem;
+      }
+    }
+    a[aria-expanded="true"] .list-marker {
+      transform: rotate(90deg);
+      transition: 0.3s ease-in-out;
+    }
+    a[aria-expanded="false"] .list-marker {
+      transform: rotate(0deg);
+      transition: 0.3s ease-in-out;
+    }
+  }
+  .chapter-content {
+    padding-left: 1.5rem;
+  }
+  .lesson {
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  .completed {
+    &::after {
+      font-family: "bootstrap-icons";
+      content: " \F26E";
+      color: #7fb99f;
+      margin-left: auto;
+      //margin-right: 0.3rem;
+      font-size: 2rem;
+    }
+  }
+  .locked {
+    &::after {
+      font-family: "bootstrap-icons";
+      content: " \F47A";
+      margin-left: auto;
+      margin-right: 0.5rem;
+    }
+  }
+  .active {
+    padding: 0.1rem;
+    background-color: #ccd9df;
+    border-radius: 0.125rem;
+  }
 }

@@ -101,6 +101,9 @@
   }
 }
 .list-marker {
+  display: flex;
+  align-items: center;
+
   &::before {
     font-family: bootstrap-icons;
     content: "\F231";
