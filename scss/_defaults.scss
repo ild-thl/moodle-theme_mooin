@@ -66,14 +66,14 @@
 .course-content .single-section .navigationtitle {
   padding-top: 0;
   padding-bottom: 2rem;
-  max-height: auto;
+  height: 10rem;
   //height: 10rem;
   position: sticky;
   top: 50px;
   background-color: white;
   z-index: 2;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
-  transition: max-height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
 
   .mdl-right,
   .mdl-left {
@@ -81,16 +81,20 @@
 
     // top: 50%;
     // transform: translateY(-50%);
+
     a {
       display: flex;
       align-items: center;
+      text-decoration: none;
+      box-shadow: none;
+      background-color: transparent;
 
       .rarrow,
       .larrow {
         font-size: 3rem;
       }
       .larrow {
-       display: none;
+        display: none;
       }
     }
   }
@@ -100,9 +104,9 @@
       left: 1rem;
     }
     a {
-      &::before{
-        font-family: 'bootstrap-icons';
-        content: '\F230';
+      &::before {
+        font-family: "bootstrap-icons";
+        content: "\F230";
         font-size: 3rem;
       }
     }
@@ -132,7 +136,8 @@
   font-size: 1.5rem;
 }
 
-.course-content ul.topics li.section .content, .course-content ul.weeks li.section .content {
+.course-content ul.topics li.section .content,
+.course-content ul.weeks li.section .content {
   display: flex;
   flex-direction: column;
 
@@ -147,16 +152,19 @@
   padding-left: 0;
 }
 
-.course-content ul.topics li.section .left, .course-content ul.topics li.section .right, .course-content ul.weeks li.section .left, .course-content ul.weeks li.section .right {
+.course-content ul.topics li.section .left,
+.course-content ul.topics li.section .right,
+.course-content ul.weeks li.section .left,
+.course-content ul.weeks li.section .right {
   padding: 0;
 }
 
 .course-content .single-section .mdl-bottom {
   display: flex !important;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   @include media-breakpoint-up(md) {
-    padding: 0 100px;
+    padding: 2rem 100px;
   }
   > span {
     &:empty {
@@ -177,6 +185,8 @@
     text-decoration: none;
     a {
       text-decoration: none;
+      box-shadow: none;
+      background-color: transparent;
     }
     @include media-breakpoint-up(md) {
       width: 10rem;
@@ -331,11 +341,17 @@ body,
 }
 .mooin4ection-div {
   position: absolute;
-  bottom: 1rem;
-  float: none !important;
-  width: 98%;
+  left: 1rem;
+  right: 1rem;
+  margin: 0 auto;
+  transition: 0.5s ease-in-out;
+
+  @include media-breakpoint-up(md) {
+    left: 100px;
+  right: 100px;
+  }
 }
 
-.sectionname {
+.inner-title-navigation {
   transition: opacity 0.5s ease-in-out;
 }
