@@ -28,6 +28,10 @@
 }
 
 .badges-certificates-card {
+  .manage-badges-gear{
+    margin-left: auto;
+    color: $primary;
+  }
   .badges-list {
     li {
       max-width: 33.3%;

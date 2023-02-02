@@ -25,6 +25,12 @@
 //   z-index: 3000;
 // }
 
+.info-tip {
+  margin-left: auto;
+  font-size: 1rem;
+  color: $primary;
+}
+
 .progressbar {
   width: 100%;
   background-color: #c5ddd3;
@@ -81,7 +87,8 @@
 }
 
 //CSS Solution for short Breadcrumb
-#page-badges-overview, #page-badges-view {
+#page-badges-overview,
+#page-badges-view {
   .breadcrumb {
     li:nth-child(-n + 2) {
       display: none;
@@ -97,7 +104,7 @@
 //Changes Breakpoint for overlapping navdrawer
 body.drawer-open-left {
   @include media-breakpoint-down(lg) {
-      margin-left: 0;
+    margin-left: 0;
   }
 }
 // Trying to change the Order of Boosts Flatnavigation Groups  -- Accessibility concerns?
@@ -226,6 +233,24 @@ body.drawer-open-left {
     transform: translateY(0);
   }
 }
+.news,
+.course-title-header {
+  .bi-gear-fill {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    color: $primary;
+
+    ::before {
+      content: "";
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      background-color: black;
+    }
+  }
+}
+
 
 .course-title-header {
   overflow: hidden;
@@ -242,19 +267,7 @@ body.drawer-open-left {
     top: unset;
   }
 
-  .bi-gear-fill {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
 
-    ::before {
-      content: "";
-      position: absolute;
-      width: 2rem;
-      height: 2rem;
-      background-color: black;
-    }
-  }
 
   .course-image {
     object-fit: cover;
@@ -495,8 +508,15 @@ body.drawer-open-left {
   }
 
   .community {
+    position: relative;
     background-color: white;
     border-radius: 0.5rem;
+
+    .info-tip {
+      position: absolute;
+      top: 1rem;
+      right: 1.55rem;
+    }
 
     .in-news {
       display: none;
