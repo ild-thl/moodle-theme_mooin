@@ -25,10 +25,21 @@
 //   z-index: 3000;
 // }
 
+//später differenzieren
+a:active {
+  box-shadow: none !important;
+}
+#nav-drawer {
+  a[data-type = "30"] {
+    font-size: 1rem;
+  }
+}
+
 .info-tip {
   margin-left: auto;
   font-size: 1rem;
   color: $primary;
+  padding-right: 0;
 }
 
 .progressbar {
@@ -328,7 +339,7 @@ body.drawer-open-left {
 
 .wrapper {
   @extend .d-md-flex;
-  max-width: 75rem;
+  max-width: 76.5rem;
   margin: 0 auto;
   gap: 1.5rem;
 
@@ -350,7 +361,7 @@ body.drawer-open-left {
     .container-md {
       padding: 0 1rem;
       @include media-breakpoint-up(md) {
-        padding: 0 2rem;
+        padding: 0 1.875rem;
       }
     }
 
@@ -544,6 +555,9 @@ body.drawer-open-left {
     img {
       width: 1.3rem !important;
       height: 1.3rem !important;
+    }
+    ul {
+      padding-left: 0;
     }
     li {
       list-style: none;
