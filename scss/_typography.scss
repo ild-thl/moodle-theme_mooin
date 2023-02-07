@@ -41,7 +41,18 @@ h3 {
 }
 
 .caption {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  margin: 0;
+  //text-transform: capitalize;
+
+  @include media-breakpoint-up(md) {
+    line-height: 1.5rem;
+    font-size: 1rem;
+  }
+}
+.caption-sm {
+  font-size: 0.875rem;
   line-height: 1.125rem;
   margin: 0;
   //text-transform: capitalize;
@@ -68,7 +79,7 @@ a {
   color: #0F6CBF;
 }
 .primary-link {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   text-decoration: underline;
   color: #3582b1;
   line-height: 1.125rem;
@@ -96,4 +107,11 @@ a {
   font-size: 0.75rem;
   line-height: 0.9375rem;
   color: #2182cf;
+}
+.no-badge-text,
+.no-certificate-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 25px;
+  color: $primary;
 }
