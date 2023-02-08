@@ -76,18 +76,21 @@ p {
 }
 
 a {
-  color: #0F6CBF;
+  color: $primary;
+  //color: #0F6CBF;
 }
 .primary-link {
   font-size: 0.875rem;
   text-decoration: underline;
-  color: #3582b1;
+  color: $primary;
+  //color: #3582b1;
   line-height: 1.125rem;
 
   a {
     font-size: 0.75rem;
     text-decoration: underline;
-    color: #3582b1;
+    color: $primary;
+    //color: #3582b1;
     line-height: 1.125rem;
   }
 
@@ -98,7 +101,8 @@ a {
     a {
       font-size: 1rem;
       text-decoration: underline;
-      color: #3582b1;
+      color: $primary;
+      //color: #3582b1;
       line-height: 1.5rem;
     }
   }
@@ -106,7 +110,8 @@ a {
 .secondary-link {
   font-size: 0.75rem;
   line-height: 0.9375rem;
-  color: #2182cf;
+  color: $primary;
+  //color: #2182cf;
 }
 .no-badge-text,
 .no-certificate-text {
