@@ -50,8 +50,8 @@ a:active {
   height: 1rem;
 
   .progressbar-inner {
-    height: 100%;
-    width: 5%;
+    height: 1rem;
+    //width: 5%;
     background: rgba(56, 148, 107, 0.5);
     box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.15);
     border-radius: 8px 0px 0px 8px;
@@ -590,7 +590,7 @@ body.drawer-open-left {
     display: flex;
     width: 100%;
     gap: 1rem;
-    align-items: center;
+    //align-items: center;
     :first-child {
       flex: 1;
       @include media-breakpoint-up(md) {
