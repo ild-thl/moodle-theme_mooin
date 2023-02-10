@@ -67,7 +67,9 @@ button.close:focus,
     color: #373a3c;
   }
 
-  li.section.hidden, .block.hidden, .block.invisible {
+  li.section.hidden,
+  .block.hidden,
+  .block.invisible {
     display: flex;
   }
 
@@ -101,11 +103,26 @@ button.close:focus,
 
   .chapter:first-of-type {
     border-top: none;
+    &::before {
+      border: none;
+    }
   }
   .chapter {
     //height: 1.5rem;
-    border-top: $border-style;
+    //border-top: $border-style;
     //padding: 0.5rem 0;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0 auto;
+      height: 1px;
+      width: 98%; /* or 100px */
+      border-top: $border-style
+    }
 
     a {
       //height: 1.5rem;
