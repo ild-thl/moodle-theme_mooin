@@ -25,6 +25,17 @@
 //   z-index: 3000;
 // }
 
+.no-forum {
+  background-image: url([[pix:theme|no_forum]]);
+  margin: 0 auto;
+  width: 100%;
+  height: 10rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
 //später differenzieren
 a:active {
   box-shadow: none !important;
@@ -276,7 +287,7 @@ body.drawer-open-left {
   text-align: center;
 
   @include media-breakpoint-up(md) {
-    min-height: 300px;
+    //min-height: 300px;
     height: fit-content;
     position: relative;
     top: unset;
@@ -550,7 +561,7 @@ body.drawer-open-left {
     }
     .news-card {
       max-height: 16.5rem;
-      margin: 1rem 0;
+      margin-bottom: 1rem
     }
   }
   .forum-card {
