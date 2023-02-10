@@ -2,10 +2,24 @@
 #page-course-view-mooin,
 #page-course-format-mooin-badges,
 #page-course-format-mooin-certificates,
+#page-course-format-mooin-alle_forums,
 #page-course-format-mooin-forum_view {
   #region-main,
   #region-main-box {
-    background: $background-color;
+    @include media-breakpoint-up(sm) {
+      background: $background-color;
+    }
+
+    nav {
+      @include media-breakpoint-up(md) {
+        width: 800px;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+      }
+    }
+    .breadcrumb:not(:empty) {
+      border: none;
+    }
   }
 }
 // Background Color Navdrawer
@@ -67,7 +81,6 @@
   padding-top: 0;
   padding-bottom: 2rem;
   height: 10rem;
-  //height: 10rem;
   position: sticky;
   top: 50px;
   background-color: white;
@@ -136,11 +149,17 @@
   }
 }
 
+.nav-up {
+  height: 5rem !important;
+}
+
+
 .inner-title-navigation {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: opacity 0.2s ease-in-out;
   //width: 100%;
   //padding-top: 1rem;
 }
@@ -368,8 +387,4 @@ body,
     left: 100px;
     right: 100px;
   }
-}
-
-.inner-title-navigation {
-  transition: opacity 0.5s ease-in-out;
 }
