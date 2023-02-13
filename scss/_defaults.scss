@@ -240,10 +240,12 @@
   }
   .mdl-right {
     position: relative;
+    margin-left: 0.5rem;
     color: white;
     background-color: #004161;
 
     a {
+      padding-left: 0.5rem;
       color: white;
       display: flex;
       align-items: center;
@@ -252,11 +254,13 @@
   }
   .mdl-left {
     position: relative;
+    margin-right: 0.5rem;
     color: #004161;
     border-color: #004161;
     background-color: #ffffff;
     border: 1px solid #004161;
     a {
+      padding-right: 0.5rem;
       color: #004161;
       display: flex;
       align-items: center;
