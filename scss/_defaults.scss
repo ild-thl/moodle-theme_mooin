@@ -197,6 +197,10 @@
   }
 }
 
+//h5p sizing
+.activity.hvp.modtype_hvp .no-overflow, .editing .activity.hvp.modtype_hvp .no-overflow {
+  width: 100%;
+}
 .section .label .mod-indent-outer {
   padding-left: 0;
 }
