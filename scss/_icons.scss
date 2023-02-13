@@ -13,7 +13,6 @@
     color: $primary;
     padding-right: 0.5rem;
 
-
     @include media-breakpoint-up(md) {
       font-size: 1.25rem;
       padding-left: 0.5rem;
@@ -110,4 +109,66 @@
     font-size: 0.8rem;
     color: black;
   }
+}
+
+#nav-drawer {
+  .icon {
+    color: $primary;
+  }
+  .fa-home::before {
+    font-family: "bootstrap-icons";
+    content: "\F422";
+  }
+  .fa-tachometer::before {
+    font-family: "bootstrap-icons";
+    content: "\F57F";
+  }
+  .fa-graduation-cap::before {
+    font-family: "bootstrap-icons";
+    content: "\F6FD";
+  }
+  .fa-shield::before {
+    font-family: "bootstrap-icons";
+    content: "\F5E6";
+  }
+  .fa-users::before {
+    font-family: "bootstrap-icons";
+    content: "\F4CF";
+  }
+  .fa-trophy::before {
+    font-family: "bootstrap-icons";
+    content: "\F153";
+  }
+  .fa-newspaper-o::before {
+    font-family: "bootstrap-icons";
+    content: "\F4A3";
+  }
+  .fa-comments {
+    position: relative;
+    // width: 1.25rem;
+    // height: 1.25rem;
+    // font-size: 1.25rem;
+    // margin-right: 0.5rem;
+    &::before {
+      font-family: bootstrap-icons;
+      //position: absolute;
+      content: "\F253";
+      //padding-right: 2rem;
+      color: $primary;
+    }
+    &::after {
+      font-family: bootstrap-icons;
+      content: "\F25B";
+      position: absolute;
+      font-size: 0.83em;
+      left: 0.37em;
+      top: 0.27em;
+      color: $primary;
+      @include media-breakpoint-up(md) {
+        top: 0.45em;
+        left: 0.35em;
+      }
+    }
+  }
+
 }
