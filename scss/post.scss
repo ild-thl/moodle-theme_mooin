@@ -466,7 +466,6 @@ body.drawer-open-left {
       .message {
         text-overflow: ellipsis;
         overflow: hidden;
-        // Addition lines for 2 line or multiline ellipsis
         display: -webkit-box !important;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;

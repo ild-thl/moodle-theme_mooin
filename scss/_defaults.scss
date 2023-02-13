@@ -56,10 +56,10 @@
   .border-card {
     border: none;
     padding: 0;
-   @include media-breakpoint-up (sm) {
-    padding: 0.5rem;
-    border: $border-style;
-   }
+    @include media-breakpoint-up(sm) {
+      padding: 0.5rem;
+      border: $border-style;
+    }
   }
 }
 
@@ -133,7 +133,10 @@
 
       .rarrow,
       .larrow {
-        font-size: 3rem;
+        font-size: 2rem;
+        @include media-breakpoint-up(md) {
+          font-size: 3rem;
+        }
       }
       .larrow {
         display: none;
@@ -149,7 +152,10 @@
       &::before {
         font-family: "bootstrap-icons";
         content: "\F230";
-        font-size: 3rem;
+        font-size: 2rem;
+        @include media-breakpoint-up(md) {
+          font-size: 3rem;
+        }
       }
     }
   }
@@ -160,9 +166,6 @@
     }
   }
 }
-
-
-
 
 .inner-title-navigation {
   position: relative;
@@ -391,6 +394,13 @@ body,
   //margin: 0 3rem;
   hyphens: auto;
   clear: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+
   @include media-breakpoint-up(md) {
     //margin: 0 8rem;
   }
