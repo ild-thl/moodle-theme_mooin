@@ -1,7 +1,7 @@
 .course-content ul.topics li.section,
 .course-content ul.weeks li.section {
   margin: 0;
-  padding: 0;
+  padding: 0 0.5rem;
 }
 .course-content .section-summary .section-title {
   margin: 0;
@@ -81,7 +81,7 @@ button.close:focus,
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
-    padding-left: 0.2rem;
+    //padding-left: 0.2rem;
     box-shadow: none;
     background-color: transparent;
     h3 {
@@ -90,9 +90,13 @@ button.close:focus,
     }
   }
   .section {
-    min-height: 3rem;
+    //min-height: 2.5rem;
     display: flex;
     align-items: center;
+    h3 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
   }
   .sectiondraggable {
     display: block;
@@ -121,7 +125,7 @@ button.close:focus,
       margin: 0 auto;
       height: 1px;
       width: 98%; /* or 100px */
-      border-top: $border-style
+      border-top: $border-style;
     }
 
     a {
@@ -130,7 +134,7 @@ button.close:focus,
       display: flex;
       //align-items: center;
       h3 {
-        padding-left: 0.5rem;
+        padding-left: 0.7rem;
       }
     }
     a[aria-expanded="true"] .list-marker {
