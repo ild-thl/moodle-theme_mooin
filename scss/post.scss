@@ -25,6 +25,15 @@
 //   z-index: 3000;
 // }
 
+.white-bg {
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  @include media-breakpoint-up(md) {
+    background-color: transparent;
+  }
+}
+
 .no-forum {
   background-image: url([[pix:theme|no_forum]]);
   margin: 0 auto;
@@ -34,7 +43,6 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
 
 //später differenzieren
 a:active {
@@ -62,7 +70,7 @@ a:active {
 
   .progressbar-inner {
     height: 1rem;
-    //width: 5%;
+    //width: 0%;
     background: rgba(56, 148, 107, 0.5);
     box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.15);
     border-radius: 8px 0px 0px 8px;
@@ -88,21 +96,35 @@ a:active {
     }
   }
 }
+.navbar-mobile {
+  //display: block;
+  flex-wrap: nowrap;
 
-//CSS Solution for short Breadcrumb
-#page-badges-overview,
-#page-badges-view {
-  .breadcrumb {
-    li:nth-child(-n + 2) {
-      display: none;
+  li {
+    :first-child{
+      max-width: 150px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    li:nth-child(3) {
-      &::before {
-        display: none;
-      }
-    }
+    //display: inline;
+
   }
 }
+//CSS Solution for short Breadcrumb
+// #page-badges-overview,
+// #page-badges-view {
+//   .breadcrumb {
+//     li:nth-child(-n + 2) {
+//       display: none;
+//     }
+//     li:nth-child(3) {
+//       &::before {
+//         display: none;
+//       }
+//     }
+//   }
+// }
 
 //Changes Breakpoint for overlapping navdrawer
 body.drawer-open-left {
@@ -231,7 +253,7 @@ body.drawer-open-left {
   position: relative;
 }
 .inner-wrapper {
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 2rem;
   background-color: white;
   transform: translateY(-3rem);
   @include media-breakpoint-up(md) {
@@ -308,7 +330,7 @@ body.drawer-open-left {
     transform: translateY(-50%);
     width: 100%;
     background: rgba(255, 255, 255, 0.73);
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     /* Set the initial opacity to 1 */
     opacity: 1;
 
@@ -322,14 +344,14 @@ body.drawer-open-left {
     h2 {
       hyphens: auto;
       text-overflow: ellipsis;
-        overflow: hidden;
-        display: -webkit-box !important;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        white-space: normal;
-        //max-height: 5rem;
-        padding:0.5rem 1rem
-        //padding-bottom: 0.5rem;
+      overflow: hidden;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      white-space: normal;
+      //max-height: 5rem;
+      padding: 0.5rem 1rem;
+      //padding-bottom: 0.5rem;
     }
 
     @include media-breakpoint-up(md) {
@@ -366,7 +388,7 @@ body.drawer-open-left {
 
     @include media-breakpoint-up(md) {
       //padding: 0 2rem;
-      border-radius: 0.625rem;
+      border-radius: 0.625rem 0.625rem 2rem 2rem;
       width: 50rem;
       max-width: 50rem;
     }
@@ -549,7 +571,7 @@ body.drawer-open-left {
     }
     .news-card {
       max-height: 16.5rem;
-      margin-bottom: 1rem
+      margin-bottom: 1rem;
     }
   }
   .forum-card {

@@ -11,7 +11,10 @@
     }
 
     nav {
-      margin: 1rem;
+      //margin: 1rem;
+      a {
+        text-decoration: underline;
+      }
       @include media-breakpoint-up(md) {
         width: 800px;
         margin: 0 auto;
@@ -82,6 +85,10 @@
     padding: 0 1rem;
     @include media-breakpoint-up(md) {
       padding: 0 130px;
+    }
+    .section {
+      margin: 0;
+      padding: 0;
     }
   }
   .section {
@@ -197,6 +204,10 @@
   }
 }
 
+.region_main_settings_menu_proxy {
+  background-color: transparent;
+}
+
 //h5p sizing
 .activity.hvp.modtype_hvp .no-overflow, .editing .activity.hvp.modtype_hvp .no-overflow {
   width: 100%;
@@ -252,11 +263,16 @@
     background-color: #004161;
 
     a {
-      padding-left: 0.5rem;
+      padding-left: 0.15rem;
       color: white;
       display: flex;
       align-items: center;
       @extend .stretched-link;
+    }
+    .rarrow {
+      width: 1rem;
+      display: flex;
+      justify-content: center;
     }
   }
   .mdl-left {
@@ -267,11 +283,16 @@
     background-color: #ffffff;
     border: 1px solid #004161;
     a {
-      padding-right: 0.5rem;
+      padding-right: 0.15rem;
       color: #004161;
       display: flex;
       align-items: center;
       @extend .stretched-link;
+    }
+    .larrow {
+      width: 1rem;
+      display: flex;
+      justify-content: center;
     }
   }
 }
