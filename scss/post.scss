@@ -25,6 +25,25 @@
 //   z-index: 3000;
 // }
 
+/* Scrollheader Test*/
+
+.scroll-up {
+  transform: none;
+  .inner-title-navigation {
+    opacity: 1;
+    transition-delay: 0.5s;
+    transition: opacity 0.1s ease-in-out;
+  }
+}
+.scroll-down {
+  transform: translateY(-80px);
+  .inner-title-navigation {
+    opacity: 0;
+    transition-delay: 0;
+    transition: opacity 0.1s ease-in-out;
+  }
+}
+
 .white-bg {
   background-color: white;
   position: relative;
@@ -101,14 +120,13 @@ a:active {
   flex-wrap: nowrap;
 
   li {
-    :first-child{
+    :first-child {
       max-width: 150px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
     //display: inline;
-
   }
 }
 //CSS Solution for short Breadcrumb

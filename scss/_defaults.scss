@@ -11,6 +11,8 @@
     }
 
     nav {
+      position: fixed;
+        z-index: 20;
       //margin: 1rem;
       a {
         text-decoration: underline;
@@ -19,6 +21,8 @@
         width: 800px;
         margin: 0 auto;
         padding-bottom: 1rem;
+
+        margin-left: 100px;
       }
     }
     .breadcrumb:not(:empty) {
@@ -96,6 +100,19 @@
     padding: 0;
   }
 }
+
+.custom-navbar {
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+.custom-navbar-mobile {
+  display: block;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
 .course-content .single-section .navigationtitle {
   padding-top: 0;
   padding-bottom: 2rem;
@@ -105,24 +122,13 @@
   background-color: white;
   z-index: 2;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
-  transition: height 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 
   .breadcrumb:not(:empty) {
     border: none;
   }
 
-  .custom-navbar {
-    display: none;
-    @include media-breakpoint-up(md) {
-      display: block;
-    }
-  }
-  .custom-navbar-mobile {
-    display: block;
-    @include media-breakpoint-up(md) {
-      display: none;
-    }
-  }
+
 
   .mdl-right,
   .mdl-left {
@@ -179,9 +185,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: opacity 0.2s ease-in-out;
+  padding-top: 2rem;
   //width: 100%;
-  //padding-top: 1rem;
+  @include media-breakpoint-up(md) {
+
+  }
+
 }
 .arrow,
 .rarrow,
