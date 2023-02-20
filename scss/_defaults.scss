@@ -9,22 +9,6 @@
     @include media-breakpoint-up(sm) {
       background: $background-color;
     }
-
-    nav {
-      //position: fixed;
-        z-index: 20;
-      //margin: 1rem;
-      a {
-        text-decoration: underline;
-      }
-      @include media-breakpoint-up(md) {
-        width: 800px;
-        margin: 0 auto;
-        padding-bottom: 1rem;
-
-        margin-left: 100px;
-      }
-    }
     .breadcrumb:not(:empty) {
       border: none;
     }
@@ -41,6 +25,26 @@
 }
 #page-course-view-mooin #region-main-box {
   padding-top: 0;
+}
+
+#page-course-view-mooin {
+  #page-content {
+    nav {
+      //position: fixed;
+      z-index: 20;
+      //margin: 1rem;
+      a {
+        text-decoration: underline;
+      }
+      @include media-breakpoint-up(md) {
+        width: 800px;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+
+        margin-left: 100px;
+      }
+    }
+  }
 }
 
 //Adding white backgroundcolor when needed
@@ -79,9 +83,9 @@
     opacity: 1;
     transition: opacity 0.1s ease-in-out;
   }
-  .custom-navbar {
+  .custom-navbar,
+  .custom-navbar-mobile {
     transform: none;
-
   }
 }
 .scroll-down {
@@ -90,11 +94,10 @@
     opacity: 0;
     transition: opacity 0.1s ease-in-out;
   }
-  .custom-navbar {
+  .custom-navbar,
+  .custom-navbar-mobile {
     transform: translateY(+80px);
-
   }
-
 }
 
 #region-main {
@@ -135,6 +138,7 @@
   }
 }
 .custom-navbar-mobile {
+  transition: 0.2s ease-in-out;
   display: block;
   @include media-breakpoint-up(md) {
     display: none;
@@ -155,12 +159,10 @@
     border: none;
   }
 
-
-
   .mdl-right,
   .mdl-left {
-    // position: absolute;
 
+    // position: absolute;
     // top: 50%;
     // transform: translateY(-50%);
 
@@ -181,6 +183,9 @@
       .larrow {
         display: none;
       }
+    }
+    @include media-breakpoint-up(md) {
+      width: 48px;
     }
   }
   .mdl-left {
@@ -215,9 +220,7 @@
   //padding-top: 2rem;
   //width: 100%;
   @include media-breakpoint-up(md) {
-
   }
-
 }
 .arrow,
 .rarrow,
@@ -245,7 +248,8 @@
 }
 
 //h5p sizing
-.activity.hvp.modtype_hvp .no-overflow, .editing .activity.hvp.modtype_hvp .no-overflow {
+.activity.hvp.modtype_hvp .no-overflow,
+.editing .activity.hvp.modtype_hvp .no-overflow {
   width: 100%;
 }
 .section .label .mod-indent-outer {
@@ -464,7 +468,8 @@ body,
   white-space: normal;
 
   @include media-breakpoint-up(md) {
-    //margin: 0 8rem;
+    width: 800px;
+    margin: 0 auto;
   }
 }
 .mooin4ection-div {
