@@ -11,7 +11,7 @@
     }
 
     nav {
-      position: fixed;
+      //position: fixed;
         z-index: 20;
       //margin: 1rem;
       a {
@@ -71,6 +71,32 @@
 }
 
 //Navigation Header
+
+/* Scrollheader Test*/
+.scroll-up {
+  transform: none;
+  .inner-title-navigation {
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+  }
+  .custom-navbar {
+    transform: none;
+
+  }
+}
+.scroll-down {
+  transform: translateY(-80px);
+  .inner-title-navigation {
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+  }
+  .custom-navbar {
+    transform: translateY(+80px);
+
+  }
+
+}
+
 #region-main {
   overflow-x: unset;
 }
@@ -102,6 +128,7 @@
 }
 
 .custom-navbar {
+  transition: 0.2s ease-in-out;
   display: none;
   @include media-breakpoint-up(md) {
     display: block;
@@ -120,7 +147,7 @@
   position: sticky;
   top: 50px;
   background-color: white;
-  z-index: 2;
+  z-index: 1;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
   transition: 0.2s ease-in-out;
 
@@ -185,7 +212,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 2rem;
+  //padding-top: 2rem;
   //width: 100%;
   @include media-breakpoint-up(md) {
 
@@ -358,6 +385,7 @@
 
 #page-header {
   background: white;
+  z-index: 2;
 }
 .single-section {
   background-color: white;
