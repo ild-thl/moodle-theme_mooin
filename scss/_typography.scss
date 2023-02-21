@@ -1,11 +1,4 @@
-// .format-mooin {
-//   p,
-//   h1,
-//   h2,
-//   h3 {
-//     margin: 0;
-//   }
-// }
+/* All the typography */
 
 
 body {
@@ -18,9 +11,7 @@ body {
 .fw-500 {
   font-weight: 500;
 }
-// .fw-600 {
-//   font-weight: 600;
-// }
+
 .fw-700 {
   font-weight: bold;
 }
@@ -64,7 +55,6 @@ h3 {
 
 
 .hyphens {
-  //Test
   hyphens: auto;
 }
 
@@ -77,8 +67,11 @@ p {
 
 a {
   color: $primary;
-  //color: #0F6CBF;
 }
+a:active {
+  box-shadow: none !important;
+}
+
 .primary-link {
   font-size: 0.875rem;
   text-decoration: underline;
@@ -119,4 +112,10 @@ a {
   font-weight: 700;
   line-height: 25px;
   color: $primary;
+}
+//Zwischenlösung
+#map_id {
+	height:480px;
+	width:100% !important;
+	overflow:hidden;
 }
