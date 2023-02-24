@@ -215,7 +215,7 @@
   .mdl-left {
     left: 0;
     @include media-breakpoint-up(md) {
-      margin-left: 2rem;
+      margin-left: 56px;
     }
     a {
       &::before {
@@ -231,7 +231,7 @@
   .mdl-right {
     right: 0rem;
     @include media-breakpoint-up(md) {
-      margin-right: 2rem;
+      margin-right: 62px;
     }
   }
 
