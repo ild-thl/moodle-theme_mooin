@@ -1,10 +1,5 @@
-// .icon-wrapper {
-//   //font-family: bootstrap-icons;
-//   //font-size: 1.5rem;
-//   color: #004161;
-//   display: flex;
-//   align-items: center;
-// }
+/* All the Icons */
+
 .news-icon {
   &::before {
     font-family: bootstrap-icons;
@@ -44,8 +39,6 @@
     content: "\F5E6";
     font-size: 1.25rem;
     color: $primary;
-
-    //padding-right: 0.2rem;
   }
 }
 .award-icon {
@@ -65,16 +58,10 @@
   height: 1.25rem;
   font-size: 1.25rem;
   margin-right: 0.5rem;
-
-  //transform: translateY(-0.2rem);
   &::before {
     font-family: bootstrap-icons;
-    //position: absolute;
     content: "\F253";
-    //padding-right: 2rem;
     color: $primary;
-
-    //background-color: white;
   }
   &::after {
     font-family: bootstrap-icons;
@@ -145,15 +132,9 @@
   }
   .fa-comments {
     position: relative;
-    // width: 1.25rem;
-    // height: 1.25rem;
-    // font-size: 1.25rem;
-    // margin-right: 0.5rem;
     &::before {
       font-family: bootstrap-icons;
-      //position: absolute;
       content: "\F253";
-      //padding-right: 2rem;
       color: $primary;
     }
     &::after {
@@ -170,5 +151,14 @@
       }
     }
   }
+}
 
+/* Overriding the default Arrows with bootstrap icons */
+.arrow,
+.rarrow,
+.larrow,
+.uarrow,
+.darrow {
+  font-family: "bootstrap-icons";
+  font-size: 1.5rem;
 }

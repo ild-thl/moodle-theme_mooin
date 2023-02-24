@@ -7,7 +7,8 @@ export function scrollHeader() {
   const scrollDown = "scroll-down";
   let lastScroll = 0;
   const navigationHeader = document.getElementById("custom-top-nav");
-  //const innerNav = document.querySelector(".inner-title-navigation");
+  //const navigationHeader = document.getElementById("region-main-box");
+  //const navigationHeader = document.querySelector(".single-section");
 
   window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;

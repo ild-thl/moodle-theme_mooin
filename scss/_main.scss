@@ -1,0 +1,459 @@
+/* Main CSS for Course Frontpage */
+
+/* The outer div for the course frontpage */
+.wrapper {
+  @extend .d-md-flex;
+  max-width: 76.5rem;
+  margin: 0 auto;
+  gap: 1.5rem;
+
+  /* Newstile for left and right side */
+  .news {
+    border-radius: 3rem 3rem 0 0;
+    background-color: white;
+
+    @include media-breakpoint-up(md) {
+      border-radius: 0;
+      border-bottom: none;
+      width: 100%;
+    }
+
+    .news-card {
+      align-items: start;
+      @include media-breakpoint-up(md) {
+        padding: 0.5rem;
+        border: $border-style;
+        border-radius: 0.25rem;
+        max-height: 13rem;
+        align-items: unset;
+      }
+      .news-card-inner {
+        //padding-left: 2rem;
+        //display: flex;
+        width: calc(100% - 2.25rem);
+        //width: 100%;
+
+        p {
+          margin-bottom: 0;
+        }
+
+        .message {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          display: -webkit-box !important;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          white-space: normal;
+          max-height: 3rem;
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  /* Container for the left section */
+  .main-container {
+    background-color: white;
+    max-width: 50rem;
+    height: fit-content;
+
+    @include media-breakpoint-up(md) {
+      border-radius: 0.625rem 0.625rem 2rem 2rem;
+      width: 50rem;
+    }
+
+    /* Course Image and Title*/
+    .course-title-header {
+      overflow: hidden;
+      max-width: 50rem;
+      height: 100vw;
+      position: sticky;
+      top: 2rem;
+      text-align: center;
+
+      @include media-breakpoint-up(md) {
+        height: auto;
+        max-height: 300px;
+        aspect-ratio: 800/280;
+        position: relative;
+        top: unset;
+      }
+
+      .course-image {
+        object-fit: contain;
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+          aspect-ratio: 800/280;
+          object-fit: contain;
+          position: static;
+          height: inherit;
+          max-height: 300px;
+          border-top-left-radius: 0.625rem;
+          border-top-right-radius: 0.625rem;
+        }
+      }
+      .course-image-none-mobile {
+        background-image: url([[pix:theme|./header_placeholder_mobile]]);
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .course-image-none-desktop {
+        background-image: url([[pix:theme|./header_placeholder_desktop]]);
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .title-overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 13rem;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.73);
+        padding: 1rem 1rem;
+        opacity: 1;
+        transition: opacity 0.5s;
+
+        @include media-breakpoint-up(md) {
+          position: absolute;
+          top: unset;
+          bottom: 0;
+          transform: translateY(0);
+          padding: 0.5rem 0;
+          border-radius: 1.875rem 1.875rem 0 0;
+          height: auto;
+        }
+
+        p,
+        h2 {
+          margin: 0;
+        }
+        /* Truncate Title after two lines */
+        h2 {
+          hyphens: auto;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          display: -webkit-box !important;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          white-space: normal;
+          padding: 0.5rem 1rem;
+        }
+      }
+      .fade-out-active {
+        opacity: 0;
+        @include media-breakpoint-up(md) {
+          opacity: 1;
+        }
+      }
+    }
+
+    /* Background Settings */
+    /* Sets a white Background to the Main Content */
+    .white-bg {
+      background-color: white;
+      position: relative;
+      z-index: 1;
+      @include media-breakpoint-up(md) {
+        background-color: transparent;
+      }
+    }
+
+    /* Left side main content */
+    .inner-wrapper {
+      border-radius: 2rem;
+      background-color: white;
+      transform: translateY(-3rem);
+      @include media-breakpoint-up(md) {
+        //border-radius: 0;
+        //max-width: 50rem;
+        transform: translateY(0);
+      }
+
+      /* Frontpage Progressbar */
+      .progressbar {
+        width: 100%;
+        background-color: #c5ddd3;
+        box-shadow: inset 0px -1px 3px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        height: 1rem;
+
+        .progressbar-inner {
+          height: 1rem;
+          background: rgba(56, 148, 107, 0.5);
+          box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.15);
+          border-radius: 8px 0px 0px 8px;
+        }
+      }
+    }
+
+    /* Container for left side tiles */
+    .container-md {
+      padding: 0 1rem;
+      @include media-breakpoint-up(md) {
+        padding: 0 1.875rem;
+      }
+    }
+
+    /* Seperator line between tiles */
+    .seperator {
+      border-bottom: 1px solid #e7e7e7;
+      margin: 0 1rem;
+      display: block;
+
+      @include media-breakpoint-up(md) {
+        margin: 0 2rem;
+      }
+    }
+  }
+
+  /* Right side section: Badges, Certificates, Community */
+  .side-right {
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 25rem;
+
+    .badges-certificates-card {
+      width: 25rem;
+      background-color: white;
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
+
+      @include media-breakpoint-up(md) {
+        border-bottom: none;
+      }
+
+      .badges-card {
+        margin: 1rem 0;
+        padding: 0.5rem;
+        border: $border-style;
+        border-radius: 0.25rem;
+
+        .manage-badges-gear {
+          margin-left: auto;
+          color: $primary;
+        }
+
+        .badges-card-inner {
+          padding: 1rem 0;
+
+
+          .badges-list {
+            li {
+              max-width: 33.3%;
+
+              a {
+                &::before {
+                  font-size: 1.5rem;
+                  left: 3.3rem;
+                  top: -1.6rem;
+                  z-index: 2;
+                }
+                &::after {
+                  top: -2rem;
+                  left: -0.7rem;
+                  width: 4.5rem;
+                  height: 3rem;
+                }
+
+                img {
+                  width: 4.5rem !important;
+                  height: 4.5rem !important;
+                }
+              }
+            }
+            li:nth-child(n + 4) {
+              display: none;
+            }
+          }
+        }
+      }
+      .certificate-card {
+        padding: 0.5rem;
+        border: $border-style;
+        border-radius: 0.25rem;
+
+        .certificate-card-inner {
+          display: flex;
+          .certificat_list {
+            div {
+              max-width: 33.3%;
+
+              a {
+                &::before {
+                  font-size: 1.5rem;
+                  left: 3.3rem;
+                  top: -1.6rem;
+                  z-index: 2;
+                }
+                &::after {
+                  top: -2rem;
+                  left: -0.7rem;
+                  width: 4.5rem;
+                  height: 3rem;
+                }
+
+                img {
+                  width: 4.5rem !important;
+                  height: 4.5rem !important;
+                }
+              }
+            }
+            div:nth-child(n + 4) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .community {
+      position: relative;
+      background-color: white;
+      border-radius: 0.5rem;
+
+      .info-tip {
+        position: absolute;
+        top: 1rem;
+        right: 1.55rem;
+      }
+
+      .news {
+        .news-card {
+          max-height: 16.5rem;
+          margin-bottom: 1rem;
+          .news-card-inner {
+            width: calc(100% - 1.8rem);
+          }
+        }
+      }
+
+      .participant-card {
+        padding: 0.5rem;
+        border: $border-style;
+        border-radius: 0.25rem;
+        img {
+          width: 1.3rem !important;
+          height: 1.3rem !important;
+        }
+        ul {
+          padding-left: 0;
+        }
+        li {
+          list-style: none;
+        }
+      }
+    }
+
+    .seperator {
+      display: none;
+    }
+
+    .container {
+      padding: 1rem;
+    }
+  }
+
+  .two-thirds {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    //align-items: center;
+    :first-child {
+      flex: 1;
+      @include media-breakpoint-up(md) {
+        flex: 2;
+      }
+    }
+    :nth-child(2) {
+      flex: 1;
+    }
+  }
+}
+
+/* Settings Gear in News and Course Header */
+.news,
+.course-title-header {
+  .bi-gear-fill {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    color: $primary;
+
+    ::before {
+      content: "";
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      background-color: black;
+    }
+  }
+}
+
+/* Userpicture shown in forum posts and userlist */
+.new_user_picture {
+  position: absolute;
+  left: -1.8rem;
+
+  .userpicture {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+}
+
+/* News Forum */
+
+/* Notification Badge for News */
+.inline-badge {
+  position: unset;
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-0.1rem);
+}
+
+/* Mobile */
+.even-columns {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  //justify-content: space-between;
+}
+.even-columns > * {
+  flex: 1;
+}
+
+/* Positioning individual Notification Badges */
+.icon-badge {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-right: 0.4rem;
+}
+.count-discussion {
+  position: absolute;
+  left: 0.8rem;
+  margin-top: -0.6rem;
+}
+.count-certificate {
+  position: absolute;
+  left: 0.6rem;
+  margin-top: -0.6rem;
+}
+
+/* Tooltips */
+.info-tip {
+  margin-left: auto;
+  font-size: 1rem;
+  color: $primary;
+  padding-right: 0;
+}

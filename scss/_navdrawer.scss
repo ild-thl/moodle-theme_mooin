@@ -1,0 +1,27 @@
+/* CSS for Navdrawer */
+
+/* Changes Breakpoint for overlapping navdrawer */
+body.drawer-open-left {
+  @include media-breakpoint-down(lg) {
+    margin-left: 0;
+  }
+}
+
+
+.list-group {
+  .list-group-item {
+    border: none;
+
+    &.active {
+      background-color: #d9d9d9;
+      color: black;
+    }
+  }
+}
+
+
+// Background Color Navdrawer
+#nav-drawer {
+  background-color: $background-color;
+  border-right: $border-style;
+}

@@ -1,0 +1,111 @@
+// .badges-list {
+//   width: 100%;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: left;
+
+//   li {
+//     position: relative;
+//     .badge-image {
+//       left: 0;
+//     }
+//     a {
+//       position: relative;
+//       font-size: 0.875rem;
+//       line-height: 0.9375rem;
+//       color: #2182cf;
+
+//       &::before {
+//         font-family: "bootstrap-icons";
+//         content: "\F430";
+//         color: $primary;
+//         position: absolute;
+//         background-color: white;
+//         border-radius: 50%;
+//       }
+//     }
+//   }
+// }
+
+/* Flag for new Badges */
+.new-badge-layer {
+  a {
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url([[pix:theme|./badges/newbadge]]);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 3;
+    }
+  }
+}
+
+// Perials badge scss
+.all-badge-layer {
+  a{
+    &::after {
+      content: none;
+      background-image: 'none';
+    }
+  }
+}
+
+
+/* Shows if there are no Badges */
+.no-badges-img {
+  margin: 0 auto;
+  width: 100%;
+  height: 10rem;
+  background-image: url([[pix:theme|no_badges]]);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Flag for new Certificates */
+.new-certificate-layer {
+  a {
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url([[pix:theme|./badges/newbadge]]);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 3;
+    }
+  }
+}
+
+/* Shows if there are no Certificates */
+.no-certificates-img {
+  margin: 0 auto;
+  width: 100%;
+  height: 10rem;
+  background-image: url([[pix:theme|no_certificates]]);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Certificate Icon */
+.certificate-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url([[pix:theme|certificate_icon]]);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  a {
+    font-size: 0.875rem;
+  }
+}
