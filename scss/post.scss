@@ -126,6 +126,9 @@
   // }
 }
 /* h5p sizing */
+.section .activity .contentwithoutlink {
+  display: flex;
+}
 .activity.hvp.modtype_hvp .no-overflow,
 .editing .activity.hvp.modtype_hvp .no-overflow {
   width: 100%;
