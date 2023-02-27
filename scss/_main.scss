@@ -415,7 +415,7 @@
 /* Notification Badge for News */
 .inline-badge {
   position: unset;
-  display: inline-flex !important;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   transform: translateY(-0.1rem);

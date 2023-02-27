@@ -41,7 +41,9 @@
 #page-course-format-mooin-forum_view {
   #region-main,
   #region-main-box {
-    //padding: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
     border: none;
     @include media-breakpoint-up(sm) {
       background: $background-color;
@@ -398,10 +400,7 @@
 }
 
 /* CSS for the custom navbars (Breadcrumb) */
-.navbar_desktop {
-  li {
-  }
-}
+
 #page-course-view-mooin {
   #page-content {
     nav {
@@ -419,23 +418,23 @@
     }
   }
 }
-#page-course-view-mooin.path-user {
-  #page-content {
-    nav {
-      z-index: 20;
-      a {
-        text-decoration: underline;
-      }
+// #page-course-view-mooin.path-user {
+//   #page-content {
+//     nav {
+//       z-index: 20;
+//       a {
+//         text-decoration: underline;
+//       }
 
-      @include media-breakpoint-up(md) {
-        max-width: 740px;
-        margin: 0 auto;
-        padding-bottom: 1rem;
-        //margin-left: 100px;
-      }
-    }
-  }
-}
+//       @include media-breakpoint-up(md) {
+//         max-width: 740px;
+//         margin: 0 auto;
+//         padding-bottom: 1rem;
+//         //margin-left: 100px;
+//       }
+//     }
+//   }
+// }
 
 .custom-navbar {
   transition: 0.2s ease-in-out;
