@@ -25,7 +25,10 @@
 //   }
 // }
 
-#page-course-view-mooin {
+#page-course-view-mooin,
+#page-course-format-mooin-badges,
+#page-course-format-mooin-certificates,
+#page-course-format-mooin-alle_forums {
   #region-main,
   #region-main-box {
     padding-top: 0;
@@ -41,9 +44,9 @@
 #page-course-format-mooin-forum_view {
   #region-main,
   #region-main-box {
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: 0;
+    // padding-top: 0;
+    // padding-left: 0;
+    // padding-right: 0;
     border: none;
     @include media-breakpoint-up(sm) {
       background: $background-color;
@@ -284,7 +287,6 @@
     @include media-breakpoint-up(md) {
       left: 130px;
       right: 130px;
-
     }
   }
 }
@@ -299,7 +301,6 @@
     //transition: opacity 0.1s ease-in-out;
     @include media-breakpoint-up(md) {
       //padding: 1rem 0 !important;
-
     }
   }
   .custom-navbar,
@@ -329,9 +330,25 @@
 
 /* Buttom navigation */
 .course-content .single-section .mdl-bottom {
+  position: relative;
   display: flex !important;
   justify-content: space-between;
   padding: 1rem 1rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 0;
+    height: 1px;
+    border-bottom: $border-style;
+    @include media-breakpoint-up(md) {
+      left: 65px;
+      right: 65px;
+    }
+  }
+
   @include media-breakpoint-up(md) {
     padding: 2rem 65px;
   }
