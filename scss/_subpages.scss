@@ -133,6 +133,22 @@
   }
 }
 
+#page-course-format-mooin-badges {
+  .no-badge-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .no-badges-img {
+      width: 220px;
+      margin: 0;
+    }
+    .no-badge-text{
+      max-width: 100px;
+      padding-left: 0.5rem;
+    }
+  }
+}
+
 // //Adding white backgroundcolor when needed
 // #page-badges-overview,
 // #page-badges-index {
