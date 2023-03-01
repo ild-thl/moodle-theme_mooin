@@ -103,7 +103,7 @@ button.close:focus,
     display: block;
   }
   .section .side {
-    margin-top: 0;
+    //margin-top: 0;
   }
 
   .chapter:first-of-type {
@@ -177,5 +177,11 @@ button.close:focus,
     padding: 0.1rem;
     background-color: #ccd9df;
     border-radius: 0.125rem;
+  }
+
+  #changenumsections {
+    text-align: center;
+    border-top: $border-style;
+    padding-top: 1rem;
   }
 }
