@@ -82,12 +82,12 @@
       }
 
       .course-image {
-        object-fit: contain;
+        object-fit: cover;
         width: 100%;
 
         @include media-breakpoint-up(md) {
           aspect-ratio: 800/280;
-          object-fit: contain;
+          object-fit: cover;
           position: static;
           height: inherit;
           max-height: 300px;
