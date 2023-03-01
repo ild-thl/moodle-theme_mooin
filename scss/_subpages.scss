@@ -64,7 +64,7 @@
 
   .sticky-container {
     position: sticky;
-    z-index: 1001;
+    z-index: 500;
     top: 50px;
     margin: 0 auto;
     padding: 0 15px;
@@ -146,6 +146,13 @@
       max-width: 100px;
       padding-left: 0.5rem;
     }
+  }
+}
+
+/* Participants Map adjustments */
+.format-mooin.path-user {
+  .leaflet-top, .leaflet-bottom {
+    z-index: 500;
   }
 }
 
