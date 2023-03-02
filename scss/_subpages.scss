@@ -133,18 +133,40 @@
   }
 }
 
+#page-course-format-mooin-alle_forums,
+#page-course-format-mooin-certificates,
 #page-course-format-mooin-badges {
-  .no-badge-container {
+  .no-certificates-container,
+  .no-badge-container,
+  .no-forums-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    .no-badges-img {
+
+    @include media-breakpoint-up(sm) {
+      flex-direction: row;
+    }
+    .no-certificates-img,
+    .no-badges-img,
+    .no-forum-img {
       width: 220px;
       margin: 0;
+
     }
-    .no-badge-text{
-      max-width: 100px;
+    .no-certificates-text,
+    .no-badge-tex,
+    .no-forums-text{
+      max-width: 100%;
       padding-left: 0.5rem;
+      padding-top: 1rem;
+      text-align: center;
+
+      @include media-breakpoint-up(sm) {
+        max-width: 100px;
+        padding-top: 0;
+        text-align: left;
+      }
     }
   }
 }
@@ -166,7 +188,7 @@
 // }
 
 /* Shows the image if there are no created forums */
-.no-forum {
+.no-forum-img {
   background-image: url([[pix:theme|no_forum]]);
   margin: 0 auto;
   width: 100%;
