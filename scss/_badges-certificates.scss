@@ -43,14 +43,13 @@
 
 // Perials badge scss
 .all-badge-layer {
-  a{
+  a {
     &::after {
       content: none;
-      background-image: 'none';
+      background-image: "none";
     }
   }
 }
-
 
 /* Shows if there are no Badges */
 .no-badges-img {
@@ -65,15 +64,17 @@
 
 /* Flag for new Certificates */
 .new-certificate-layer {
-  a {
-    &::after {
-      content: "";
-      position: absolute;
-      background-image: url([[pix:theme|./badges/newbadge]]);
-      background-size: contain;
-      background-repeat: no-repeat;
-      z-index: 3;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url([[pix:theme|./badges/newbadge]]);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 3;
+    top: 0rem;
+    left: -0.9rem;
+    width: 4.5rem;
+    height: 3rem;
   }
 }
 
@@ -90,6 +91,7 @@
 
 /* Certificate Icon */
 .certificate-img {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,6 +106,17 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+  // &::after {
+  //   font-family: "bootstrap-icons";
+  //   content: "\F430";
+  //   color: $primary;
+  //   position: absolute;
+  //   //background-color: white;
+  //   font-size: 1.5rem;
+  //   left: 3.3rem;
+  //   top: -1.6rem;
+  //   z-index: 2;
+  // }
 
   a {
     font-size: 0.875rem;
