@@ -12,6 +12,38 @@
 @import "./subpages";
 @import "./navdrawer";
 
+#nav-drawer {
+  .completed {
+    display: flex;
+    align-items: center;
+    &::after {
+      font-family: "bootstrap-icons";
+      content: " \F26E";
+      color: #7fb99f;
+      margin-left: auto;
+      //margin-right: 0.3rem;
+      font-size: 2rem;
+    }
+  }
+  .locked {
+    display: flex;
+    align-items: center;
+    &::after {
+      font-family: "bootstrap-icons";
+      content: " \F47A";
+      margin-left: auto;
+      margin-right: 0.5rem;
+    }
+  }
+  .active {
+    display: flex;
+    align-items: center;
+    padding: 0.1rem;
+    background-color: #ccd9df;
+    border-radius: 0.125rem;
+  }
+}
+
 // body.format-mooin {
 //   background-color: #f8f8f8;
 // }
