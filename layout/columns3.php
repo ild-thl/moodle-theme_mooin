@@ -66,5 +66,5 @@ $templatecontext['firstcollectionlabel'] = $nav->get_collectionlabel();
 
 //Evtl ins Kursformat verschieben
 //$PAGE->requires->js_call_amd('theme_mooin/test', 'init');
-echo $OUTPUT->render_from_template('theme_boost/columns2', $templatecontext);
+echo $OUTPUT->render_from_template('theme_boost/columns3', $templatecontext);
 

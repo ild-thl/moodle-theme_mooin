@@ -29,12 +29,12 @@ class theme_mooin_core_renderer extends core_renderer
     $header->headeractions = $this->page->get_header_actions();
 
 
-    $coursecontext = context_course::instance($this->page->course->id);
-    if (has_capability('moodle/course:update', $coursecontext)) {
-      return $this->render_from_template('core/full_header', $header);
-    }
+    // $coursecontext = context_course::instance($this->page->course->id);
+    // if (has_capability('moodle/course:update', $coursecontext)) {
+    //   return $this->render_from_template('core/full_header', $header);
+    // }
 
-    //return $this->render_from_template('core/full_header', $header);
+    return $this->render_from_template('core/full_header', $header);
 
   }
 }

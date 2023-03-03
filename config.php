@@ -17,6 +17,22 @@
 // This line protects the file from being accessed by a URL directly.
 defined('MOODLE_INTERNAL') || die();
 
+$THEME->layouts = [
+      // Main course page.
+      'course' => array(
+        'file' => 'columns2.php',
+        'regions' => array('side-pre'),
+        'defaultregion' => 'side-pre',
+        'options' => array('langmenu' => true)
+    ),
+    // Part of course, typical for modules - default page layout if $cm specified in require_login().
+    'incourse' => array(
+        'file' => 'columns3.php',
+        'regions' => array('side-pre'),
+        'defaultregion' => 'side-pre',
+    ),
+];
+
 $THEME->name = 'mooin';
 $THEME->sheets = ['bootstrap-icons'];
 $THEME->editor_sheets = [];
