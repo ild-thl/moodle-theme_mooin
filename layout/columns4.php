@@ -26,6 +26,7 @@ defined('MOODLE_INTERNAL') || die();
 
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
 require_once($CFG->libdir . '/behat/lib.php');
+require_once($CFG->dirroot.'/course/format/mooin/locallib.php');
 
 if (isloggedin()) {
     $navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
@@ -53,7 +54,91 @@ $templatecontext = [
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu)
 ];
 
+//Course
+
 $nav = $PAGE->flatnav;
+$adminnode = $nav -> get('sitesettings');
+$mycourses = $nav -> get('mycourses');
+$coursehome = $nav -> get('coursehome');
+$mooin_newsforum = $nav -> get('format_mooin_newsforum');
+$mooin_badges = $nav -> get('format_mooin_badges');
+$mooin_certificates = $nav -> get('format_mooin_certificates');
+$mooin_discussion = $nav -> get('format_mooin_discussions');
+$participantsnode = $nav -> get('participants');
+$calendar = $nav -> get('calendar');
+$privatefiles = $nav -> get('privatefiles');
+$contentbank = $nav -> get('contentbank');
+$coursenodes = $nav -> type(30);
+$home = $nav -> get('home');
+$home ->set_showdivider(false);
+$myhome = $nav -> get('myhome');
+
+
+
+foreach ($nav as $node) {
+    $nav -> remove($node->key);
+}
+
+if($home) {
+    $home ->set_showdivider(false);
+    $nav->add($home);
+}
+
+if($myhome) {
+    $myhome ->set_showdivider(false);
+    $nav->add($myhome);
+}
+//$nav->add($myhome);
+
+if($mycourses) {
+    $nav->add($mycourses);
+}
+//$nav->add($mycourses);
+if($coursehome) {
+    $coursehome->set_showdivider(true);
+    $coursehome->make_active();
+    $nav->add($coursehome);
+}
+//$nav->add($coursehome);
+if($mooin_newsforum) {
+    //$mooin_newsforum -> make_active();
+    $nav->add($mooin_newsforum);
+}
+
+foreach($coursenodes as $node) {
+    if($node->isactive() && $node->has_children()) {
+        $node -> remove_class('collapsed');
+    }
+    if(is_last_section_of_chapter($node->key)) {
+        $node -> set_showdivider(true);
+    }
+    $nav->add($node);
+    //$nav -> add($node);
+}
+
+if($mooin_badges) {
+    $nav->add($mooin_badges);
+}
+if($mooin_certificates) {
+    $nav->add($mooin_certificates);
+}
+if($mooin_discussion) {
+    $nav->add($mooin_discussion);
+}
+//$nav->add($mooin_discussion);
+//$nav->add($participantsnode);
+if($participantsnode) {
+    $nav->add($participantsnode);
+}
+if($adminnode) {
+    $nav->add($adminnode);
+}
+
+//Remove the Activity Nodes
+$nodes = $nav -> type(40);
+foreach($nodes as $node) {
+    $nav -> remove($node -> key);
+}
 //$nav->remove('calendar');
 $templatecontext['flatnavigation'] = $nav;
 $templatecontext['firstcollectionlabel'] = $nav->get_collectionlabel();
@@ -66,5 +151,5 @@ $templatecontext['firstcollectionlabel'] = $nav->get_collectionlabel();
 
 //Evtl ins Kursformat verschieben
 //$PAGE->requires->js_call_amd('theme_mooin/test', 'init');
-echo $OUTPUT->render_from_template('theme_boost/columns2', $templatecontext);
+echo $OUTPUT->render_from_template('theme_mooin/columns4', $templatecontext);
 

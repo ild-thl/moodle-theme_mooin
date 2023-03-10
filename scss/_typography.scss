@@ -1,6 +1,5 @@
 /* All the typography */
 
-
 body {
   font-family: "Roboto";
   font-size: 1rem;
@@ -52,7 +51,6 @@ h3 {
     line-height: 1.5rem;
   }
 }
-
 
 .hyphens {
   hyphens: auto;
@@ -116,7 +114,29 @@ a:active {
 }
 //Zwischenlösung
 #map_id {
-	height:480px;
-	width:100% !important;
-	overflow:hidden;
+  height: 480px;
+  width: 100% !important;
+  overflow: hidden;
+}
+
+#nav-drawer {
+  font-size: 18px;
+  a[data-key="coursehome"] {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 36px;
+    height: 42px;
+    padding: 0 0 0 2.5rem;
+    .icon {
+      display: none;
+    }
+  }
+  .chapter,
+  .section {
+    font-size: 16px;
+    line-height: 30px;
+  }
 }

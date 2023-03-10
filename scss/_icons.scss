@@ -91,7 +91,7 @@
   align-items: center;
 
   &::before {
-    font-family: bootstrap-icons;
+    font-family: 'bootstrap-icons';
     content: "\F231";
     font-size: 0.8rem;
     color: black;
@@ -150,6 +150,10 @@
         left: 0.35em;
       }
     }
+  }
+  .fa-folder::before {
+    font-family: 'bootstrap-icons';
+    content: "\F229";
   }
 }
 
