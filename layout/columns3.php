@@ -104,14 +104,7 @@ if($mooin_newsforum) {
     $nav->add($mooin_newsforum);
 }
 //$nav->add($mooin_newsforum);
-foreach($coursenodes as $node) {
 
-    if(is_last_section_of_chapter($node->key)) {
-        $node -> set_showdivider(true);
-    }
-    $nav->add($node);
-    //$nav -> add($node);
-}
 if($mooin_badges) {
     $nav->add($mooin_badges);
 }
@@ -127,6 +120,14 @@ if($mooin_discussion) {
 //$nav->add($participantsnode);
 if($participantsnode) {
     $nav->add($participantsnode);
+}
+foreach($coursenodes as $node) {
+
+    if(is_last_section_of_chapter($node->key)) {
+        $node -> set_showdivider(true);
+    }
+    $nav->add($node);
+    //$nav -> add($node);
 }
 if($adminnode) {
     $nav->add($adminnode);

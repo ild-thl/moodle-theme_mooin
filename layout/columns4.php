@@ -88,21 +88,29 @@ if($myhome) {
     $myhome ->set_showdivider(false);
     $nav->add($myhome);
 }
-//$nav->add($myhome);
 
 if($mycourses) {
     $nav->add($mycourses);
 }
-//$nav->add($mycourses);
 if($coursehome) {
     $coursehome->set_showdivider(true);
     $coursehome->make_active();
     $nav->add($coursehome);
 }
-//$nav->add($coursehome);
 if($mooin_newsforum) {
-    //$mooin_newsforum -> make_active();
     $nav->add($mooin_newsforum);
+}
+if($mooin_badges) {
+    $nav->add($mooin_badges);
+}
+if($mooin_certificates) {
+    $nav->add($mooin_certificates);
+}
+if($mooin_discussion) {
+    $nav->add($mooin_discussion);
+}
+if($participantsnode) {
+    $nav->add($participantsnode);
 }
 
 foreach($coursenodes as $node) {
@@ -113,23 +121,14 @@ foreach($coursenodes as $node) {
         $node -> set_showdivider(true);
     }
     $nav->add($node);
-    //$nav -> add($node);
 }
 
-if($mooin_badges) {
-    $nav->add($mooin_badges);
-}
-if($mooin_certificates) {
-    $nav->add($mooin_certificates);
-}
-if($mooin_discussion) {
-    $nav->add($mooin_discussion);
-}
+
+
+
 //$nav->add($mooin_discussion);
 //$nav->add($participantsnode);
-if($participantsnode) {
-    $nav->add($participantsnode);
-}
+
 if($adminnode) {
     $nav->add($adminnode);
 }
