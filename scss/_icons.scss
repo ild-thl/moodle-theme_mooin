@@ -166,3 +166,16 @@
   font-family: "bootstrap-icons";
   font-size: 1.5rem;
 }
+
+.topicsOut {
+  .section_action_menu {
+    .fa-eye {
+      &::before {
+        font-family: "bootstrap-icons";
+        content: " \F47A";
+        margin-left: auto;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
