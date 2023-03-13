@@ -12,7 +12,32 @@
 @import "./subpages";
 @import "./navdrawer";
 
-
+.aalink.focus,
+a.focus.autolink,
+.aalink:focus,
+a.autolink:focus,
+#page-footer a:not([class]).focus,
+#page-footer a:not([class]):focus,
+.arrow_link.focus,
+.arrow_link:focus,
+a:not([class]).focus,
+a:not([class]):focus,
+.activityinstance > a.focus,
+.activityinstance > a:focus {
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  text-decoration: underline;
+  color: inherit;
+}
+.aalink:focus:hover,
+a.autolink:focus:hover,
+#page-footer a:not([class]):focus:hover,
+.arrow_link:focus:hover,
+a:not([class]):focus:hover,
+.activityinstance > a:focus:hover {
+  text-decoration: underline;
+}
 
 // body.format-mooin {
 //   background-color: #f8f8f8;
@@ -50,7 +75,7 @@
     // padding-left: 0;
     // padding-right: 0;
     border: none;
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       background: $background-color;
       //padding: 0;
     }
@@ -140,6 +165,10 @@
 }
 .section .label .mod-indent-outer {
   padding-left: 0;
+}
+.section li.activity {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 // #page-course-view-mooin #region-main,
@@ -285,7 +314,21 @@
     margin: 0 auto;
     transition: 0.5s ease-in-out;
     //bottom: 0.5rem;
+    .progressbar {
+      width: 100%;
+      background-color: #c5ddd3;
+      box-shadow: inset 0px -1px 3px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      height: 1rem;
+      overflow: hidden;
 
+      .progressbar-inner {
+        height: 1rem;
+        background: rgba(56, 148, 107, 0.5);
+        box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.15);
+        //border-radius: 8px 0px 0px 8px;
+      }
+    }
     @include media-breakpoint-up(md) {
       left: 130px;
       right: 130px;
@@ -587,9 +630,12 @@ ul.badges-list.badges {
         border-radius: 50%;
       }
     }
+    a:not([class]):focus {
+      color: #2182cf;;
+    }
   }
 }
 /* Bootstrap Icons in Discussion Nav */
 .path-mod-forum .discussion-nav {
-  font-family: 'bootstrap-icons', 'roboto';
+  font-family: "bootstrap-icons", "roboto";
 }
