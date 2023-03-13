@@ -1,12 +1,12 @@
 @mixin text-layout($color, $icon) {
   padding: 0 1rem 1rem 1rem;
-  width: fit-content;
+  //width: fit-content;
   position: relative;
   border: 0.3rem solid $color;
 
   @include media-breakpoint-up(md) {
     //max-width: 25rem;
-    width: fit-content;
+    //width: fit-content;
   }
 
   h1,

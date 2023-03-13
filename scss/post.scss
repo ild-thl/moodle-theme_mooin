@@ -115,6 +115,14 @@ a:not([class]):focus:hover,
     flex-direction: column;
     width: 100%;
   }
+  .no-overflow {
+    width: 100%;
+  }
+}
+.mod-indent-outer.w-100 {
+  .no-overflow {
+    width: 100%;
+  }
 }
 //Sticky Header
 #region-main {
@@ -169,6 +177,9 @@ a:not([class]):focus:hover,
 .section li.activity {
   padding-left: 0;
   padding-right: 0;
+}
+.breadcrumb:not(:empty) {
+  border: none;
 }
 
 // #page-course-view-mooin #region-main,
