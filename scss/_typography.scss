@@ -29,12 +29,17 @@ h3 {
   font-weight: bold;
   line-height: 1.875rem;
 }
-
+a.caption{
+  text-decoration: underline;
+}
 .caption {
   font-size: 0.875rem;
   line-height: 1.125rem;
   margin: 0;
   //text-transform: capitalize;
+  a{
+    text-decoration: underline;
+  }
 
   @include media-breakpoint-up(md) {
     line-height: 1.5rem;
@@ -46,7 +51,9 @@ h3 {
   line-height: 1.125rem;
   margin: 0;
   //text-transform: capitalize;
-
+  a{
+    text-decoration: underline;
+  }
   @include media-breakpoint-up(md) {
     line-height: 1.5rem;
   }
