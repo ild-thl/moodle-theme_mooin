@@ -8,9 +8,12 @@
   gap: 1.5rem;
 
   /* Newstile for left and right side */
-  .news {
+  .news,
+  .discussion {
     border-radius: 3rem 3rem 0 0;
     background-color: white;
+    // position: relative;
+    // z-index: 2;
 
     @include media-breakpoint-up(md) {
       border-radius: 0;
@@ -186,14 +189,16 @@
         box-shadow: inset 0px -1px 3px 1px rgba(0, 0, 0, 0.2);
         border-radius: 8px;
         height: 1rem;
+        overflow: hidden;
 
         .progressbar-inner {
           height: 1rem;
           background: rgba(56, 148, 107, 0.5);
           box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.15);
-          border-radius: 8px 0px 0px 8px;
+          //border-radius: 8px 0px 0px 8px;
         }
       }
+
     }
 
     /* Container for left side tiles */
@@ -245,7 +250,6 @@
 
         .badges-card-inner {
           padding: 1rem 0;
-
 
           .badges-list {
             li {
@@ -327,7 +331,8 @@
         right: 1.55rem;
       }
 
-      .news {
+      .news,
+      .discussion {
         .news-card {
           max-height: 16.5rem;
           margin-bottom: 1rem;
