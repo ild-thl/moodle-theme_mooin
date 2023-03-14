@@ -105,7 +105,8 @@ a:not([class]):focus:hover,
 // }
 
 /* Course View */
-.section .activity .contentwithoutlink > a, .section .activity .activityinstance > a {
+.section .activity .contentwithoutlink > a,
+.section .activity .activityinstance > a {
   //text-decoration: underline;
 }
 .course-content ul.topics li.section .content,
@@ -177,6 +178,13 @@ a:not([class]):focus:hover,
 .section .label .mod-indent-outer {
   padding-left: 0;
 }
+.mediaplugin,
+.mediaplugin video {
+  >div {
+    max-width: none !important;
+  }
+}
+
 .section li.activity {
   padding-left: 0;
   padding-right: 0;
@@ -299,6 +307,9 @@ a:not([class]):focus:hover,
       //padding: 1rem 0;
     }
     .sectionname {
+      font-size: 1.25rem;
+      font-weight: bold;
+      line-height: 1.875rem;
       text-align: center;
       //margin: 0 3rem;
       hyphens: auto;
