@@ -70,8 +70,10 @@ p {
   }
 }
 
+
 a {
   color: $primary;
+  //text-decoration: underline;
 }
 a:active {
   box-shadow: none !important;
@@ -127,6 +129,9 @@ a:active {
 }
 
 #nav-drawer {
+  a {
+    text-decoration: none;
+  }
   font-size: 18px;
   a[data-key="coursehome"] {
     display: flex;
@@ -145,5 +150,8 @@ a:active {
   .section {
     font-size: 16px;
     line-height: 30px;
+    a{
+      text-decoration: underline;
+    }
   }
 }
