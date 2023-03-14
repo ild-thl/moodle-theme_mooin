@@ -2,12 +2,17 @@
 
 /* Changes Breakpoint for overlapping navdrawer */
 body.drawer-open-left {
+  //margin-left: 380px;
   @include media-breakpoint-down(lg) {
     margin-left: 0;
   }
 }
+#nav-drawer.closed {
+  //left: -380px;
+}
 
 #nav-drawer {
+  //width: 380px;
   hr {
     margin: 0;
     border-color: #d9d9d9;
@@ -54,7 +59,6 @@ body.drawer-open-left {
       transform: translateY(0px);
     }
     background-color: #d9d9d9;
-
   }
   .completed {
     display: flex;
@@ -109,14 +113,20 @@ body.drawer-open-left {
     //   bottom: 0;
     // }
   }
+  a[data-key="format_mooin_unenrol"] {
+    box-shadow: none;
+    .media-left {
+      display: none;
+    }
+  }
 }
 
 // Background Color Navdrawer
 #nav-drawer {
-  background-color: $background-color;
+  //background-color: $background-color;
+  background-color: white;
   border-right: $border-style;
   hyphens: auto;
-
 
   .list-group {
     .list-group-item {
@@ -125,9 +135,9 @@ body.drawer-open-left {
       &.active {
         background-color: #d9d9d9;
         color: black;
-        hr {display: none;}
-
-
+        hr {
+          display: none;
+        }
       }
     }
   }

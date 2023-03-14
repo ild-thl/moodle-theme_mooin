@@ -173,6 +173,7 @@
 
     /* Left side main content */
     .inner-wrapper {
+      margin-bottom: 1rem;
       border-radius: 2rem;
       background-color: white;
       transform: translateY(-3rem);
@@ -198,7 +199,6 @@
           //border-radius: 8px 0px 0px 8px;
         }
       }
-
     }
 
     /* Container for left side tiles */
@@ -461,4 +461,10 @@
   font-size: 1rem;
   color: $primary;
   padding-right: 0;
+}
+.unenrol-link {
+  margin-left: 3rem;
+  @include media-breakpoint-up(md) {
+    margin-left: 3.875rem;
+  }
 }
