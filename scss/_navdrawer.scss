@@ -93,14 +93,14 @@ body.drawer-open-left {
     hr {
       display: none;
     }
-    &::after {
-      position: absolute;
-      margin-left: auto;
-      margin-right: 0.5rem;
-      right: 0.5rem;
-      font-family: "bootstrap-icons";
-      content: "\F231";
-    }
+    // &::after {
+    //   position: absolute;
+    //   margin-left: auto;
+    //   margin-right: 0.5rem;
+    //   right: 0.5rem;
+    //   font-family: "bootstrap-icons";
+    //   content: "\F231";
+    // }
     //position: relative;
     // &::before {
     //   content: '';
