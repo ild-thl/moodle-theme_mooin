@@ -27,7 +27,7 @@ a:not([class]):focus,
   background-color: transparent;
   outline: none;
   box-shadow: none;
-  text-decoration: underline;
+  //text-decoration: underline;
   color: inherit;
 }
 .aalink:focus:hover,
@@ -36,7 +36,7 @@ a.autolink:focus:hover,
 .arrow_link:focus:hover,
 a:not([class]):focus:hover,
 .activityinstance > a:focus:hover {
-  text-decoration: underline;
+  //text-decoration: underline;
 }
 
 // body.format-mooin {
@@ -106,7 +106,7 @@ a:not([class]):focus:hover,
 
 /* Course View */
 .section .activity .contentwithoutlink > a, .section .activity .activityinstance > a {
-  text-decoration: underline;
+  //text-decoration: underline;
 }
 .course-content ul.topics li.section .content,
 .course-content ul.weeks li.section .content {
@@ -485,7 +485,7 @@ a:not([class]):focus:hover,
     nav {
       z-index: 20;
       a {
-        text-decoration: underline;
+        //text-decoration: underline;
       }
 
       @include media-breakpoint-up(md) {
@@ -636,7 +636,7 @@ ul.badges-list.badges {
       position: relative;
       font-size: 0.875rem;
       line-height: 0.9375rem;
-      color: #2182cf;
+      //color: #2182cf;
 
       &::before {
         font-family: "bootstrap-icons";
@@ -648,7 +648,7 @@ ul.badges-list.badges {
       }
     }
     a:not([class]):focus {
-      color: #2182cf;
+      //color: #2182cf;
     }
   }
 }

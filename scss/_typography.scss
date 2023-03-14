@@ -30,7 +30,7 @@ h3 {
   line-height: 1.875rem;
 }
 a.caption{
-  text-decoration: underline;
+  //text-decoration: underline;
 }
 .caption {
   font-size: 0.875rem;
@@ -38,7 +38,7 @@ a.caption{
   margin: 0;
   //text-transform: capitalize;
   a{
-    text-decoration: underline;
+    //text-decoration: underline;
   }
 
   @include media-breakpoint-up(md) {
@@ -52,7 +52,7 @@ a.caption{
   margin: 0;
   //text-transform: capitalize;
   a{
-    text-decoration: underline;
+    //text-decoration: underline;
   }
   @include media-breakpoint-up(md) {
     line-height: 1.5rem;
@@ -81,14 +81,14 @@ a:active {
 
 .primary-link {
   font-size: 0.875rem;
-  text-decoration: underline;
+  //text-decoration: underline;
   color: $primary;
   //color: #3582b1;
   line-height: 1.125rem;
 
   a {
     font-size: 0.75rem;
-    text-decoration: underline;
+    //text-decoration: underline;
     color: $primary;
     //color: #3582b1;
     line-height: 1.125rem;
@@ -100,7 +100,7 @@ a:active {
 
     a {
       font-size: 1rem;
-      text-decoration: underline;
+      //text-decoration: underline;
       color: $primary;
       //color: #3582b1;
       line-height: 1.5rem;
@@ -151,7 +151,7 @@ a:active {
     font-size: 16px;
     line-height: 30px;
     a{
-      text-decoration: underline;
+      //text-decoration: underline;
     }
   }
 }
