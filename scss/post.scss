@@ -105,6 +105,9 @@ a:not([class]):focus:hover,
 // }
 
 /* Course View */
+.section .activity .contentwithoutlink > a, .section .activity .activityinstance > a {
+  text-decoration: underline;
+}
 .course-content ul.topics li.section .content,
 .course-content ul.weeks li.section .content {
   display: flex;
@@ -645,7 +648,7 @@ ul.badges-list.badges {
       }
     }
     a:not([class]):focus {
-      color: #2182cf;;
+      color: #2182cf;
     }
   }
 }
