@@ -72,6 +72,7 @@ $coursenodes = $nav -> type(30);
 $home = $nav -> get('home');
 $home ->set_showdivider(false);
 $myhome = $nav -> get('myhome');
+$unenrol = $nav -> get('format_mooin_unenrol');
 
 
 
@@ -131,6 +132,9 @@ foreach($coursenodes as $node) {
 
 if($adminnode) {
     $nav->add($adminnode);
+}
+if($unenrol) {
+    $nav->add($unenrol);
 }
 
 //Remove the Activity Nodes
