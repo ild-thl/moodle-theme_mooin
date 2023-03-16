@@ -352,6 +352,7 @@ a:not([class]):focus:hover,
         background: rgba(56, 148, 107, 0.5);
         box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.15);
         //border-radius: 8px 0px 0px 8px;
+        transition: width 1s ease-in-out;
       }
     }
     @include media-breakpoint-up(md) {
