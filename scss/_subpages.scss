@@ -2,6 +2,9 @@
 
 /* Forums Page - List of all Discussion Forums */
 #page-course-format-mooin-alle_forums {
+  .forum_elemts_in_list:hover {
+    background-color: #d9d9d9;
+  }
   .border-card {
     padding: 0;
     border: none;
@@ -21,6 +24,9 @@
         margin-left: 1rem;
       }
     }
+  }
+  .markasunreadlink {
+    margin-left: auto;
   }
 }
 
