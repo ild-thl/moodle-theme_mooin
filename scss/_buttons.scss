@@ -74,7 +74,9 @@
   }
 
   .btn-continue {
-    //max-width: 218px;
+    min-width: 200px;
+    white-space: nowrap;
+    padding: 0 .3rem;
     &::after {
       font-family: bootstrap-icons;
       content: "\F231";
