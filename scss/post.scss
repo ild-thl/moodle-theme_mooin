@@ -490,6 +490,17 @@ a:not([class]):focus:hover,
   }
 }
 
+#page-course-view-mooin {
+  .side.right {
+    display: none;
+  }
+
+}
+.editing .section .activity .mod-indent-outer {
+  padding-right: 10rem;
+}
+
+
 /* Completion Modals */
 /* The Modal (background) */
 .modal_style {
@@ -567,7 +578,6 @@ a:not([class]):focus:hover,
   margin: 0 auto;
 }
 .modal_button_close.text_close {
-
 }
 
 .text_close {
@@ -588,7 +598,7 @@ a:not([class]):focus:hover,
   display: flex;
   width: 100%;
   gap: 45px;
-  .btn-white{
+  .btn-white {
     background-color: white;
     color: $primary;
     &::after {
@@ -755,7 +765,7 @@ ul.badges-list.badges {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: flex-start;
 
   li {
