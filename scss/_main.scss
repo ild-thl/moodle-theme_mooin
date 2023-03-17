@@ -287,10 +287,12 @@
         border-radius: 0.25rem;
 
         .certificate-card-inner {
+          padding: 1rem 0;
           display: flex;
           .certificat_list {
             div {
               max-width: 33.3%;
+              width: 150px;
 
               a {
                 &::before {

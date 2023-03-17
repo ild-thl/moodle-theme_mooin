@@ -99,11 +99,12 @@
     }
   }
 }
-/* Badges Overview */
+/* Badges and Certificates Overview */
 #page-course-format-mooin-badges,
+#page-course-format-mooin-certificates,
 .format-mooin.path-user {
-  .badges-list {
-    li {
+  .badges-list, .certificat_list {
+    li, >div {
       position: relative;
       width: 50%;
 
