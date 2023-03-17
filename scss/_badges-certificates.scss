@@ -89,8 +89,9 @@
   background-position: center;
 }
 
-/* Certificate Icon */
-.certificate-img {
+/* Certificate Image */
+a.certificate-img,
+span.certificate-img {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -98,6 +99,8 @@
   align-items: center;
   text-align: center;
   padding-top: 1rem;
+  font-size: 0.875rem;
+  width: 100px;
   &::before {
     content: "";
     width: 100px;
@@ -123,4 +126,7 @@
     font-size: 0.875rem;
     width: 100px;
   }
+}
+span.certificate-img {
+  opacity: 0.2;
 }

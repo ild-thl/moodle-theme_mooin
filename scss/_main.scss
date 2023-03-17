@@ -290,31 +290,31 @@
           padding: 1rem 0;
           display: flex;
           .certificat_list {
-            div {
+            span,
+            a {
               max-width: 33.3%;
               width: 150px;
+              &::before {
+                font-size: 1.5rem;
+                left: 3.3rem;
+                top: -1.6rem;
+                z-index: 2;
+              }
+              &::after {
+                top: -2rem;
+                left: -0.7rem;
+                width: 4.5rem;
+                height: 3rem;
+              }
 
-              a {
-                &::before {
-                  font-size: 1.5rem;
-                  left: 3.3rem;
-                  top: -1.6rem;
-                  z-index: 2;
-                }
-                &::after {
-                  top: -2rem;
-                  left: -0.7rem;
-                  width: 4.5rem;
-                  height: 3rem;
-                }
-
-                img {
-                  width: 4.5rem !important;
-                  height: 4.5rem !important;
-                }
+              img {
+                width: 4.5rem !important;
+                height: 4.5rem !important;
               }
             }
-            div:nth-child(n + 4) {
+
+            a:nth-child(n + 4),
+            span:nth-child(n + 4) {
               display: none;
             }
           }
@@ -490,7 +490,6 @@
     &:hover {
       text-decoration: none;
     }
-
 
     &::after {
       font-family: "bootstrap-icons";
