@@ -494,6 +494,11 @@ a:not([class]):focus:hover,
   .side.right {
     display: none;
   }
+  .topicsOut {
+    .side.right {
+      display: block;
+    }
+  }
 
 }
 .editing .section .activity .mod-indent-outer {
