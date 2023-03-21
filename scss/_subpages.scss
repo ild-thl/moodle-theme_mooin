@@ -2,8 +2,10 @@
 
 /* Forums Page - List of all Discussion Forums */
 #page-course-format-mooin-alle_forums {
-  .forum_elemts_in_list:hover {
-    background-color: #d9d9d9;
+  @include media-breakpoint-up(md) {
+    .forum_elemts_in_list:hover {
+      background-color: #d9d9d9;
+    }
   }
   .border-card {
     padding: 0;
@@ -18,15 +20,34 @@
     .forum_elemts_in_list {
       display: flex;
       align-items: center;
+      margin: .5rem 0;
+      @include media-breakpoint-up(md) {
+        margin: 0;
+      }
 
       .count-container {
         position: static;
-        margin-left: 1rem;
+        margin: 0 1rem;
+        flex-shrink: 0;
       }
     }
   }
   .markasunreadlink {
     margin-left: auto;
+  }
+  .markasunreadlink-mobile {
+    margin-left: auto;
+    width: fit-content;
+    white-space: nowrap;
+    padding: 0 0.5rem;
+    border: 1px solid #004161;
+    //box-shadow: none;
+    &::after {
+      font-family: "bootstrap-icons";
+      content: "\F26E";
+      font-size: 1.5rem;
+      color: $primary;
+    }
   }
 }
 
@@ -103,8 +124,11 @@
 #page-course-format-mooin-badges,
 #page-course-format-mooin-certificates,
 .format-mooin.path-user {
-  .badges-list, .certificat_list {
-    li, >span, a {
+  .badges-list,
+  .certificat_list {
+    li,
+    > span,
+    a {
       position: relative;
       width: 50%;
 
@@ -159,11 +183,10 @@
     .no-forum-img {
       width: 220px;
       margin: 0;
-
     }
     .no-certificates-text,
     .no-badge-tex,
-    .no-forums-text{
+    .no-forums-text {
       max-width: 100%;
       padding-left: 0.5rem;
       padding-top: 1rem;
@@ -180,7 +203,8 @@
 
 /* Participants Map adjustments */
 .format-mooin.path-user {
-  .leaflet-top, .leaflet-bottom {
+  .leaflet-top,
+  .leaflet-bottom {
     z-index: 500;
   }
 }
