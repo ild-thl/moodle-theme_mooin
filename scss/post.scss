@@ -117,7 +117,7 @@ a:not([class]):focus:hover,
   .section {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    //width: 100%;
   }
   .no-overflow {
     width: 100%;
@@ -362,6 +362,18 @@ a:not([class]):focus:hover,
   }
 }
 /* Scrollheader */
+.editing {
+  .scroll-up,
+  .scroll-down {
+    transform: none !important;
+    .inner-title-navigation,
+    .custom-navbar,
+    .custom-navbar-mobile {
+      transform: none !important;
+      opacity: 1;
+    }
+  }
+}
 .scroll-up {
   transform: none;
   transition: 0.2s ease-in-out;
@@ -379,6 +391,7 @@ a:not([class]):focus:hover,
     transform: none;
   }
 }
+
 .scroll-down {
   transition: 0.2s ease-in-out;
   transform: translateY(-80px);
@@ -499,12 +512,10 @@ a:not([class]):focus:hover,
       display: block;
     }
   }
-
 }
 .editing .section .activity .mod-indent-outer {
   padding-right: 10rem;
 }
-
 
 /* Completion Modals */
 /* The Modal (background) */
