@@ -61,6 +61,7 @@
     background-color: white;
     max-width: 50rem;
     height: fit-content;
+    min-width: 0;
 
     @include media-breakpoint-up(md) {
       border-radius: 0.625rem 0.625rem 2rem 2rem;
