@@ -90,9 +90,9 @@ if($myhome) {
     $nav->add($myhome);
 }
 
-if($mycourses) {
-    $nav->add($mycourses);
-}
+// if($mycourses) {
+//     $nav->add($mycourses);
+// }
 if($coursehome) {
     $coursehome->set_showdivider(true);
     $coursehome->make_active();
