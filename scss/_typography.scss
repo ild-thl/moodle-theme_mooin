@@ -3,6 +3,9 @@
 body {
   font-family: "Roboto";
   font-size: 1rem;
+  // @media (max-width: 350px) {
+  //   font-size: 0.75rem;
+  // }
 }
 .fw-400 {
   font-weight: 400;
@@ -141,7 +144,7 @@ a:active {
     font-size: 14px;
     line-height: 36px;
     //height: 42px;
-    padding: 0 0 0 2.5rem;
+    padding: 0 1.25rem;
     .icon {
       display: none;
     }
