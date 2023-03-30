@@ -544,22 +544,32 @@ a:not([class]):focus:hover,
   margin: auto; /* 15% from the top and centered */
   border: 1px solid #888;
   width: 360px;
-  height: 280px;
+  //height: 280px;
   text-align: center;
-  padding: 55px 10px;
+  padding: 10px 10px 22px 10px;
+  border-radius: 8px;
+
+  .modal-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+  }
 
   h3 {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 30px;
-    letter-spacing: 0em;
     text-align: center;
     margin: 0;
-    width: 250px;
+    max-width: 275px;
+    padding-top: 1.5rem;
   }
-  .bi-check-circle {
-    font-size: 1.5rem;
-    color: $primary;
+  .bi-check-circle,
+  .bi-star,
+  .bi-mortarboard-fill {
+    padding: 2rem 0;
+    font-size: 6rem;
+    color: rgba(56, 148, 107, 0.5);
   }
 }
 
@@ -593,7 +603,8 @@ a:not([class]):focus:hover,
   text-align: center;
   margin: 0 auto;
 }
-.modal_button_close.text_close {
+.modal_button_close{
+  max-width: 156px;
 }
 
 .text_close {
