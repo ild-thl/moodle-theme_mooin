@@ -56,7 +56,7 @@ button.close:focus,
   border-radius: 0 0 2rem 2rem;
 
   .topics {
-    #section-0{
+    #section-0 {
       display: none;
     }
   }
@@ -78,6 +78,34 @@ button.close:focus,
   .block.hidden,
   .block.invisible {
     display: flex;
+  }
+
+  .hidden:not(.sectiondraggable) {
+    @extend .locked;
+  }
+  // li.section.hidden .sectionname > span {
+  //   color: black;
+  //   font-weight: 600;
+  // }
+
+  a.dimmed,
+  a.dimmed:link,
+  a.dimmed:visited,
+  a.dimmed_text,
+  a.dimmed_text:link,
+  a.dimmed_text:visited,
+  .dimmed_text,
+  .dimmed_text a,
+  .dimmed_text a:link,
+  .dimmed_text a:visited,
+  .usersuspended,
+  .usersuspended a,
+  .usersuspended a:link,
+  .usersuspended a:visited,
+  .dimmed_category,
+  .dimmed_category a {
+    color: black;
+    font-weight: 600;
   }
 
   .sectiondraggable {
@@ -166,7 +194,7 @@ button.close:focus,
     padding: 0;
     display: flex;
     align-items: center;
-    a{
+    a {
       //text-decoration: underline;
     }
   }
@@ -186,6 +214,16 @@ button.close:focus,
       content: " \F47A";
       margin-left: auto;
       margin-right: 0.5rem;
+    }
+  }
+  .completed.hidden {
+    &::after {
+      font-family: "bootstrap-icons";
+      content: " \F47A";
+      margin-left: auto;
+      margin-right: 0.5rem;
+      color: black;
+      font-size: 1rem;
     }
   }
   .active {
