@@ -155,4 +155,4 @@ $THEME->darrow ='&#xF229';
 
 
 //delete later
-$CFG->cachejs = false;
+//$CFG->cachejs = false;
