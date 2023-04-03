@@ -25,7 +25,7 @@ $plugin->requires = '2021051100';
 
 // This is the component name of the plugin - it always starts with 'theme_'
 // for themes and should be the same as the name of the folder.
-$plugin->component = 'theme_mooin';
+$plugin->component = 'theme_mooin4';
 
 // This is a list of plugins, this plugin depends on (and their versions).
 $plugin->dependencies = [

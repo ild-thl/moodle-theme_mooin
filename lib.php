@@ -19,7 +19,7 @@ defined('MOODLE_INTERNAL') || die();
 
 
 // Main SCSS.
-function theme_mooin_get_main_scss_content($theme) {
+function theme_mooin4_get_main_scss_content($theme) {
     global $CFG;
 
     $scss = '';
@@ -33,8 +33,8 @@ function theme_mooin_get_main_scss_content($theme) {
     } else if ($filename == 'plain.scss') {
         // We still load the default preset files directly from the boost theme. No sense in duplicating them.
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/plain.scss');
-    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_mooin', 'preset', 0, '/', $filename))) {
-        // This preset file was fetched from the file area for theme_mooin and not theme_boost (see the line above).
+    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_mooin4', 'preset', 0, '/', $filename))) {
+        // This preset file was fetched from the file area for theme_mooin4 and not theme_boost (see the line above).
         $scss .= $presetfile->get_content();
     } else {
         // Safety fallback - maybe new installs etc.
@@ -42,9 +42,9 @@ function theme_mooin_get_main_scss_content($theme) {
     }
 
     // Pre CSS - this is loaded AFTER any prescss from the setting but before the main scss.
-    $pre = file_get_contents($CFG->dirroot . '/theme/mooin/scss/pre.scss');
+    $pre = file_get_contents($CFG->dirroot . '/theme/mooin4/scss/pre.scss');
     // Post CSS - this is loaded AFTER the main scss but before the extra scss from the setting.
-    $post = file_get_contents($CFG->dirroot . '/theme/mooin/scss/post.scss');
+    $post = file_get_contents($CFG->dirroot . '/theme/mooin4/scss/post.scss');
 
     // Combine them together.
     return $pre . "\n" . $scss . "\n" . $post;

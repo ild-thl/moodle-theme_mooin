@@ -1,6 +1,6 @@
 <?php
 
-class theme_mooin_core_renderer extends core_renderer
+class theme_mooin4_core_renderer extends core_renderer
 {
   public function full_header()
   {

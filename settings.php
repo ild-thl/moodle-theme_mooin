@@ -22,22 +22,22 @@ defined('MOODLE_INTERNAL') || die();
 if ($ADMIN->fulltree) {
 
     // Boost provides a nice setting page which splits settings onto separate tabs. We want to use it here.
-    $settings = new theme_boost_admin_settingspage_tabs('themesettingmooin', get_string('configtitle', 'theme_mooin'));
+    $settings = new theme_boost_admin_settingspage_tabs('themesettingmooin4', get_string('configtitle', 'theme_mooin4'));
 
     // Each page is a tab - the first is the "General" tab.
-    $page = new admin_settingpage('theme_mooin_general', get_string('generalsettings', 'theme_mooin'));
+    $page = new admin_settingpage('theme_mooin4_general', get_string('generalsettings', 'theme_mooin4'));
 
     // Replicate the preset setting from boost.
-    $name = 'theme_mooin/preset';
-    $title = get_string('preset', 'theme_mooin');
-    $description = get_string('preset_desc', 'theme_mooin');
+    $name = 'theme_mooin4/preset';
+    $title = get_string('preset', 'theme_mooin4');
+    $description = get_string('preset_desc', 'theme_mooin4');
     $default = 'default.scss';
 
     // We list files in our own file area to add to the drop down. We will provide our own function to
     // load all the presets from the correct paths.
     $context = context_system::instance();
     $fs = get_file_storage();
-    $files = $fs->get_area_files($context->id, 'theme_mooin', 'preset', 0, 'itemid, filepath, filename', false);
+    $files = $fs->get_area_files($context->id, 'theme_mooin4', 'preset', 0, 'itemid, filepath, filename', false);
 
     $choices = [];
     foreach ($files as $file) {
@@ -52,9 +52,9 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     // Preset files setting.
-    $name = 'theme_mooin/presetfiles';
-    $title = get_string('presetfiles', 'theme_mooin');
-    $description = get_string('presetfiles_desc', 'theme_mooin');
+    $name = 'theme_mooin4/presetfiles';
+    $title = get_string('presetfiles', 'theme_mooin4');
+    $description = get_string('presetfiles_desc', 'theme_mooin4');
 
     $setting = new admin_setting_configstoredfile(
         $name,
@@ -68,9 +68,9 @@ if ($ADMIN->fulltree) {
 
     // Variable $brand-color.
     // We use an empty default value because the default colour should come from the preset.
-    $name = 'theme_mooin/brandcolor';
-    $title = get_string('brandcolor', 'theme_mooin');
-    $description = get_string('brandcolor_desc', 'theme_mooin');
+    $name = 'theme_mooin4/brandcolor';
+    $title = get_string('brandcolor', 'theme_mooin4');
+    $description = get_string('brandcolor_desc', 'theme_mooin4');
     $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
@@ -79,13 +79,13 @@ if ($ADMIN->fulltree) {
     $settings->add($page);
 
     // Advanced settings.
-    $page = new admin_settingpage('theme_mooin_advanced', get_string('advancedsettings', 'theme_mooin'));
+    $page = new admin_settingpage('theme_mooin4_advanced', get_string('advancedsettings', 'theme_mooin4'));
 
     // Raw SCSS to include before the content.
     $setting = new admin_setting_configtextarea(
-        'theme_mooin/scsspre',
-        get_string('rawscsspre', 'theme_mooin'),
-        get_string('rawscsspre_desc', 'theme_mooin'),
+        'theme_mooin4/scsspre',
+        get_string('rawscsspre', 'theme_mooin4'),
+        get_string('rawscsspre_desc', 'theme_mooin4'),
         '',
         PARAM_RAW
     );
@@ -94,9 +94,9 @@ if ($ADMIN->fulltree) {
 
     // Raw SCSS to include after the content.
     $setting = new admin_setting_configtextarea(
-        'theme_mooin/scss',
-        get_string('rawscss', 'theme_mooin'),
-        get_string('rawscss_desc', 'theme_mooin'),
+        'theme_mooin4/scss',
+        get_string('rawscss', 'theme_mooin4'),
+        get_string('rawscss_desc', 'theme_mooin4'),
         '',
         PARAM_RAW
     );

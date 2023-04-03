@@ -129,7 +129,7 @@ $THEME->layouts = [
     )
 ];
 
-$THEME->name = 'mooin';
+$THEME->name = 'mooin4';
 $THEME->sheets = ['bootstrap-icons'];
 $THEME->editor_sheets = [];
 $THEME->parents = ['boost'];
@@ -139,7 +139,7 @@ $THEME->requiredblocks = '';
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 $THEME->hidefromselector = false;
 $THEME->scss = function ($theme) {
-    return theme_mooin_get_main_scss_content($theme);
+    return theme_mooin4_get_main_scss_content($theme);
 };
 // Override Renderer.
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
