@@ -20,7 +20,7 @@
     .forum_elemts_in_list {
       display: flex;
       align-items: center;
-      margin: .5rem 0;
+      margin: 0.5rem 0;
       @include media-breakpoint-up(md) {
         margin: 0;
       }
@@ -105,10 +105,13 @@
       padding: 0 30px;
     }
   }
-  .navbar_desktop {
+
+  .navbar_desktop,
+  .custom-navbar {
     padding-left: 0;
     margin-bottom: 0;
-    span[itemprop="title"] {
+    span[itemprop="title"],
+    .course-title {
       max-width: min(calc(100vw - 200px), 600px);
       white-space: nowrap;
       overflow: hidden;
