@@ -81,6 +81,7 @@ a:not([class]):focus:hover,
     }
     .breadcrumb:not(:empty) {
       border: none;
+      padding: 0.25rem 0;
       // margin-left: 0;
       // margin-right: 0;
     }
