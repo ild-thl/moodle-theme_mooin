@@ -76,7 +76,7 @@
     }
   }
 }
-.format-mooin.path-user,
+#page-course-view-mooin.path-user,
 #page-course-format-mooin-alle_forums,
 #page-course-format-mooin-certificates,
 #page-course-format-mooin-badges {
@@ -86,6 +86,9 @@
   #page-content {
     nav {
       padding-bottom: 0;
+      .breadcrumb {
+        margin-left: 0 !important;
+      }
     }
   }
 

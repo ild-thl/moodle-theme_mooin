@@ -81,6 +81,15 @@ a:not([class]):focus:hover,
     }
     .breadcrumb:not(:empty) {
       border: none;
+      // margin-left: 0;
+      // margin-right: 0;
+    }
+    .metadetail-body ul,
+    ol {
+      margin-left: 0px !important;
+      @include media-breakpoint-up(md) {
+        margin-left: 130px !important;
+      }
     }
   }
 }
@@ -155,7 +164,7 @@ a:not([class]):focus:hover,
   .topics {
     padding: 0 1rem;
     @include media-breakpoint-up(md) {
-      padding: 0 130px;
+      padding: 20px 130px;
     }
     .section {
       margin: 0;
@@ -243,8 +252,11 @@ a:not([class]):focus:hover,
 
   .custom-navbar {
     max-width: 740px;
-    margin: 0 130px;
+    //margin: 0 130px;
     padding-bottom: 1rem;
+    @include media-breakpoint-up(md) {
+      margin: 0 130px;
+    }
   }
 
   .mdl-right,
@@ -603,7 +615,7 @@ a:not([class]):focus:hover,
   text-align: center;
   margin: 0 auto;
 }
-.modal_button_close{
+.modal_button_close {
   max-width: 156px;
 }
 
@@ -685,43 +697,57 @@ a:not([class]):focus:hover,
 
 .custom-navbar {
   transition: 0.2s ease-in-out;
-  display: none;
+  //display: none;
   @include media-breakpoint-up(md) {
-    display: block;
+    //display: block;
   }
 }
 .custom-navbar-mobile {
   transition: 0.2s ease-in-out;
-  display: block;
+  display: none;
   @include media-breakpoint-up(md) {
     display: none;
   }
 }
+
 //Navbars should be one line
-.navbar_desktop {
+.navbar_desktop,
+.custom-navbar {
   flex-wrap: nowrap;
 
   li {
     white-space: nowrap;
   }
-  span[itemprop="title"] {
-    max-width: 400px;
+  span[itemprop="title"],
+  .course-title {
+    max-width: calc(100vw - 200px);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
+    @include media-breakpoint-up(md) {
+      max-width: 400px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
   }
   .breadcrumd_in_section {
     white-space: nowrap;
   }
-  .chap {
-    min-width: 105px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
+  .chap,
+  .chapter {
+    @include media-breakpoint-up(md) {
+      min-width: 105px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
   }
-  .sec {
+  .sec,
+  section {
     white-space: nowrap;
   }
 }
