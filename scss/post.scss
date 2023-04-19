@@ -52,6 +52,17 @@ a:not([class]):focus:hover,
 //   }
 // }
 
+//remove padding form all breadcbrumbs
+
+  .metadetail-body ul,
+  .breadcrumb.ol {
+    margin-left: 0px !important;
+    @include media-breakpoint-up(md) {
+      margin-left: 130px !important;
+    }
+  }
+
+
 #page-course-view-mooin,
 #page-course-format-mooin-badges,
 #page-course-format-mooin-certificates,

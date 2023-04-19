@@ -37,4 +37,25 @@ class theme_mooin4_core_renderer extends core_renderer
     return $this->render_from_template('core/full_header', $header);
 
   }
+
+   /**
+     * This renders the navbar.
+     * Uses bootstrap compatible html.
+     */
+    public function navbar() {
+      global $PAGE, $OUTPUT, $COURSE;
+     $items = $PAGE->navbar->get_items();
+     $short_items = [];
+
+    //Split the navbar array at coursehome
+     foreach($items as $item) {
+        if ($item->key === $COURSE->id) {
+            $short_items = array_splice($items, intval(array_search($item, $items)));
+        }
+     }
+     $templatecontext = array(
+      'get_items'=> $short_items
+  );
+      return $this->render_from_template('core/navbar', $templatecontext);
+  }
 }

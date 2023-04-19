@@ -23,13 +23,14 @@ $THEME->layouts = [
         'file' => 'columns4.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
-        'options' => array('langmenu' => true)
+        'options' => array('langmenu' => true, 'nonavbar' => true)
     ),
     // Part of course, typical for modules - default page layout if $cm specified in require_login().
     'incourse' => array(
         'file' => 'columns3.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
+        'options' => array('nonavbar' => true),
     ),
     // Most backwards compatible layout without the blocks - this is the layout used by default.
     'base' => array(
