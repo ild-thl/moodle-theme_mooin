@@ -54,14 +54,17 @@ a:not([class]):focus:hover,
 
 //remove padding form all breadcbrumbs
 
-  .metadetail-body ul,
-  .breadcrumb.ol {
-    margin-left: 0px !important;
-    @include media-breakpoint-up(md) {
-      margin-left: 130px !important;
-    }
-  }
+.metadetail-body ul,
+ol {
+  margin-left: 15px !important;
+}
 
+.format-mooin {
+  ol.breadcrumb:not(:empty) {
+    margin-left: 0 !important;
+    //margin-bottom: 0.5rem;
+  }
+}
 
 #page-course-view-mooin,
 #page-course-format-mooin-badges,
@@ -95,6 +98,10 @@ a:not([class]):focus:hover,
       padding: 0.25rem 0;
       // margin-left: 0;
       // margin-right: 0;
+      .breadcrumb-item {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
     }
     .metadetail-body ul,
     ol {
@@ -265,9 +272,9 @@ a:not([class]):focus:hover,
   .custom-navbar {
     max-width: 740px;
     //margin: 0 130px;
-    padding-bottom: 1rem;
+    //padding-bottom: 1rem;
     @include media-breakpoint-up(md) {
-      margin: 0 130px;
+      margin: 0 130px 0.5rem 130px;
     }
   }
 
