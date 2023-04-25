@@ -97,7 +97,7 @@ if($myhome) {
 //$nav->add($mycourses);
 if($coursehome) {
     $coursehome->set_showdivider(true);
-    //$coursehome->make_active();
+    $coursehome->make_active();
     $nav->add($coursehome);
 }
 if($mooin_newsforum) {
