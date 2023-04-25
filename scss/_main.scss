@@ -64,7 +64,7 @@
     min-width: 0;
 
     @include media-breakpoint-up(md) {
-      border-radius: 0.625rem 0.625rem 2rem 2rem;
+      border-radius: 0.625rem;
       width: 50rem;
     }
 
@@ -231,7 +231,7 @@
     .badges-certificates-card {
       width: 25rem;
       background-color: white;
-      border-radius: 0.5rem;
+      border-radius: 0.625rem;
       margin-bottom: 1.5rem;
 
       @include media-breakpoint-up(md) {
@@ -326,7 +326,7 @@
     .community {
       position: relative;
       background-color: white;
-      border-radius: 0.5rem;
+      border-radius: 0.625rem;
 
       .info-tip {
         position: absolute;
