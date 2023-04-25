@@ -50,7 +50,14 @@ button.close:focus,
   outline: 0;
   box-shadow: none;
 }
-
+.editing {
+  .topicsOut {
+    #section-1 {
+      display: block !important;
+      padding-left: 2rem;
+    }
+  }
+}
 .topicsOut {
   //padding-top: 1rem;
   border-radius: 0 0 2rem 2rem;
@@ -59,6 +66,7 @@ button.close:focus,
     #section-0 {
       display: none;
     }
+
   }
   .container-md {
     h2 {
