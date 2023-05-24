@@ -335,6 +335,7 @@ ol {
     justify-content: space-between;
     //height: 50px;
     height: auto;
+    min-height: 3rem;
 
     @include media-breakpoint-up(md) {
       //padding: 1rem 0;
@@ -410,10 +411,13 @@ ol {
       opacity: 1;
     }
   }
-  .course-content .single-section .navigationtitle .inner-title-navigation .sectionname {
+  .course-content
+    .single-section
+    .navigationtitle
+    .inner-title-navigation
+    .sectionname {
     margin: 20px 130px;
   }
-
 }
 .scroll-up {
   transform: none;
@@ -557,6 +561,50 @@ ol {
 }
 .editing .section .activity .mod-indent-outer {
   padding-right: 10rem;
+}
+
+/* Mooin Modals */
+.mooin-modal {
+  .modal-content {
+    width: 340px;
+    height: 340px;
+    max-width: 340px;
+    max-height: 340px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    border: none;
+    .modal-header {
+      padding-top: 9px;
+      border: none;
+      .modal-title {
+        margin: 0 auto;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 30px;
+      }
+      .close {
+        font-size: 18px;
+        color: $primary;
+        opacity: 1;
+        position: absolute;
+        right: 9px;
+        top: 9px;
+      }
+    }
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        font-size: 20px;
+        text-align: center;
+      }
+      .bi {
+        font-size: 100px;
+        color: rgba(56, 148, 107, 0.5);
+      }
+    }
+  }
 }
 
 /* Completion Modals */
