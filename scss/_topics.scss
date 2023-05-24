@@ -112,8 +112,8 @@ button.close:focus,
   .usersuspended a:visited,
   .dimmed_category,
   .dimmed_category a {
-    color: black;
-    font-weight: 600;
+    // color: black;
+    // font-weight: 600;
   }
 
   .sectiondraggable {
@@ -217,6 +217,9 @@ button.close:focus,
     }
   }
   .locked {
+    .section-title {
+      color: #6a737b;
+    }
     &::after {
       font-family: "bootstrap-icons";
       content: " \F47A";
