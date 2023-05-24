@@ -60,6 +60,7 @@ $nav = $PAGE->flatnav;
 $adminnode = $nav -> get('sitesettings');
 $mycourses = $nav -> get('mycourses');
 $coursehome = $nav -> get('coursehome');
+$overview = $nav -> get('format_mooin_course_overview');
 $mooin_newsforum = $nav -> get('format_mooin_newsforum');
 $mooin_badges = $nav -> get('format_mooin_badges');
 $mooin_certificates = $nav -> get('format_mooin_certificates');
@@ -97,8 +98,13 @@ if($myhome) {
 //$nav->add($mycourses);
 if($coursehome) {
     $coursehome->set_showdivider(true);
+    $coursehome->action = null;
     $coursehome->make_active();
     $nav->add($coursehome);
+}
+if ($overview) {
+    //$overview->make_inactive();
+    $nav->add($overview);
 }
 if($mooin_newsforum) {
     //$mooin_newsforum -> make_active();
