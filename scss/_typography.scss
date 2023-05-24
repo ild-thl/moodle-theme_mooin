@@ -136,15 +136,17 @@ a:active {
     text-decoration: none;
   }
   font-size: 18px;
-  a[data-key="coursehome"] {
+  div[data-key="coursehome"] {
     display: flex;
     align-items: center;
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 36px;
     //height: 42px;
     padding: 0 1.25rem;
+    background-color: #b7b7b7;
+color: #000;
     .icon {
       display: none;
     }
