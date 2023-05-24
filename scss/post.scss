@@ -39,10 +39,10 @@ a:not([class]):focus:hover,
   //text-decoration: underline;
 }
 
-// body.format-mooin {
+// body.format-mooin4 {
 //   background-color: #f8f8f8;
 // }
-// .format-mooin {
+// .format-mooin4 {
 //   #page-wrapper {
 //     max-width: 1000px;
 //     margin: 0 auto;
@@ -59,17 +59,17 @@ ol {
   margin-left: 15px !important;
 }
 
-.format-mooin {
+.format-mooin4 {
   ol.breadcrumb:not(:empty) {
     margin-left: 0 !important;
     //margin-bottom: 0.5rem;
   }
 }
 
-#page-course-view-mooin,
-#page-course-format-mooin-badges,
-#page-course-format-mooin-certificates,
-#page-course-format-mooin-alle_forums {
+#page-course-view-mooin4,
+#page-course-format-mooin4-badges,
+#page-course-format-mooin4-certificates,
+#page-course-format-mooin4-alle_forums {
   #region-main,
   #region-main-box {
     padding-top: 0;
@@ -78,11 +78,11 @@ ol {
   }
 }
 //Setting backgroundcolor to grey
-#page-course-view-mooin,
-#page-course-format-mooin-badges,
-#page-course-format-mooin-certificates,
-#page-course-format-mooin-alle_forums,
-#page-course-format-mooin-forum_view {
+#page-course-view-mooin4,
+#page-course-format-mooin4-badges,
+#page-course-format-mooin4-certificates,
+#page-course-format-mooin4-alle_forums,
+#page-course-format-mooin4-forum_view {
   #region-main,
   #region-main-box {
     // padding-top: 0;
@@ -221,8 +221,8 @@ ol {
   border: none;
 }
 
-// #page-course-view-mooin #region-main,
-// #page-course-view-mooin #region-main-box {
+// #page-course-view-mooin4 #region-main,
+// #page-course-view-mooin4 #region-main-box {
 //   padding-top: 0;
 // }
 // #region-main {
@@ -404,7 +404,7 @@ ol {
   .scroll-down {
     transform: none !important;
     .inner-title-navigation,
-    #mooin-breadcrumb-container,
+    #mooin4-breadcrumb-container,
     .custom-navbar,
     .custom-navbar-mobile {
       transform: none !important;
@@ -449,7 +449,7 @@ ol {
       //padding: 0;
     }
   }
-  #mooin-breadcrumb-container,
+  #mooin4-breadcrumb-container,
   .custom-navbar,
   .custom-navbar-mobile {
     //transform: translateY(+80px);
@@ -549,7 +549,7 @@ ol {
   }
 }
 
-#page-course-view-mooin {
+#page-course-view-mooin4 {
   .side.right {
     display: none;
   }
@@ -564,7 +564,7 @@ ol {
 }
 
 /* Mooin Modals */
-.mooin-modal {
+.mooin4-modal {
   .modal-content {
     width: 340px;
     height: 340px;
@@ -738,7 +738,7 @@ ol {
 
 /* CSS for the custom navbars (Breadcrumb) */
 
-#page-course-view-mooin {
+#page-course-view-mooin4 {
   #page-content {
     nav {
       z-index: 20;
@@ -755,7 +755,7 @@ ol {
     }
   }
 }
-// #page-course-view-mooin.path-user {
+// #page-course-view-mooin4.path-user {
 //   #page-content {
 //     nav {
 //       z-index: 20;
@@ -772,7 +772,7 @@ ol {
 //     }
 //   }
 // }
-#mooin-breadcrumb-container,
+#mooin4-breadcrumb-container,
 .custom-navbar {
   transition: 0.2s ease-in-out;
   //display: none;

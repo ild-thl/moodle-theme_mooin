@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
 
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
 require_once($CFG->libdir . '/behat/lib.php');
-require_once($CFG->dirroot.'/course/format/mooin/locallib.php');
+require_once($CFG->dirroot.'/course/format/mooin4/locallib.php');
 
 if (isloggedin()) {
     $navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
@@ -60,11 +60,11 @@ $nav = $PAGE->flatnav;
 $adminnode = $nav -> get('sitesettings');
 $mycourses = $nav -> get('mycourses');
 $coursehome = $nav -> get('coursehome');
-$overview = $nav -> get('format_mooin_course_overview');
-$mooin_newsforum = $nav -> get('format_mooin_newsforum');
-$mooin_badges = $nav -> get('format_mooin_badges');
-$mooin_certificates = $nav -> get('format_mooin_certificates');
-$mooin_discussion = $nav -> get('format_mooin_discussions');
+$overview = $nav -> get('format_mooin4_course_overview');
+$mooin_newsforum = $nav -> get('format_mooin4_newsforum');
+$mooin_badges = $nav -> get('format_mooin4_badges');
+$mooin_certificates = $nav -> get('format_mooin4_certificates');
+$mooin_discussion = $nav -> get('format_mooin4_discussions');
 $participantsnode = $nav -> get('participants');
 $calendar = $nav -> get('calendar');
 $privatefiles = $nav -> get('privatefiles');
@@ -73,7 +73,7 @@ $coursenodes = $nav -> type(30);
 $home = $nav -> get('home');
 $home ->set_showdivider(false);
 $myhome = $nav -> get('myhome');
-$unenrol = $nav -> get('format_mooin_unenrol');
+$unenrol = $nav -> get('format_mooin4_unenrol');
 
 
 
