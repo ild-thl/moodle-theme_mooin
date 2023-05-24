@@ -130,6 +130,10 @@
     font-family: "bootstrap-icons";
     content: "\F4A3";
   }
+  .fa-map-marker::before {
+    font-family: "bootstrap-icons";
+    content: "\F545";
+  }
   .fa-comments {
     position: relative;
     &::before {
