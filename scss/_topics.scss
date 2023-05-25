@@ -219,6 +219,7 @@ button.close:focus,
   .locked {
     .section-title {
       color: #6a737b;
+      font-weight: 400;
     }
     &::after {
       font-family: "bootstrap-icons";
