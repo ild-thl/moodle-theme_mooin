@@ -53,10 +53,9 @@ a:not([class]):focus:hover,
 //   }
 // }
 
-//remove padding form all breadcbrumbs
+//remove padding from all breadcbrumbs
 
-.metadetail-body ul,
-ol {
+.metadetail-body ul, ol {
   margin-left: 15px !important;
 }
 
@@ -104,13 +103,14 @@ ol {
         padding-bottom: 0;
       }
     }
-    .metadetail-body ul,
-    ol {
-      margin-left: 0px !important;
-      @include media-breakpoint-up(md) {
-        margin-left: 130px !important;
-      }
-    }
+
+    // .metadetail-body ul,
+    // ol {
+    //   margin-left: 0px !important;
+    //   @include media-breakpoint-up(md) {
+    //     margin-left: 130px !important;
+    //   }
+    // }
   }
 }
 /* Removes remaining backgroundcolor fromt Settings-gear */
@@ -276,7 +276,7 @@ ol {
     //margin: 0 130px;
     //padding-bottom: 1rem;
     @include media-breakpoint-up(md) {
-      margin: 0 130px 0.5rem 130px;
+      margin: 0 130px 0.5rem 130px !important;
     }
   }
 
