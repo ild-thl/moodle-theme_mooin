@@ -32,7 +32,7 @@ h2 {
 //   font-weight: bold;
 //   line-height: 1.875rem;
 // }
-a.caption{
+a.caption {
   //text-decoration: underline;
 }
 .caption {
@@ -40,7 +40,7 @@ a.caption{
   line-height: 1.125rem;
   margin: 0;
   //text-transform: capitalize;
-  a{
+  a {
     //text-decoration: underline;
   }
 
@@ -54,7 +54,7 @@ a.caption{
   line-height: 1.125rem;
   margin: 0;
   //text-transform: capitalize;
-  a{
+  a {
     //text-decoration: underline;
   }
   @include media-breakpoint-up(md) {
@@ -72,7 +72,6 @@ p {
     color: $primary;
   }
 }
-
 
 a {
   color: $primary;
@@ -136,7 +135,8 @@ a:active {
     text-decoration: none;
   }
   font-size: 18px;
-  div[data-key="coursehome"] {
+
+  div[data-key="format_mooin4_course_overview"] {
     display: flex;
     align-items: center;
     font-style: normal;
@@ -146,7 +146,7 @@ a:active {
     //height: 42px;
     padding: 0 1.25rem;
     background-color: #b7b7b7;
-color: #000;
+    color: #000;
     .icon {
       display: none;
     }
@@ -155,7 +155,7 @@ color: #000;
   .section {
     font-size: 16px;
     line-height: 30px;
-    a{
+    a {
       //text-decoration: underline;
     }
   }

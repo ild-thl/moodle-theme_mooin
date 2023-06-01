@@ -96,16 +96,29 @@ if($myhome) {
 //     $nav->add($mycourses);
 // }
 //$nav->add($mycourses);
-if($coursehome) {
-    $coursehome->set_showdivider(true);
-    $coursehome->action = null;
-    $coursehome->make_active();
-    $nav->add($coursehome);
-}
 if ($overview) {
+    $overview->set_showdivider(true);
+    $overview->action = null;
     //$overview->make_inactive();
     $nav->add($overview);
 }
+if($coursehome) {
+    //$coursehome->set_showdivider(true);
+    //$coursehome->action = null;
+    $coursehome->text=get_string('course_overview', 'format_mooin4');
+    //$coursehome->make_active();
+    $nav->add($coursehome);
+}
+// if($coursehome) {
+//     $coursehome->set_showdivider(true);
+//     $coursehome->action = null;
+//     $coursehome->make_active();
+//     $nav->add($coursehome);
+// }
+// if ($overview) {
+//     //$overview->make_inactive();
+//     $nav->add($overview);
+// }
 if($mooin_newsforum) {
     //$mooin_newsforum -> make_active();
     $nav->add($mooin_newsforum);
