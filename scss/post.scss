@@ -55,7 +55,8 @@ a:not([class]):focus:hover,
 
 //remove padding from all breadcbrumbs
 
-.metadetail-body ul, ol {
+.metadetail-body ul,
+ol {
   margin-left: 15px !important;
 }
 
@@ -566,6 +567,9 @@ a:not([class]):focus:hover,
 
 /* Mooin Modals */
 .mooin4-modal {
+  .modal-dialog {
+    max-width: 340px;
+  }
   .modal-content {
     width: 340px;
     height: 340px;
@@ -596,6 +600,7 @@ a:not([class]):focus:hover,
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 0;
       p {
         font-size: 20px;
         text-align: center;
@@ -603,6 +608,20 @@ a:not([class]):focus:hover,
       .bi {
         font-size: 100px;
         color: rgba(56, 148, 107, 0.5);
+        height: 100px;
+
+      }
+    }
+    .modal-footer {
+      border: none;
+      flex-wrap: nowrap;
+      padding-bottom: 23px;
+      gap: 32px;
+      button {
+        gap: .5rem;
+        i {
+          font-size: 14px;
+        }
       }
     }
   }
