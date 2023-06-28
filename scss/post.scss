@@ -575,13 +575,13 @@ ol {
 /* Mooin Modals */
 .mooin4-modal {
   .modal-dialog {
-    max-width: 340px;
+    max-width: 540px;
     margin: 5rem auto;
   }
   .modal-content {
     //width: 340px;
     height: 340px;
-    max-width: 340px;
+    max-width: 540px;
     max-height: 340px;
     background-color: #f2f2f2;
     border-radius: 8px;
@@ -610,9 +610,10 @@ ol {
       align-items: center;
       padding: 0;
       p {
+        min-height: 3rem;
         font-size: 20px;
         text-align: center;
-        margin: 0 0.5rem;
+        margin: 0 2rem;
       }
       .bi {
         font-size: 100px;
@@ -626,7 +627,10 @@ ol {
       flex-wrap: nowrap;
       padding-bottom: 23px;
       gap: 32px;
-      button {
+      button, a {
+        border: none;
+        max-width: 156px;
+        margin: 0 auto;
         gap: .5rem;
         i {
           font-size: 14px;
@@ -636,7 +640,7 @@ ol {
   }
 }
 
-/* Completion Modals */
+/* Completion Modals (old) */
 /* The Modal (background) */
 .modal_style {
   display: flex;
