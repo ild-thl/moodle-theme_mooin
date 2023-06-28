@@ -1,0 +1,58 @@
+/* oncampus mod - start */
+.activity.hvp.modtype_hvp .no-overflow, .editing .activity.hvp.modtype_hvp .no-overflow {
+  width: 70%;
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+}
+
+.activity.hvp.modtype_hvp .contentafterlink {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.activity.hvp.modtype_hvp img, .editing .activity.hvp.modtype_hvp img {
+  width: 22px;
+}
+
+#page-mod-hvp-embed #page {
+  padding: 0;
+  margin: 0;
+}
+
+#page-mod-hvp-embed {
+  min-width: 0;
+}
+
+#page-course-view-topics .activity.hvp.modtype_hvp .mod-indent-outer, #page-course-view-topics .activity.hvp.modtype_hvp .contentwithoutlink {
+  display: block;
+}
+
+#page-course-view-topics .activity.hvp.modtype_hvp .no-overflow {
+  width: 100%;
+}
+
+.h5p-dialog[data-lib="H5P.SingleChoiceSet"] .h5p-dialog-inner .h5p-sc-set-wrapper.initialized {
+  overflow: auto !important;
+}
+
+.h5peditor.h5p-interactivevideo-editor .h5p-add-dialog .h5p-dialog-box:first-child,
+.h5peditor.h5p-interactivevideo-editor .h5p-add-dialog .h5p-or-vertical {
+  display: none;
+}
+
+.h5peditor.h5p-interactivevideo-editor .h5p-add-dialog .h5p-dialog-box {
+  width: 92%;
+}
+
+.h5p-documentation-tool-main-content.hidden {
+  visibility: inherit;
+}
+/*
+html.h5p-iframe, html.h5p-iframe > body {
+  width: 1px;
+  min-width: 100%;
+}*/
+
+/* oncampus mod - end */
