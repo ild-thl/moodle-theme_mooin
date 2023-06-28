@@ -81,15 +81,15 @@ foreach ($nav as $node) {
     $nav -> remove($node->key);
 }
 
-if($home) {
-    $home ->set_showdivider(false);
-    $nav->add($home);
-}
+// if($home) {
+//     $home ->set_showdivider(false);
+//     $nav->add($home);
+// }
 
-if($myhome) {
-    $myhome ->set_showdivider(false);
-    $nav->add($myhome);
-}
+// if($myhome) {
+//     $myhome ->set_showdivider(false);
+//     $nav->add($myhome);
+// }
 
 // if($mycourses) {
 //     $nav->add($mycourses);
