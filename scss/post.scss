@@ -12,6 +12,7 @@
 @import "./subpages";
 @import "./navdrawer";
 @import "./accordions";
+@import "./hvp";
 
 .aalink.focus,
 a.focus.autolink,
@@ -197,6 +198,12 @@ ol {
   //   padding: 0;
   // }
 }
+
+.course-content li.section ul {
+  padding-left: 1rem;
+}
+
+
 /* h5p sizing */
 .section .activity .contentwithoutlink {
   display: flex;
@@ -569,9 +576,10 @@ ol {
 .mooin4-modal {
   .modal-dialog {
     max-width: 340px;
+    margin: 5rem auto;
   }
   .modal-content {
-    width: 340px;
+    //width: 340px;
     height: 340px;
     max-width: 340px;
     max-height: 340px;
@@ -604,6 +612,7 @@ ol {
       p {
         font-size: 20px;
         text-align: center;
+        margin: 0 0.5rem;
       }
       .bi {
         font-size: 100px;
