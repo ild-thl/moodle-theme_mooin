@@ -130,7 +130,7 @@ foreach($coursenodes as $node) {
         $node -> remove_class('collapsed');
     }
     if(is_last_section_of_chapter($node->key)) {
-        $node -> set_showdivider(true, 'course');
+        $node -> set_showdivider(true);
     }
     $nav->add($node);
 }
