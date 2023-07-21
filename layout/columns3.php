@@ -151,6 +151,17 @@ foreach($coursenodes as $node) {
     $nav->add($node);
     //$nav -> add($node);
 }
+
+if($home) {
+    $home ->set_showdivider(false);
+    $nav->add($home);
+}
+
+if($myhome) {
+    $myhome ->set_showdivider(false);
+    $nav->add($myhome);
+}
+
 if($adminnode) {
     $nav->add($adminnode);
 }

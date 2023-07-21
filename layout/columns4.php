@@ -130,7 +130,7 @@ foreach($coursenodes as $node) {
         $node -> remove_class('collapsed');
     }
     if(is_last_section_of_chapter($node->key)) {
-        $node -> set_showdivider(true);
+        $node -> set_showdivider(true, 'course');
     }
     $nav->add($node);
 }
@@ -140,6 +140,15 @@ foreach($coursenodes as $node) {
 
 //$nav->add($mooin_discussion);
 //$nav->add($participantsnode);
+if($home) {
+    $home ->set_showdivider(false);
+    $nav->add($home);
+}
+
+if($myhome) {
+    $myhome ->set_showdivider(false);
+    $nav->add($myhome);
+}
 
 if($adminnode) {
     $nav->add($adminnode);
