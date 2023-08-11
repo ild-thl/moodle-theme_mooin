@@ -203,6 +203,12 @@ ol {
   padding-left: 1rem;
 }
 
+.section li.activity {
+  &.hasinfo {
+      border-bottom: none;
+  }
+}
+
 
 /* h5p sizing */
 .section .activity .contentwithoutlink {
