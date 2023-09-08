@@ -1,6 +1,11 @@
 /* CSS for Navdrawer */
 
 /* Changes Breakpoint for overlapping navdrawer */
+body:not(.uses-drawers).drawer-open-left {
+  @include media-breakpoint-down(lg) {
+    margin-left: 0;
+  }
+}
 body.drawer-open-left {
   //margin-left: 380px;
   @include media-breakpoint-down(lg) {

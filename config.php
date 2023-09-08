@@ -144,6 +144,7 @@ $THEME->scss = function ($theme) {
 };
 // Override Renderer.
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
+$THEME->haseditswitch = true;
 
 
 $THEME->rarrow ='&#xF231';

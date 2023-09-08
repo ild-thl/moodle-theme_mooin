@@ -8,7 +8,7 @@
     color: $primary;
     padding-right: 0.5rem;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
       font-size: 1.25rem;
       padding-left: 0.5rem;
     }

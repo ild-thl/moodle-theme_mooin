@@ -1,0 +1,14 @@
+.navbar {
+    //max-height: 50px;
+    padding: .5rem 1rem !important;
+    display: flex;
+    align-items: center !important;
+
+    button[data-action="toggle-drawer"] {
+        max-width: 50px;
+        height: 39px !important;
+    }
+    div[data-region="drawer-toggle"] {
+
+    }
+}

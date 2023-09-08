@@ -1,1 +1,11 @@
 amd/src/test.js
+.DS_Store
+amd/.DS_Store
+fonts/.DS_Store
+lang/.DS_Store
+lang/en/.DS_Store
+pix/.DS_Store
+pix_core/.DS_Store
+templates/.DS_Store
+.gitignore
+

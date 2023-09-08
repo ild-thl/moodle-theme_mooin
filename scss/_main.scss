@@ -23,13 +23,15 @@
 
     .news-card {
       align-items: start;
-      @include media-breakpoint-up(md) {
+
+      @include media-breakpoint-up(sm) {
         padding: 0.5rem;
         border: $border-style;
         border-radius: 0.25rem;
         max-height: 13rem;
         align-items: unset;
       }
+
       .news-card-inner {
         //padding-left: 2rem;
         //display: flex;
@@ -48,6 +50,7 @@
           -webkit-box-orient: vertical;
           white-space: normal;
           max-height: 3rem;
+
           p {
             margin: 0;
           }
@@ -62,6 +65,7 @@
     max-width: 50rem;
     height: fit-content;
     min-width: 0;
+    margin: 0 auto;
 
     @include media-breakpoint-up(md) {
       border-radius: 0.625rem;
@@ -77,7 +81,7 @@
       top: 50px;
       text-align: center;
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(sm) {
         height: auto;
         max-height: 300px;
         aspect-ratio: 800/280;
@@ -99,12 +103,14 @@
           border-top-right-radius: 0.625rem;
         }
       }
+
       .course-image-none-mobile {
         background-image: url([[pix:theme|./header_placeholder_mobile]]);
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
       }
+
       .course-image-none-desktop {
         background-image: url([[pix:theme|./header_placeholder_desktop]]);
         height: 100%;
@@ -127,7 +133,7 @@
         opacity: 1;
         transition: opacity 0.5s;
 
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(sm) {
           position: absolute;
           top: unset;
           bottom: 0;
@@ -141,6 +147,7 @@
         h2 {
           margin: 0;
         }
+
         /* Truncate Title after two lines */
         h2 {
           hyphens: auto;
@@ -153,9 +160,11 @@
           padding: 0.5rem 1rem;
         }
       }
+
       .fade-out-active {
         opacity: 0;
-        @include media-breakpoint-up(md) {
+
+        @include media-breakpoint-up(sm) {
           opacity: 1;
         }
       }
@@ -167,6 +176,7 @@
       background-color: white;
       position: relative;
       z-index: 1;
+
       @include media-breakpoint-up(md) {
         background-color: transparent;
       }
@@ -178,7 +188,8 @@
       border-radius: 2rem;
       background-color: white;
       transform: translateY(-3rem);
-      @include media-breakpoint-up(md) {
+
+      @include media-breakpoint-up(sm) {
         //border-radius: 0;
         //max-width: 50rem;
         transform: translateY(0);
@@ -205,9 +216,13 @@
     /* Container for left side tiles */
     .container-md {
       padding: 0 1rem;
-      @include media-breakpoint-up(md) {
+
+      @include media-breakpoint-up(sm) {
         padding: 0 1.875rem;
+        margin: 0;
+        max-width: 100%;
       }
+
     }
 
     /* Seperator line between tiles */
@@ -216,8 +231,145 @@
       margin: 0 1rem;
       display: block;
 
-      @include media-breakpoint-up(md) {
-        margin: 0 2rem;
+      @include media-breakpoint-up(sm) {
+        margin: 0 1.875rem;
+      }
+    }
+  }
+
+  /* Custom Badges, Certificates and Community Cards for Tabletscreensizes */
+
+  .tablet-view {
+    .badges-certificates-card {
+
+      padding-bottom: 1.5rem !important;
+
+      .badges-cert-container {
+        gap: 30px;
+      }
+
+      .badges-card,
+      .certificate-card {
+        padding: 10px;
+        border: $border-style;
+        border-radius: 0.25rem;
+        width: 356px;
+      }
+
+
+
+      .badges-card-inner {
+
+        div {
+          gap: 10px;
+        }
+
+        .badges-list {
+          li {
+            max-width: 33.3%;
+
+            a {
+              &::before {
+                font-size: 1.5rem;
+                left: 3.3rem;
+                top: -1.6rem;
+                z-index: 1;
+              }
+
+              &::after {
+                top: -2rem;
+                left: -0.7rem;
+                width: 4.5rem;
+                height: 3rem;
+              }
+
+              img {
+                width: 4.5rem !important;
+                height: 4.5rem !important;
+              }
+            }
+          }
+
+          li:nth-child(n + 4) {
+            display: none;
+          }
+        }
+      }
+
+      .certificate-card-inner {
+
+        display: flex;
+
+        div {
+          gap: 10px;
+        }
+
+
+
+        .certificat_list {
+
+          span,
+          a {
+            max-width: 33.3%;
+            width: 150px;
+
+            &::before {
+              font-size: 1.5rem;
+              left: 3.3rem;
+              top: -1.6rem;
+              z-index: 2;
+            }
+
+            &::after {
+              top: 15px;
+              left: 15px;
+              width: 4.5rem;
+              height: 3rem;
+            }
+
+            img {
+              width: 4.5rem !important;
+              height: 4.5rem !important;
+            }
+          }
+
+          a:nth-child(n + 4),
+          span:nth-child(n + 4) {
+            display: none;
+          }
+        }
+
+      }
+
+      .manage-badges-gear {
+        margin-left: auto;
+      }
+    }
+
+    .community {
+      .community-container {
+        gap: 30px;
+        width: 100%;
+      }
+
+      .participant-card, .news-card {
+        padding: 10px;
+        border: $border-style;
+        border-radius: 0.25rem;
+        width: 356px;
+        //height: 185px;
+      }
+      .participant-card {
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .news-card {
+        //height: 185px;
+      }
+
+      .discussion {
+        width: 100%;
       }
     }
   }
@@ -263,6 +415,7 @@
                   top: -1.6rem;
                   z-index: 1;
                 }
+
                 &::after {
                   top: -2rem;
                   left: -0.7rem;
@@ -276,12 +429,14 @@
                 }
               }
             }
+
             li:nth-child(n + 4) {
               display: none;
             }
           }
         }
       }
+
       .certificate-card {
         padding: 0.5rem;
         border: $border-style;
@@ -290,17 +445,21 @@
         .certificate-card-inner {
           padding: 1rem 0;
           display: flex;
+
           .certificat_list {
+
             span,
             a {
               max-width: 33.3%;
               width: 150px;
+
               &::before {
                 font-size: 1.5rem;
                 left: 3.3rem;
                 top: -1.6rem;
                 z-index: 2;
               }
+
               &::after {
                 top: 15px;
                 left: 15px;
@@ -339,6 +498,7 @@
         .news-card {
           max-height: 16.5rem;
           margin-bottom: 1rem;
+
           .news-card-inner {
             width: calc(100% - 1.8rem);
           }
@@ -349,13 +509,16 @@
         padding: 0.5rem;
         border: $border-style;
         border-radius: 0.25rem;
+
         img {
           width: 1.3rem !important;
           height: 1.3rem !important;
         }
+
         ul {
           padding-left: 0;
         }
+
         li {
           list-style: none;
         }
@@ -375,13 +538,16 @@
     display: flex;
     width: 100%;
     gap: 1rem;
+
     //align-items: center;
     :first-child {
       flex: 1;
+
       @include media-breakpoint-up(md) {
         flex: 2;
       }
     }
+
     :nth-child(2) {
       flex: 1;
     }
@@ -436,7 +602,8 @@
   align-items: center;
   //justify-content: space-between;
 }
-.even-columns > * {
+
+.even-columns>* {
   flex: 1;
 }
 
@@ -447,11 +614,13 @@
   justify-content: center;
   padding-right: 0.4rem;
 }
+
 .count-discussion {
   position: absolute;
   left: 0.8rem;
   margin-top: -0.6rem;
 }
+
 .count-certificate {
   position: absolute;
   left: 0.6rem;
@@ -468,6 +637,7 @@
 
 .unenrol-link {
   margin-left: 3.875rem;
+
   @include media-breakpoint-down(sm) {
     color: black;
     background: #b8c1ca;
@@ -488,6 +658,7 @@
     justify-content: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-decoration: none;
+
     &:hover {
       text-decoration: none;
     }

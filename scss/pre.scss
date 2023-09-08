@@ -2,9 +2,11 @@ $primary: #004161;
 $font-size-base: 1rem !default;
 //$enable-rfs: false;
 $drawer-width: 320px !default;
+$drawer-left-width: 320px !default;
 $drawer-padding-x: 20px !default;
 $drawer-padding-y: 20px !default;
 $drawer-offscreen-gutter: 20px !default;
+$navbar-height: 50px;
 
 @font-face {
   font-family: Roboto;

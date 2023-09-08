@@ -9,8 +9,11 @@
 .course-content .section-summary {
   border: none;
 }
-.course-content ul li.section.main {
+.course-content ul li.section.main .course-content ul li.section.main:not(.course-section) {
   border-bottom: none;
+}
+.course-content ul li.section.main:not(.course-section) {
+  border: none;
 }
 
 .aabtn.focus,

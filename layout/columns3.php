@@ -41,8 +41,11 @@ if ($navdraweropen) {
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $blockshtml = $OUTPUT->blocks('side-pre');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
-$buildregionmainsettings = !$PAGE->include_region_main_settings_in_header_actions();
-// If the settings menu will be included in the header then don't add it here.
+
+$primary = new core\navigation\output\primary($PAGE);
+$renderer = $PAGE->get_renderer('core');
+$primarymenu = $primary->export_for_template($renderer);
+$buildregionmainsettings = !$PAGE->include_region_main_settings_in_header_actions()  && !$PAGE->has_secondary_navigation();// If the settings menu will be included in the header then don't add it here.
 $regionmainsettingsmenu = $buildregionmainsettings ? $OUTPUT->region_main_settings_menu() : false;
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
@@ -52,7 +55,10 @@ $templatecontext = [
     'bodyattributes' => $bodyattributes,
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
-    'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu)
+    'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
+    'mobileprimarynav' => $primarymenu['mobileprimarynav'],
+    'usermenu' => $primarymenu['user'],
+    'langmenu' => $primarymenu['lang'],
 ];
 //incourse
 
