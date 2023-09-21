@@ -254,6 +254,10 @@
         border: $border-style;
         border-radius: 0.25rem;
         width: 356px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
 
 
@@ -352,13 +356,15 @@
         width: 100%;
       }
 
-      .participant-card, .news-card {
+      .participant-card,
+      .news-card {
         padding: 10px;
         border: $border-style;
         border-radius: 0.25rem;
         width: 356px;
         //height: 185px;
       }
+
       .participant-card {
         flex-direction: column;
         justify-content: space-between;
@@ -584,6 +590,24 @@
   }
 }
 
+
+
+.course-content {
+  .userinitials.size-35 {
+    font-size: .75rem;
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+}
+
+// #user-menu-toggle {
+//   .userinitials.size-35 {
+//     width: 20px;
+//     height: 20px;
+//   }
+// }
+
 /* News Forum */
 
 /* Notification Badge for News */
@@ -668,6 +692,21 @@
       content: "\F1C3";
       padding-left: 0.5rem;
       font-size: 1.5rem;
+    }
+  }
+}
+
+/* Edit gear styling for Moodle 4 */
+.format-mooin4 {
+  .action-menu-trigger {
+    margin-left: auto;
+    margin-right: 1rem;
+    margin-top: 1rem;
+
+    #action-menu-toggle-2 {
+      .fa-cog {
+        font-size: 1.5rem;
+      }
     }
   }
 }
