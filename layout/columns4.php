@@ -179,6 +179,7 @@ $templatecontext['firstcollectionlabel'] = $nav->get_collectionlabel();
     $coursecontext = context_course::instance($this->page->course->id);
     if (has_capability('moodle/course:update', $coursecontext)) {
         $templatecontext['showfullheader'] = true;
+        $templatecontext['showEditGear'] = true;
     }
 
 //Evtl ins Kursformat verschieben
