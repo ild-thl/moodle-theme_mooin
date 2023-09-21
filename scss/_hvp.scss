@@ -56,3 +56,22 @@ html.h5p-iframe, html.h5p-iframe > body {
 }*/
 
 /* oncampus mod - end */
+
+
+/* Moodle 4.1 */
+// remove title and tasktitle
+.embedded-main {
+  h2 {
+    display: none;
+  }
+  .activity-header {
+    display: none
+  }
+}
+
+.activity-item:not(.activityinline) {
+  padding-left: 0;
+  padding-right: 0;
+  //padding: 0;
+  border: none;
+  }
