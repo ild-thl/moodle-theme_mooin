@@ -1,5 +1,14 @@
 /* CSS for the different Course Subpages */
 
+
+#page-course-format-mooin4-forums {
+  #page {
+    .media {
+      align-items: center;
+    }
+  }
+}
+
 /* Forums Page - List of all Discussion Forums */
 #page-course-format-mooin4-alle_forums {
   @include media-breakpoint-up(md) {
