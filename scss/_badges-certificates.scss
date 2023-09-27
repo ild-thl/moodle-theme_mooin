@@ -43,6 +43,7 @@
 
 .all-badge-layer {
   a {
+    hyphens: auto;
     &::after {
       content: none;
       background-image: "none";
@@ -100,6 +101,7 @@ span.certificate-img {
   padding-top: 1rem;
   font-size: 0.875rem;
   width: 100px;
+  hyphens: auto;
   &::before {
     content: "";
     width: 100px;
