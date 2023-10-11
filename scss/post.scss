@@ -981,3 +981,22 @@ ul.badges-list.badges {
 .path-mod-forum .discussion-nav {
   font-family: "bootstrap-icons", "roboto";
 }
+
+
+.atto_image_button_left,
+.atto_image_button_right,
+.atto_image_button_top,
+.atto_image_button_bottom,
+.atto_image_button_text-left,
+.atto_image_button_text-right,
+.atto_image_button_text-top,
+.atto_image_button_text-bottom {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  max-width: 100%;
+}
+
+.img-response {
+  width: 100%;
+}
