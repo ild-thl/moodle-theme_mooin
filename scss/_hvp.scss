@@ -59,6 +59,13 @@ html.h5p-iframe, html.h5p-iframe > body {
 
 
 /* Moodle 4.1 */
+
+.format-mooin4 {
+  iframe {
+    max-width: 740px !important;
+  }
+}
+
 // remove title and tasktitle
 .embedded-main {
   h2 {
@@ -68,6 +75,7 @@ html.h5p-iframe, html.h5p-iframe > body {
     display: none
   }
 }
+
 
 .activity-item:not(.activityinline) {
   padding-left: 0;
