@@ -246,6 +246,11 @@
 
       .badges-cert-container {
         gap: 30px;
+        max-height: 13rem;
+
+        .no-badges-img, .no-certificates-img {
+          height: 7rem;
+        }
       }
 
       .badges-card,
@@ -363,12 +368,14 @@
         border-radius: 0.25rem;
         width: 356px;
         //height: 185px;
-      }
-
-      .participant-card {
         flex-direction: column;
         justify-content: space-between;
       }
+
+      // .participant-card {
+      //   flex-direction: column;
+      //   justify-content: space-between;
+      // }
 
       .news-card {
         //height: 185px;
