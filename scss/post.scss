@@ -16,7 +16,7 @@
 @import "./navbar";
 
 #page {
-  overflow:unset !important;
+  overflow: unset !important;
 }
 
 .aalink.focus,
@@ -29,20 +29,21 @@ a.autolink:focus,
 .arrow_link:focus,
 a:not([class]).focus,
 a:not([class]):focus,
-.activityinstance > a.focus,
-.activityinstance > a:focus {
+.activityinstance>a.focus,
+.activityinstance>a:focus {
   background-color: transparent;
   outline: none;
   box-shadow: none;
   //text-decoration: underline;
   color: inherit;
 }
+
 .aalink:focus:hover,
 a.autolink:focus:hover,
 #page-footer a:not([class]):focus:hover,
 .arrow_link:focus:hover,
 a:not([class]):focus:hover,
-.activityinstance > a:focus:hover {
+.activityinstance>a:focus:hover {
   //text-decoration: underline;
 }
 
@@ -77,6 +78,7 @@ ol {
 #page-course-format-mooin4-badges,
 #page-course-format-mooin4-certificates,
 #page-course-format-mooin4-alle_forums {
+
   #region-main,
   #region-main-box {
     padding-top: 0;
@@ -84,25 +86,30 @@ ol {
     padding-right: 0;
   }
 }
+
 //Setting backgroundcolor to grey
 #page-course-view-mooin4,
 #page-course-format-mooin4-badges,
 #page-course-format-mooin4-certificates,
 #page-course-format-mooin4-alle_forums,
 #page-course-format-mooin4-forum_view {
+
   #region-main,
   #region-main-box {
     // padding-top: 0;
     // padding-left: 0;
     // padding-right: 0;
     border: none;
+
     @include media-breakpoint-up(md) {
       background: $background-color;
       //padding: 0;
     }
+
     .breadcrumb:not(:empty) {
       border: none;
       padding: 0.25rem 0;
+
       // margin-left: 0;
       // margin-right: 0;
       .breadcrumb-item {
@@ -120,6 +127,7 @@ ol {
     // }
   }
 }
+
 /* Removes remaining backgroundcolor fromt Settings-gear */
 .region_main_settings_menu_proxy {
   background-color: transparent;
@@ -133,6 +141,7 @@ ol {
   background: white;
   z-index: 2;
 }
+
 // .single-section {
 //   background-color: white;
 //   padding: 1rem;
@@ -141,10 +150,11 @@ ol {
 // }
 
 /* Course View */
-.section .activity .contentwithoutlink > a,
-.section .activity .activityinstance > a {
+.section .activity .contentwithoutlink>a,
+.section .activity .activityinstance>a {
   //text-decoration: underline;
 }
+
 .course-content ul.topics li.section .content,
 .course-content ul.weeks li.section .content {
   display: flex;
@@ -155,24 +165,29 @@ ol {
     flex-direction: column;
     //width: 100%;
   }
+
   .no-overflow {
     width: 100%;
   }
 }
+
 .mod-indent-outer.w-100 {
   .no-overflow {
     width: 100%;
   }
 }
+
 //Sticky Header
 #region-main {
   overflow-x: unset;
 }
+
 #section-0 {
   max-width: 1000px;
   background-color: white;
   margin: 0 auto;
 }
+
 .course-content .single-section {
   margin-top: 0;
   padding-top: 0;
@@ -182,22 +197,28 @@ ol {
   background-color: white;
   //padding: 1rem;
   margin: 0 auto;
+
   .section-navigation {
     padding: 0 1rem;
+
     @include media-breakpoint-up(md) {
       padding: 0;
     }
   }
+
   .topics {
     padding: 1rem;
+
     @include media-breakpoint-up(md) {
       padding: 20px 130px;
     }
+
     .section {
       margin: 0;
       padding: 0;
     }
   }
+
   // .section {
   //   margin: 0;
   //   padding: 0;
@@ -210,7 +231,7 @@ ol {
 
 .section li.activity {
   &.hasinfo {
-      border-bottom: none;
+    border-bottom: none;
   }
 }
 
@@ -219,16 +240,19 @@ ol {
 .section .activity .contentwithoutlink {
   display: flex;
 }
+
 .activity.hvp.modtype_hvp .no-overflow,
 .editing .activity.hvp.modtype_hvp .no-overflow {
   width: 100%;
 }
+
 .section .label .mod-indent-outer {
   padding-left: 0;
 }
+
 .mediaplugin,
 .mediaplugin video {
-  > div {
+  >div {
     max-width: none !important;
   }
 }
@@ -237,6 +261,7 @@ ol {
   padding-left: 0;
   padding-right: 0;
 }
+
 .breadcrumb:not(:empty) {
   border: none;
 }
@@ -268,8 +293,8 @@ ol {
 
 /* Removing default padding in course view */
 .contentwithoutlink,
-.path-site li.activity > div,
-.path-course-view li.activity > div {
+.path-site li.activity>div,
+.path-course-view li.activity>div {
   padding-right: 0 !important;
 }
 
@@ -292,6 +317,7 @@ ol {
 
   .custom-navbar {
     max-width: 740px;
+
     //margin: 0 130px;
     //padding-bottom: 1rem;
     @include media-breakpoint-up(md) {
@@ -302,6 +328,7 @@ ol {
   .mdl-right,
   .mdl-left {
     position: relative;
+
     a {
       display: flex;
       align-items: center;
@@ -312,37 +339,46 @@ ol {
       .rarrow,
       .larrow {
         font-size: 2rem;
+
         @include media-breakpoint-up(md) {
           font-size: 3rem;
         }
       }
+
       .larrow {
         display: none;
       }
     }
+
     @include media-breakpoint-up(md) {
       width: 48px;
       position: absolute;
     }
   }
+
   .mdl-left {
     left: 0;
+
     @include media-breakpoint-up(md) {
       margin-left: 56px;
     }
+
     a {
       &::before {
         font-family: "bootstrap-icons";
         content: "\F230";
         font-size: 2rem;
+
         @include media-breakpoint-up(md) {
           font-size: 3rem;
         }
       }
     }
   }
+
   .mdl-right {
     right: 0rem;
+
     @include media-breakpoint-up(md) {
       margin-right: 62px;
     }
@@ -360,6 +396,7 @@ ol {
     @include media-breakpoint-up(md) {
       //padding: 1rem 0;
     }
+
     .sectionname {
       font-size: 1.25rem;
       font-weight: bold;
@@ -384,6 +421,7 @@ ol {
       }
     }
   }
+
   /* Progressbar */
   .mooin4ection-div {
     // position: absolute;
@@ -392,9 +430,9 @@ ol {
     // bottom: 0.5rem;
 
     //max-width: 740px;
-    margin: 0 auto;
-    margin-top: 1rem;
-    transition: 0.5s ease-in-out;
+    //margin: 0 auto;
+    //margin-top: 1rem;
+    //transition: transform 0.2s ease-in-out;
     //bottom: 0.5rem;
     .progressbar {
       width: 100%;
@@ -412,17 +450,21 @@ ol {
         transition: width 1s ease-in-out;
       }
     }
+
     @include media-breakpoint-up(md) {
       margin-left: 130px;
       margin-right: 130px;
     }
   }
 }
+
 /* Scrollheader */
 .editing {
+
   .scroll-up,
   .scroll-down {
     transform: none !important;
+
     .inner-title-navigation,
     #mooin4-breadcrumb-container,
     .custom-navbar,
@@ -431,50 +473,64 @@ ol {
       opacity: 1;
     }
   }
-  .course-content
-    .single-section
-    .navigationtitle
-    .inner-title-navigation
-    .sectionname {
+
+  .course-content .single-section .navigationtitle .inner-title-navigation .sectionname {
     margin: 20px 130px;
   }
 }
+
 .scroll-up {
   transform: none;
   transition: 0.2s ease-in-out;
+
   .inner-title-navigation {
     transform: none;
-    transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 1;
+
     //transition: opacity 0.1s ease-in-out;
     @include media-breakpoint-up(md) {
       //padding: 1rem 0 !important;
     }
   }
+
   .custom-navbar,
   .custom-navbar-mobile {
     transform: none;
+  }
+
+  .mooin4ection-div {
+    margin-top: 0rem;
+    transition: margin 0.2s;
   }
 }
 
 .scroll-down {
   transition: 0.2s ease-in-out;
+
   //transform: translateY(-80px);
   .inner-title-navigation {
     //transform: translateY(+80px);
     transition: transform 0.2s ease-in-out, opacity 0.1s ease-in-out;
     opacity: 0;
+
     //transition: opacity 0.1s ease-in-out;
     @include media-breakpoint-up(md) {
       //padding: 0;
     }
   }
+
   #mooin4-breadcrumb-container,
   .custom-navbar,
   .custom-navbar-mobile {
     //transform: translateY(+80px);
     position: relative;
     z-index: 9999;
+  }
+
+  .mooin4ection-div {
+    margin-top: 1rem;
+    transition: margin 0.2s;
   }
 }
 
@@ -493,6 +549,7 @@ ol {
     top: 0;
     height: 1px;
     border-bottom: $border-style;
+
     @include media-breakpoint-up(md) {
       left: 65px;
       right: 65px;
@@ -502,10 +559,12 @@ ol {
   @include media-breakpoint-up(md) {
     padding: 2rem 65px;
   }
-  > span {
+
+  >span {
     &:empty {
       visibility: hidden;
     }
+
     font-weight: 500 !important;
     font-size: 0.75rem;
     line-height: 1.3125rem;
@@ -519,15 +578,18 @@ ol {
     justify-content: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-decoration: none;
+
     a {
       text-decoration: none;
       box-shadow: none;
       background-color: transparent;
     }
+
     @include media-breakpoint-up(md) {
       width: 10rem;
     }
   }
+
   .mdl-right {
     position: relative;
     margin-left: 0.5rem;
@@ -541,12 +603,14 @@ ol {
       align-items: center;
       @extend .stretched-link;
     }
+
     .rarrow {
       width: 1rem;
       display: flex;
       justify-content: center;
     }
   }
+
   .mdl-left {
     position: relative;
     margin-right: 0.5rem;
@@ -554,6 +618,7 @@ ol {
     border-color: #004161;
     background-color: #ffffff;
     border: 1px solid #004161;
+
     a {
       padding-right: 0.15rem;
       color: #004161;
@@ -561,6 +626,7 @@ ol {
       align-items: center;
       @extend .stretched-link;
     }
+
     .larrow {
       width: 1rem;
       display: flex;
@@ -573,12 +639,14 @@ ol {
   .side.right {
     display: none;
   }
+
   .topicsOut {
     .side.right {
       display: block;
     }
   }
 }
+
 .editing .section .activity .mod-indent-outer {
   padding-right: 10rem;
 }
@@ -589,6 +657,7 @@ ol {
     max-width: 540px;
     margin: 5rem auto;
   }
+
   .modal-content {
     //width: 340px;
     height: 340px;
@@ -597,15 +666,18 @@ ol {
     background-color: #f2f2f2;
     border-radius: 8px;
     border: none;
+
     .modal-header {
       padding-top: 9px;
       border: none;
+
       .modal-title {
         margin: 0 auto;
         font-weight: 700;
         font-size: 1rem;
         line-height: 30px;
       }
+
       .close {
         font-size: 18px;
         color: $primary;
@@ -615,17 +687,20 @@ ol {
         top: 9px;
       }
     }
+
     .modal-body {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 0;
+
       p {
         min-height: 3rem;
         font-size: 20px;
         text-align: center;
         margin: 0 2rem;
       }
+
       .bi {
         font-size: 100px;
         color: rgba(56, 148, 107, 0.5);
@@ -633,16 +708,20 @@ ol {
 
       }
     }
+
     .modal-footer {
       border: none;
       flex-wrap: nowrap;
       padding-bottom: 23px;
       gap: 32px;
-      button, a {
+
+      button,
+      a {
         border: none;
         max-width: 156px;
         margin: 0 auto;
         gap: .5rem;
+
         i {
           font-size: 14px;
         }
@@ -657,14 +736,20 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed; /* Stay in place */
-  z-index: 9999; /* Sit on top */
+  position: fixed;
+  /* Stay in place */
+  z-index: 9999;
+  /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -675,7 +760,8 @@ ol {
   justify-content: space-between;
   position: relative;
   background-color: #f2f2f2;
-  margin: auto; /* 15% from the top and centered */
+  margin: auto;
+  /* 15% from the top and centered */
   border: 1px solid #888;
   width: 360px;
   //height: 280px;
@@ -698,6 +784,7 @@ ol {
     max-width: 275px;
     padding-top: 1.5rem;
   }
+
   .bi-check-circle,
   .bi-star,
   .bi-mortarboard-fill {
@@ -714,6 +801,7 @@ ol {
   right: 9px;
   font-size: 1rem;
   line-height: 1rem;
+
   &::before {
     font-family: "bootstrap-icons";
     content: "\F622";
@@ -727,6 +815,7 @@ ol {
   text-decoration: none;
   cursor: pointer;
 }
+
 .progressbar {
   width: 100%;
   background-color: rgba(56, 148, 107, 0.5);
@@ -737,12 +826,14 @@ ol {
   text-align: center;
   margin: 0 auto;
 }
+
 .modal_button_close {
   max-width: 156px;
 }
 
 .text_close {
   font-size: 11px;
+
   // padding: 16px;
   // margin: 12px;
   // border-radius: 8px;
@@ -759,9 +850,11 @@ ol {
   display: flex;
   width: 100%;
   gap: 45px;
+
   .btn-white {
     background-color: white;
     color: $primary;
+
     &::after {
       color: $primary;
     }
@@ -776,6 +869,7 @@ ol {
   // border-radius: 4px;
   // font-size: 11px;
 }
+
 .modal_btn_next_chapter a {
   display: flex;
 }
@@ -786,6 +880,7 @@ ol {
   #page-content {
     nav {
       z-index: 20;
+
       a {
         //text-decoration: underline;
       }
@@ -799,6 +894,7 @@ ol {
     }
   }
 }
+
 // #page-course-view-mooin4.path-user {
 //   #page-content {
 //     nav {
@@ -819,14 +915,17 @@ ol {
 #mooin4-breadcrumb-container,
 .custom-navbar {
   transition: 0.2s ease-in-out;
+
   //display: none;
   @include media-breakpoint-up(md) {
     //display: block;
   }
 }
+
 .custom-navbar-mobile {
   transition: 0.2s ease-in-out;
   display: none;
+
   @include media-breakpoint-up(md) {
     display: none;
   }
@@ -840,6 +939,7 @@ ol {
   li {
     white-space: nowrap;
   }
+
   span[itemprop="title"],
   .course-title {
     max-width: calc(100vw - 200px);
@@ -847,6 +947,7 @@ ol {
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
+
     @include media-breakpoint-up(md) {
       max-width: 400px;
       white-space: nowrap;
@@ -855,9 +956,11 @@ ol {
       display: block;
     }
   }
+
   .breadcrumd_in_section {
     white-space: nowrap;
   }
+
   .chap,
   .chapter {
     @include media-breakpoint-up(md) {
@@ -868,11 +971,13 @@ ol {
       display: block;
     }
   }
+
   .sec,
   section {
     white-space: nowrap;
   }
 }
+
 .navbar_mobile {
   flex-wrap: nowrap;
 
@@ -884,9 +989,11 @@ ol {
     text-overflow: ellipsis;
     display: block;
   }
+
   .breadcrumd_in_section {
     white-space: nowrap;
   }
+
   // li:nth-child(2) {
   //     max-width: 70vw;
   //     white-space: nowrap;
@@ -900,6 +1007,7 @@ ol {
 .navbar .count-container {
   width: 1.1rem;
   height: 1.1rem;
+
   @include media-breakpoint-up(md) {
     width: 1.1rem;
     height: 1.1rem;
@@ -918,6 +1026,7 @@ ol {
   background-color: #ff0000 !important;
   font-weight: 700 !important;
 }
+
 .count-container.count-container-small {
   font-size: 9px;
 }
@@ -935,6 +1044,7 @@ ol {
 ul.badges-list.badges {
   padding-left: 0;
 }
+
 .certificat_list,
 .badges-list {
   width: 100%;
@@ -945,10 +1055,12 @@ ul.badges-list.badges {
 
   li {
     position: relative;
+
     .certificate-img,
     .badge-image {
       left: 0;
     }
+
     a {
       position: relative;
       font-size: 0.875rem;
@@ -964,12 +1076,27 @@ ul.badges-list.badges {
         border-radius: 50%;
       }
     }
+
     a:not([class]):focus {
       //color: #2182cf;
     }
   }
 }
+
 /* Bootstrap Icons in Discussion Nav */
 .path-mod-forum .discussion-nav {
   font-family: "bootstrap-icons", "roboto";
+}
+
+.atto_image_button_left,
+.atto_image_button_right,
+.atto_image_button_top,
+.atto_image_button_bottom,
+.atto_image_button_text-left,
+.atto_image_button_text-right,
+.atto_image_button_text-top,
+.atto_image_button_text-bottom {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
 }
