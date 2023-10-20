@@ -65,6 +65,11 @@ html.h5p-iframe, html.h5p-iframe > body {
     max-width: 740px !important;
   }
 }
+.hvp {
+  iframe {
+    width: 100%;
+  }
+}
 
 // remove title and tasktitle
 .embedded-main {

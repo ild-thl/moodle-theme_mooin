@@ -1100,3 +1100,10 @@ ul.badges-list.badges {
   height: auto;
   margin: 0;
 }
+
+iframe[title="YouTube video player"] {
+  aspect-ratio: 1.7777;
+  width: 100%;
+  height: 100%;
+  //max-width: 740px;
+}
