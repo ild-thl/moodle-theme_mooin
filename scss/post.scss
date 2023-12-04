@@ -14,6 +14,7 @@
 @import "./accordions";
 @import "./hvp";
 @import "./navbar";
+@import "./ocsurvey";
 
 #page {
   overflow: unset !important;
@@ -534,7 +535,10 @@ ol {
   }
 }
 
-/* Buttom navigation */
+
+
+
+/* Bottom navigation */
 .course-content .single-section .mdl-bottom {
   position: relative;
   display: flex !important;
@@ -634,6 +638,113 @@ ol {
     }
   }
 }
+
+
+//Only for OCSurvey Plugin
+.course-content .mdl-bottom {
+  position: relative;
+  display: flex !important;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  margin-bottom: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 0;
+    height: 1px;
+    border-bottom: $border-style;
+
+    @include media-breakpoint-up(md) {
+      left: 65px;
+      right: 65px;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 2rem 65px;
+  }
+
+  >span {
+    &:empty {
+      visibility: hidden;
+    }
+
+    font-weight: 500 !important;
+    font-size: 0.75rem;
+    line-height: 1.3125rem;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    width: 50%;
+    height: 2.3125rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+
+    a {
+      text-decoration: none;
+      box-shadow: none;
+      background-color: transparent;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 10rem;
+    }
+  }
+
+  .mdl-right {
+    position: relative;
+    margin-left: 0.5rem;
+    color: white;
+    background-color: #004161;
+
+    a {
+      padding-left: 0.15rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      @extend .stretched-link;
+    }
+
+    .rarrow {
+      width: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .mdl-left {
+    position: relative;
+    margin-right: 0.5rem;
+    color: #004161;
+    border-color: #004161;
+    background-color: #ffffff;
+    border: 1px solid #004161;
+
+    a {
+      padding-right: 0.15rem;
+      color: #004161;
+      display: flex;
+      align-items: center;
+      @extend .stretched-link;
+    }
+
+    .larrow {
+      width: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
 
 #page-course-view-mooin4 {
   .side.right {
