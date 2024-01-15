@@ -222,7 +222,6 @@
         margin: 0;
         max-width: 100%;
       }
-
     }
 
     /* Seperator line between tiles */
@@ -240,15 +239,25 @@
   /* Custom Badges, Certificates and Community Cards for Tabletscreensizes */
 
   .tablet-view {
-    .badges-certificates-card {
 
+    .info-tip {
+      //margin-left: auto;
+      position: absolute;
+      right: 0;
+      font-size: 1rem;
+      color: $primary;
+      padding-right: 0;
+    }
+    .badges-certificates-card {
       padding-bottom: 1.5rem !important;
 
       .badges-cert-container {
         gap: 30px;
-        max-height: 13rem;
+        //max-height: 13rem;
+        height: auto;
 
-        .no-badges-img, .no-certificates-img {
+        .no-badges-img,
+        .no-certificates-img {
           height: 7rem;
         }
       }
@@ -258,19 +267,22 @@
         padding: 10px;
         border: $border-style;
         border-radius: 0.25rem;
-        width: 356px;
+        flex: 1;
 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        .card-title-container {
+          position: relative;
+
+          
+        }
       }
 
-
-
       .badges-card-inner {
-
         div {
-          gap: 10px;
+          //gap: 10px;
         }
 
         .badges-list {
@@ -306,17 +318,13 @@
       }
 
       .certificate-card-inner {
-
         display: flex;
 
         div {
-          gap: 10px;
+          //gap: 10px;
         }
 
-
-
         .certificat_list {
-
           span,
           a {
             max-width: 33.3%;
@@ -347,18 +355,29 @@
             display: none;
           }
         }
-
       }
 
       .manage-badges-gear {
-        margin-left: auto;
+        position: absolute;
+        right: 0;
+        //margin-left: auto;
       }
     }
 
     .community {
+      .community-title-container {
+        .info-tip {
+          right: 0.7rem;
+        }
+      }
       .community-container {
         gap: 30px;
         width: 100%;
+        height: 13rem;
+
+        .no-forum-img {
+          height: 6.5rem;
+        }
       }
 
       .participant-card,
@@ -366,10 +385,54 @@
         padding: 10px;
         border: $border-style;
         border-radius: 0.25rem;
-        width: 356px;
-        //height: 185px;
+        //width: 356px;
+        flex: 1;
+        height: auto;
         flex-direction: column;
         justify-content: space-between;
+        //max-height: max-content;
+
+        .news-icon-wrapper {
+          transform: translateX(-8px);
+        }
+        .no-posts-img {
+          background-image: url([[pix:theme|no_posts]]);
+          margin: 0 auto;
+          width: 100%;
+          height: 6.7rem;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        .info-tip {
+          transform: translateX(+8px);
+        }
+      }
+
+      .participant-card {
+        max-height: 13rem;
+
+        .user-container {
+          margin-left: 1.7rem;
+        }
+
+        .user-list {
+          max-height: 4.5rem;
+          overflow: hidden;
+        }
+
+        img {
+          width: 1.3rem !important;
+          height: 1.3rem !important;
+        }
+
+        ul {
+          padding-left: 0;
+        }
+
+        li {
+          list-style: none;
+        }
       }
 
       // .participant-card {
@@ -385,7 +448,7 @@
         width: 100%;
       }
     }
-  }
+  } //TABLET VIEW END
 
   /* Right side section: Badges, Certificates, Community */
   .side-right {
@@ -460,7 +523,6 @@
           display: flex;
 
           .certificat_list {
-
             span,
             a {
               max-width: 33.3%;
@@ -556,7 +618,7 @@
     :first-child {
       flex: 1;
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         flex: 2;
       }
     }
@@ -597,15 +659,12 @@
   }
 }
 
-
-
 .course-content {
   .userinitials.size-35 {
-    font-size: .75rem;
+    font-size: 0.75rem;
     width: 1.3rem;
     height: 1.3rem;
   }
-
 }
 
 // #user-menu-toggle {
@@ -634,7 +693,7 @@
   //justify-content: space-between;
 }
 
-.even-columns>* {
+.even-columns > * {
   flex: 1;
 }
 
