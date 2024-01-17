@@ -1,3 +1,7 @@
+@import "./fonts";
+@import "./bootstrap-icons";
+
+
 $primary: #004161;
 $font-size-base: 1rem !default;
 //$enable-rfs: false;
@@ -8,25 +12,3 @@ $drawer-padding-y: 20px !default;
 $drawer-offscreen-gutter: 20px !default;
 $navbar-height: 50px;
 
-@font-face {
-  font-family: Roboto;
-  //src: url("../fonts/Roboto-Regular.ttf");
-  src: url([[font:theme|Roboto-Regular.ttf]]) format("truetype");
-}
-@font-face {
-  font-family: Roboto;
- // src: url("../fonts/Roboto-Bold.ttf");
-  src: url([[font:theme|Roboto-Bold.ttf]]) format("truetype");
-  font-weight: bold;
-}
-@font-face {
-  font-family: Roboto;
-  //src: url("../fonts/Roboto-Medium.ttf");
-  src: url([[font:theme|Roboto-Medium.ttf]]) format("truetype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: bootstrap-icons;
-  src: url("../icons/fonts/bootstrap-icons.woff");
-  src: url([[font:theme|bootstrap-icons.woff]]) format("woff");
-}
