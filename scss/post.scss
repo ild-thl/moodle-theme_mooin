@@ -1219,3 +1219,8 @@ iframe[title="YouTube video player"] {
   height: 100%;
   //max-width: 740px;
 }
+
+table, td, th {
+  border: 1px solid gray;
+  padding: 0.25rem;
+}
