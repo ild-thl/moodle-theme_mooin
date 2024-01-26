@@ -67,6 +67,11 @@
   max-width: 1000px;
   margin: 0 auto;
   background-color: #fff;
+  //padding: 0 1rem;
+
+  @include media-breakpoint-up(md) {
+    padding: 0 130px;
+  }
 }
 .mooin4-md-container,
 .userlist {
@@ -129,7 +134,8 @@
       transition: none;
 
       @include media-breakpoint-up(md) {
-        padding: 0;
+        padding: 0 130px;
+        margin: 0;
       }
     }
   }
