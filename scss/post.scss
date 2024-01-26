@@ -66,7 +66,7 @@ a:not([class]):focus:hover,
 
 .metadetail-body ul,
 ol {
-  margin-left: 15px !important;
+  //margin-left: 15px !important;
 }
 
 .format-mooin4 {
@@ -159,6 +159,7 @@ ol {
 
 .course-content ul.topics li.section .content,
 .course-content ul.weeks li.section .content {
+  width: 100%;
   display: flex;
   flex-direction: column;
 
@@ -236,6 +237,9 @@ ol {
     border-bottom: none;
   }
 }
+.section li.activity:not(.activity-wrapper) {
+  padding: 0;
+}
 
 
 /* h5p sizing */
@@ -290,7 +294,7 @@ ol {
 .course-content ul.topics li.section .right,
 .course-content ul.weeks li.section .left,
 .course-content ul.weeks li.section .right {
-  padding: 0;
+  //padding: 0;
 }
 
 /* Removing default padding in course view */
@@ -1240,6 +1244,13 @@ iframe[title="YouTube video player"] {
       border: 1px solid #e7e7e7;
       padding: 0.25rem;
     }
+  }
+
+  ul.section {
+    ul {
+      padding-left: 40px !important;
+    }
+    
   }
   
 }
