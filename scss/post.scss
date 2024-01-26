@@ -319,11 +319,16 @@ ol {
 
   .custom-navbar {
     max-width: 740px;
+    //margin-bottom: 0.25rem;
+    padding-bottom: 0.25rem !important;
+    padding-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
 
     //margin: 0 130px;
     //padding-bottom: 1rem;
     @include media-breakpoint-up(md) {
-      margin: 0 130px 0.5rem 130px !important;
+      margin: 0 130px 0.25rem 130px !important;
+      padding: 0;
     }
   }
 
@@ -504,6 +509,11 @@ ol {
   .mooin4ection-div {
     margin-top: 0rem;
     transition: margin 0.2s;
+    opacity: 1;
+
+    @media (max-height: 600px), screen and (orientation: portrait) {
+      transition: transform 0.2s ease-in-out, opacity 0.5s ease-in-out;
+    }
   }
 }
 
@@ -533,6 +543,11 @@ ol {
   .mooin4ection-div {
     margin-top: 1rem;
     transition: margin 0.2s;
+
+    @media (max-height: 600px) {
+      opacity: 0;
+    }
+   
   }
 }
 
@@ -1219,8 +1234,12 @@ iframe[title="YouTube video player"] {
   height: 100%;
   //max-width: 740px;
 }
-
-table, td, th {
-  border: 1px solid gray;
-  padding: 0.25rem;
+#page-course-view-mooin4 {
+  .section {
+    table, td, th {
+      border: 1px solid #e7e7e7;
+      padding: 0.25rem;
+    }
+  }
+  
 }
