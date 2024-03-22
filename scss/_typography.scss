@@ -1,0 +1,27 @@
+h1 {
+  line-height: $mooin-line-height-lg;
+}
+h2 {
+  line-height: $mooin-line-height-md;
+}
+h3,
+h4,
+h5 {
+  line-height: $mooin-line-height-sm;
+}
+
+.caption {
+  color: $primary;
+  font-size: 1rem;
+  font-weight: 700;
+
+  &--sm {
+    font-size: 0.875rem;
+  }
+}
+
+.coursefrontpage__course-table {
+  h3 {
+    font-size: 1rem;
+  }
+}

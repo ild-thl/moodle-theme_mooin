@@ -1,0 +1,27 @@
+@import "./fonts";
+@import "./bootstrap-icons.scss";
+
+$mooin-color: #004161 !default;
+$primary: $mooin-color !default;
+$boder-radius: 0.625rem !default;
+$background-color: #f8f8f8 !default;
+$course-content-maxwidth: 1000px !default;
+$font-family-sans-serif: Roboto !default;
+$font-size-base: 1rem !default;
+$h1-font-size: $font-size-base * 2.125 !default;
+$h2-font-size: $font-size-base * 1.5 !default;
+$h3-font-size: $font-size-base * 1.5 !default;
+$h4-font-size: $font-size-base * 1.25 !default;
+$h5-font-size: $font-size-base * 1.125 !default;
+$caption-font-size: $font-size-base * 0.875rem !default;
+
+$mooin-line-height-lg: 3.188rem !default;
+$mooin-line-height-md: 2.25rem !default;
+$mooin-line-height-sm: 1.5rem !default;
+$mooin-line-height-xs: 1.125rem !default;
+
+$frontpage-padding-main: 1.5rem 1.875rem !default; 
+$frontpage-padding-side: 0.5rem 1rem 1rem 1rem !default; 
+
+$frontpage-margin-main: 1.5rem 1.875rem !default; 
+$frontpage-margin-side: 1rem !default; 

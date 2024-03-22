@@ -1,0 +1,24 @@
+@font-face {
+  font-family: Roboto;
+  src: url([[font:theme|Roboto-Regular.ttf]]) format('truetype');
+}
+@font-face {
+  font-family: Roboto;
+  src: url([[font:theme|Roboto-Bold.ttf]]) format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: Roboto;
+  src: url([[font:theme|Roboto-Medium.ttf]]) format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'bootstrap-icons';
+  src: url([[font:theme|bootstrap-icons.woff]]) format('woff');
+  
+}
+@font-face {
+  font-family: 'bootstrap-icons';
+  src: url([[font:theme|bootstrap-icons.woff2]]) format('woff2');
+}
