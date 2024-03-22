@@ -181,5 +181,13 @@
         margin-right: 0.5rem;
       }
     }
+    .fa-eye-slash {
+      &::before {
+        font-family: "bootstrap-icons";
+        content: " \F5FF";
+        margin-left: auto;
+        margin-right: 0.5rem;
+      }
+    }
   }
 }
