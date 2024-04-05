@@ -40,18 +40,21 @@
 
 // Forum Posts
 .news-preview {
+  padding: 0.5rem 1rem;
+}
+.discussion-preview {
+  padding: 0.5rem;
+}
+.news-preview,
+.discussion-preview {
   border: 1px solid #e7e7e7;
   border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
 
   i {
     color: $primary;
     font-size: 1.25rem;
   }
-  .userpicture {
-    width: 1.3rem;
-    height: 1.3rem;
-  }
+
   .news-title {
     font-weight: 500;
   }
@@ -64,16 +67,32 @@
     white-space: normal;
     max-height: 3rem;
   }
+
   .discussion-link {
     text-align: end;
   }
 }
+
+
+.news-preview,
+.discussion-preview,
+.participants-container {
+  .userpicture, .userinitials.size-35 {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  
+}
+
+
 .news-post-preview {
   display: flex;
 }
 
-//Badges & Certificates
-.badges-container {
+//Badges & Certificates & Participants
+.badges-container,
+.certificates-container,
+.participants-container {
   padding: 0.5rem;
   border: 1px solid #e7e7e7;
   border-radius: 0.25rem;
@@ -85,9 +104,15 @@
   .bi-gear-fill {
     font-size: 1rem;
   }
-  .all-badges-link {
+  .all-badges-link,
+  .detail-link,
+  .participants-link {
     text-align: end;
   }
+}
+
+.participants-container {
+  list-style: none;
 }
 
 ul.badges-list {
@@ -98,7 +123,6 @@ ul.badges-list {
     width: 33.3%;
   }
 
-
   img {
     width: 4.5rem; //!important;
     height: 4.5rem; //!important;
@@ -107,5 +131,15 @@ ul.badges-list {
   a {
     font-size: 0.875rem;
     hyphens: auto;
+  }
+}
+
+.chat-icon {
+  position: relative;
+  .bi-chat-right-text-fill {
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    scale: 0.8;
   }
 }

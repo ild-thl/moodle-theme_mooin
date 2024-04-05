@@ -1,6 +1,7 @@
 @import "./typography";
 @import "./buttons";
 @import "./utilities";
+@import "./hvp";
 
 /*------------------------------------------------------------ GENERAL LAYOUT ------------------------------------------------------------ */
 .format-moointopics.pagelayout-course {
@@ -28,8 +29,13 @@
     background-color: $background-color;
   }
 
+  .secondary-navigation {
+    padding-bottom: 0;
+  }
+
   .moointopics {
     padding-left: 0;
+    margin-bottom: 0;
   }
   .coursefrontpagelayout {
     #section-0 {
@@ -50,62 +56,157 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 .coursefrontpage {
   background-color: $background-color;
   display: flex;
-  margin-top: 1.875rem;
+
   gap: 1.875rem;
+
+  @include media-breakpoint-up(sm) {
+    margin-top: 1.875rem;
+  }
 
   &__main {
     background-color: #fff;
     width: 800px;
     border-radius: $boder-radius;
+    margin: 0 auto;
+    padding-bottom: 1rem;
   }
 
   &__header {
-    border-radius: $boder-radius $boder-radius 0 0;
+    
     overflow: hidden;
+      max-width: 50rem;
+      height: 100vw;
+      position: sticky;
+      top: 0px;
+      text-align: center;
+
+      .moointopics-btn {
+        width: 100%;
+        .bi {
+          font-size: 1.25rem;
+        }
+      }
+
+      @include media-breakpoint-up(sm) {
+        border-radius: $boder-radius $boder-radius 0 0;
+        height: auto;
+        max-height: 300px;
+        aspect-ratio: 800/280;
+        position: relative;
+        top: unset;
+      }
 
     .desktop-placeholder {
       background-image: url([[pix:theme|./header_placeholder_desktop]]);
     }
-    .desktop-placeholder,
-    .header-image {
+    .mobile-placeholder {
+      background-image: url([[pix:theme|./header_placeholder_mobile]]);
+    }
+    
+    .header-image, .desktop-placeholder, .mobile-placeholder {
+      object-fit: cover;
       width: 100%;
+      height: 100%;
       background-size: cover;
-      background-repeat: no-repeat;
-      aspect-ratio: 2.8571428571;
+        background-repeat: no-repeat;
+
+      @include media-breakpoint-up(sm) {
+        
+        
+        aspect-ratio: 2.8571428571;
+      }
+      
     }
     .title-overlay {
+      top: 50%;
+      transform: translateY(-50%);
       width: 100%;
-      top: unset;
-      bottom: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background-color: rgba(255, 255, 255, 0.73);
-      border-radius: 1.875rem 1.875rem 0 0;
-      padding: 0.5rem 0;
-      p {
-        margin: 0;
+      height: 13em;
+      padding: 1rem;
+      transition: opacity 0.5s;
+
+      @include media-breakpoint-up(sm) {
+        transform: none;
+        top: unset;
+        bottom: 0;
+        height: auto;
+        border-radius: 1.875rem 1.875rem 0 0;
+        padding: 0.5rem 0;
+        p {
+          margin: 0;
+        }
+        h2 {
+          padding: 0.5rem 1rem;
+          margin: 0;
+        }
       }
-      h2 {
-        padding: 0.5rem 1rem;
-        margin: 0;
+    }
+    .title-overlay.fade-out {
+      opacity: 0;
+      @include media-breakpoint-up(sm) {
+        opacity: 1;
       }
     }
   }
+
+  .mobile-bg {
+    position: relative;
+    z-index: 1;
+    background: white;
+    border-radius: 2rem 2rem 0 0;
+    transform: translateY(-3rem);
+    padding-top: 0.5rem;
+    margin-bottom: -3rem;
+
+    @include media-breakpoint-up(sm) {
+      border-radius:0;
+      transform: none;
+      padding-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
   &__news-section {
-    margin: $frontpage-margin-main;
+    margin: 1.5rem 1rem;
+    @include media-breakpoint-up(sm) {
+      margin: $frontpage-margin-main;
+    }
+    .news-mobile {
+      .news-title {
+        font-weight: 500;
+      }
+      .bi {
+        font-size: 1.5rem;
+        color: $primary;
+      }
+    }
   }
   &__course-progress {
-    margin: $frontpage-margin-main;
+    margin: 1.5rem 1rem;
+    @include media-breakpoint-up(sm) {
+      margin: $frontpage-margin-main;
+    }
 
     .course-progress-inner {
       height: 2.3125rem;
       gap: 1rem;
+
+      .bi {
+        font-size: 1.25rem;
+      }
     }
 
     .progress-container {
-      flex: 2;
+      flex: 1;
+      @include media-breakpoint-up(lg) {
+        flex: 2;
+      }
+     
     }
 
     a {
@@ -114,12 +215,17 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
 
   &__course-table {
+    
     .section-summary {
       border: none;
       margin: 0;
     }
 
-    margin: $frontpage-margin-main;
+    margin: 1.5rem 1rem;
+    @include media-breakpoint-up(sm) {
+      margin: $frontpage-margin-main;
+    }
+    margin-bottom: 0;
 
     h3 {
       padding-top: 0.5rem;
@@ -176,7 +282,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
 
   &__side {
-    width: 400px;
+    max-width: 25rem;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -188,6 +294,10 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     background-color: #fff;
     min-height: 300px;
     border-radius: $boder-radius;
+
+    p {
+      margin: 0;
+    }
   }
 
   &__badges-certificates {
@@ -199,6 +309,23 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
   &__community {
   }
+
+  .mobile-tiles {
+    margin: 1.5rem 1rem;
+    .bi {
+      font-size: 1.25rem;
+    }
+  }
+  .badges-certificates-mobile {
+    gap: 1rem;
+    a {
+      flex: 1;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
 }
 
 /*------------------------------------------------------------ SECTION LAYOUT ------------------------------------------------------------ */
@@ -208,10 +335,17 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 }
 
 .single-section .moointopics {
-  margin: 1.25rem 8.125rem;
+  margin: 1.25rem 1rem;
+  margin-bottom: 0;
+  @include media-breakpoint-up(sm) {
+    margin: 1.25rem 8.125rem;
+  }
 }
 #moointopics-breadcrumb-container {
-  margin-left: 8rem;
+  margin-left: 1rem;
+  @include media-breakpoint-up(sm) {
+    margin-left: 8rem;
+  }
 }
 .course-content .single-section {
   margin-top: 0;
@@ -227,8 +361,10 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
 
   .progress-container {
-    width: 740px;
-    margin: 0 auto;
+    margin: 1rem 1rem;
+    @include media-breakpoint-up(sm) {
+      margin: 0 130px;
+    }
 
     .progress-text {
       font-size: 0.75rem;
@@ -237,8 +373,11 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 }
 .navigationtitle {
   align-items: center;
-  margin: 0 4rem;
+  margin: 0 1rem;
   height: 3rem;
+  @include media-breakpoint-up(sm) {
+    margin: 0 4rem;
+  }
 
   .prevsection {
     width: 48px;
@@ -251,21 +390,29 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 
   .larrow,
   .rarrow {
-    font-size: 3rem;
+    font-size: 2rem;
+    @include media-breakpoint-up(sm) {
+      font-size: 3rem;
+    }
   }
 
   h3.sectionname {
     font-size: 1.25rem;
-    width: 46.25rem;
-    text-align: left;
+    width: 100%;
+    text-align: center;
     margin-bottom: 0;
+
+    @include media-breakpoint-up(sm) {
+      text-align: left;
+      padding-left: 1.2rem;
+    }
   }
 }
 .section .label .contentwithoutlink {
   padding-right: 0;
 }
 .course-content .single-section .mdl-bottom {
-  margin: 0 4rem;
+  margin: 1rem 4rem;
   padding-bottom: 2rem;
   .larrow,
   .rarrow {
@@ -322,7 +469,9 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 }
 
 /*------------------------------------------------------------ SUBPAGES ------------------------------------------------------------ */
-#page-course-format-moointopics-badges {
+#page-course-format-moointopics-badges,
+#page-course-format-moointopics-certificate,
+#page-course-format-moointopics-all_discussionforums {
   .moointopics-breadcrumb-container {
     position: sticky;
     top: 0;
@@ -331,6 +480,10 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
     .breadcrumb {
       margin: 0 130px;
+      padding: 0;
+    }
+    nav {
+      padding: 0.25rem 0;
     }
   }
   .subpage {
@@ -338,13 +491,23 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     margin: 0 auto;
     background-color: #fff;
     &--badges {
-      padding: 1rem 130px;
+      margin: 1rem 130px;
       padding-bottom: 2rem;
       .badges-list {
         img {
           width: 7rem;
           height: 7rem;
         }
+      }
+    }
+    &--discussions {
+      margin: 1rem 130px;
+      ul {
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+      li {
+        list-style: none;
       }
     }
     .border-card {

@@ -1,13 +1,22 @@
 h1 {
   line-height: $mooin-line-height-lg;
+  font-size: $h1-font-size;
 }
 h2 {
   line-height: $mooin-line-height-md;
+  font-size: $h2-font-size;
+}
+h3 {
+  font-size: $h3-font-size;
+}
+h4 {
+  font-size: $h4-font-size;
 }
 h3,
 h4,
 h5 {
   line-height: $mooin-line-height-sm;
+  font-size: $h5-font-size;
 }
 
 .caption {
@@ -17,6 +26,7 @@ h5 {
 
   &--sm {
     font-size: 0.875rem;
+    line-height: 1.5rem;
   }
 }
 
