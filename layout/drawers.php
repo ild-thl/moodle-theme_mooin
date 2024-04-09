@@ -94,6 +94,11 @@ $isCourseFrontPage = $isCourseContext && $PAGE->url == course_get_url($COURSE);
 
 $PAGE->requires->js_call_amd('theme_mooinboost/navigation-header', 'scrollHeader');
 
+$incourse = false;
+if ($PAGE->pagelayout == 'incourse') {
+    $incourse = true;
+}
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
@@ -114,7 +119,8 @@ $templatecontext = [
     'overflow' => $overflow,
     'headercontent' => $headercontent,
     'addblockbutton' => $addblockbutton,
-    'iscoursefrontpage' => $isCourseFrontPage
+    'iscoursefrontpage' => $isCourseFrontPage,
+    'incourse' => $incourse,
 ];
 
 echo $OUTPUT->render_from_template('theme_boost/drawers', $templatecontext);
