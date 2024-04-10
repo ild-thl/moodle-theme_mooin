@@ -1,0 +1,43 @@
+.drawer.drawer-left {
+  background-color: white;
+  border-right: 1px solid #e7e7e7;
+}
+.drawercontent {
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+  }
+}
+.courseindex {
+  .nav-links {
+    @include media-breakpoint-up(sm) {
+      margin: 0 1rem;
+    }
+    h2 {
+      font-size: 1.125rem;
+      background-color: #b7b7b7;
+      padding: 0 1.25rem;
+      margin-bottom: 0;
+    }
+    a {
+      height: 50px;
+      font-size: 1.125rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem;
+    }
+    a:hover {
+        text-decoration: none;
+        background-color: #d9d9d9;
+        color: $primary;
+    }
+    a.active {
+      background-color: #d9d9d9;
+      font-weight: 700;
+      color: black;
+      .bi {
+        color: $primary;
+      }
+    }
+  }
+}
