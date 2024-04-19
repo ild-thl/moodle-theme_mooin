@@ -45,12 +45,12 @@
   }
 
   /* Moodle 4 Courseindex */
-  // .courseindex-section[data-number="0"] {
-  //   display: none;
-  // }
-  // #courseindexsection0 {
-  //   display: none !important;
-  // }
+  .courseindex-section[data-number="0"] {
+    display: none;
+  }
+  #courseindexsection0 {
+    display: none !important;
+  }
   nav.moremenu.navigation {
     max-width: 1000px;
     margin: 0 auto;

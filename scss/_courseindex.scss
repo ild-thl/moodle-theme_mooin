@@ -19,24 +19,27 @@
       margin-bottom: 0;
     }
     a {
-      height: 50px;
+      height: 40px;
       font-size: 1.125rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
       padding: 1rem;
+      margin: 0.125rem;
     }
     a:hover {
         text-decoration: none;
-        background-color: #d9d9d9;
-        color: $primary;
+        background-color: $primary;
+        color: $white;
+        border-radius: 0.5rem;
     }
     a.active {
-      background-color: #d9d9d9;
+      background-color: $primary;
       font-weight: 700;
-      color: black;
+      color: $white;
+      border-radius: 0.5rem;
       .bi {
-        color: $primary;
+        color: $white;
       }
     }
   }
