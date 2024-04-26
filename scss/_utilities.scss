@@ -144,17 +144,17 @@ ul.badges-list {
   }
 }
 
-a:not(.collapsed) {
-  .bi-caret-right-fill {
-    display: inline-block;
-    transform: rotate(90deg);
-    transition: 0.3s ease-in-out;
-  }
-}
-a.collapsed {
-  .bi-caret-right-fill {
-    display: inline-block;
-    transform: rotate(0deg);
-    transition: 0.3s ease-in-out;
-  }
-}
+// a:not(.collapsed) {
+//   .bi-caret-right-fill {
+//     display: inline-block;
+//     transform: rotate(90deg);
+//     transition: 0.3s ease-in-out;
+//   }
+// }
+// a.collapsed {
+//   .bi-caret-right-fill {
+//     display: inline-block;
+//     transform: rotate(0deg);
+//     transition: 0.3s ease-in-out;
+//   }
+// }

@@ -10,7 +10,7 @@
 .courseindex {
   .nav-links {
     @include media-breakpoint-up(sm) {
-      margin: 0 1rem;
+      //margin: 0 1rem;
     }
     h2 {
       font-size: 1.125rem;
@@ -43,4 +43,52 @@
       }
     }
   }
+  a:not(.collapsed) {
+      .bi-caret-right-fill {
+        display: inline-block;
+        transform: rotate(90deg);
+        transition: 0.3s ease-in-out;
+      }
+    }
+    a.collapsed {
+      .bi-caret-right-fill {
+        display: inline-block;
+        transform: rotate(0deg);
+        transition: 0.3s ease-in-out;
+      }
+    }
+
+    .active {
+      background-color: #004161;
+      color: white;
+      border-radius: 0.5rem;
+      a.courseindex-link {
+        color: white;
+      }
+    }
+
+    // .courseindex-item.pageitem {
+    //   background-color: unset;
+    //   color: #495057;
+    //   a {
+    //     color: #495057;
+    //   }
+    // }
+
+    // .active {
+    //   .courseindex-item.pageitem {
+    //     background-color: unset;
+    //     color: white;
+    //     a {
+    //       color: white;
+    //     }
+    //   }
+    //   .courseindex-item:hover {
+    //     color: white;
+    //   }
+    //   .courseindex-link:hover {
+    //     color: white;
+    //   }
+    // }
+    
 }
