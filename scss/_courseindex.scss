@@ -28,10 +28,10 @@
       margin: 0.125rem;
     }
     a:hover {
-        text-decoration: none;
-        background-color: $primary;
-        color: $white;
-        border-radius: 0.5rem;
+      text-decoration: none;
+      background-color: $primary;
+      color: $white;
+      border-radius: 0.5rem;
     }
     a.active {
       background-color: $primary;
@@ -44,51 +44,81 @@
     }
   }
   a:not(.collapsed) {
-      .bi-caret-right-fill {
-        display: inline-block;
-        transform: rotate(90deg);
-        transition: 0.3s ease-in-out;
-      }
+    .bi-caret-right-fill {
+      display: inline-block;
+      transform: rotate(90deg);
+      transition: 0.3s ease-in-out;
     }
-    a.collapsed {
-      .bi-caret-right-fill {
-        display: inline-block;
-        transform: rotate(0deg);
-        transition: 0.3s ease-in-out;
-      }
+  }
+  a.collapsed {
+    .bi-caret-right-fill {
+      display: inline-block;
+      transform: rotate(0deg);
+      transition: 0.3s ease-in-out;
     }
+  }
 
-    .active {
-      background-color: #004161;
-      color: white;
-      border-radius: 0.5rem;
-      a.courseindex-link {
-        color: white;
-      }
+  .courseindex-item {
+    max-height: 42px;
+    align-items: center;
+  }
+
+  .index-infos {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    .fa-lock {
+      font-size: 1rem;
     }
+  }
 
-    // .courseindex-item.pageitem {
-    //   background-color: unset;
-    //   color: #495057;
-    //   a {
-    //     color: #495057;
-    //   }
-    // }
+  // .active {
+  //   background-color: #004161;
+  //   color: white;
+  //   border-radius: 0.5rem;
+  //   a.courseindex-link {
+  //     color: white;
+  //   }
+  // }
 
-    // .active {
-    //   .courseindex-item.pageitem {
-    //     background-color: unset;
-    //     color: white;
-    //     a {
-    //       color: white;
-    //     }
-    //   }
-    //   .courseindex-item:hover {
-    //     color: white;
-    //   }
-    //   .courseindex-link:hover {
-    //     color: white;
-    //   }
-    // }
-    
+  // .courseindex-item.pageitem {
+  //   background-color: unset;
+  //   color: #495057;
+  //   a {
+  //     color: #495057;
+  //   }
+  // }
+
+  // .active {
+  //   .courseindex-item.pageitem {
+  //     background-color: unset;
+  //     color: white;
+  //     a {
+  //       color: white;
+  //     }
+  //   }
+  //   .courseindex-item:hover {
+  //     color: white;
+  //   }
+  //   .courseindex-link:hover {
+  //     color: white;
+  //   }
+  // }
+
+  
 }
+
+body:not(.editing) {
+  .dragicon {
+    display: none;
+  }
+}
+
+// .editing .dragicon {
+//   display: block;
+// }
+// .draggable:hover .dragicon {
+//   visibility: visible;
+//   cursor: move;
+// }

@@ -1,0 +1,39 @@
+.tablet-tiles {
+  margin: 1.5rem 1.875rem;
+  .coursefrontpage__badges-certificates {
+    padding: 0;
+   
+    .tiles-wrapper {
+      display: flex;
+      gap: 30px;
+
+      .badges-container {
+        flex: 1;
+        margin-bottom: 0;
+      }
+      .certificates-container {
+        flex: 1;
+      }
+    }
+  }
+
+  .seperator {
+    margin: 1.5rem 0;
+  }
+
+  .coursefrontpage__community {
+    padding: 0;
+    .tiles-wrapper {
+      display: flex;
+      gap: 30px;
+
+      .discussion-preview {
+        flex: 1;
+        margin-bottom: 0;
+      }
+      .participants-container {
+        flex: 1;
+      }
+    }
+  }
+}

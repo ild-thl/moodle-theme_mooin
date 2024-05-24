@@ -3,6 +3,8 @@
 @import "./utilities";
 @import "./hvp";
 @import "./courseindex";
+@import "./tablet";
+@import "./modals";
 
 /*------------------------------------------------------------ GENERAL LAYOUT ------------------------------------------------------------ */
 .format-moointopics.pagelayout-course {
@@ -44,17 +46,20 @@
     }
   }
 
-  /* Moodle 4 Courseindex */
-  .courseindex-section[data-number="0"] {
-    display: none;
-  }
-  #courseindexsection0 {
-    display: none !important;
-  }
+  // /* Moodle 4 Courseindex */
+  // .courseindex-section[data-number="0"] {
+  //   display: none;
+  // }
+  // #courseindexsection0 {
+  //   display: none !important;
+  // }
   nav.moremenu.navigation {
     max-width: 1000px;
     margin: 0 auto;
   }
+}
+.courseindex-section[data-number="0"] {
+  display: none;
 }
 
 /*------------------------------------------------------------ COURSEFRONTPAGE ------------------------------------------------------------ */
@@ -80,29 +85,28 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
 
   &__header {
-    
     overflow: hidden;
-      max-width: 50rem;
-      height: 100vw;
-      position: sticky;
-      top: 0px;
-      text-align: center;
+    max-width: 50rem;
+    height: 100vw;
+    position: sticky;
+    top: 0px;
+    text-align: center;
 
-      .moointopics-btn {
-        width: 100%;
-        .bi {
-          font-size: 1.25rem;
-        }
+    .moointopics-btn {
+      width: 100%;
+      .bi {
+        font-size: 1.25rem;
       }
+    }
 
-      @include media-breakpoint-up(sm) {
-        border-radius: $boder-radius $boder-radius 0 0;
-        height: auto;
-        max-height: 300px;
-        aspect-ratio: 800/280;
-        position: relative;
-        top: unset;
-      }
+    @include media-breakpoint-up(sm) {
+      border-radius: $boder-radius $boder-radius 0 0;
+      height: auto;
+      max-height: 300px;
+      aspect-ratio: 800/280;
+      position: relative;
+      top: unset;
+    }
 
     .desktop-placeholder {
       background-image: url([[pix:theme|./header_placeholder_desktop]]);
@@ -110,20 +114,19 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     .mobile-placeholder {
       background-image: url([[pix:theme|./header_placeholder_mobile]]);
     }
-    
-    .header-image, .desktop-placeholder, .mobile-placeholder {
+
+    .header-image,
+    .desktop-placeholder,
+    .mobile-placeholder {
       object-fit: cover;
       width: 100%;
       height: 100%;
       background-size: cover;
-        background-repeat: no-repeat;
+      background-repeat: no-repeat;
 
       @include media-breakpoint-up(sm) {
-        
-        
         aspect-ratio: 2.8571428571;
       }
-      
     }
     .title-overlay {
       top: 50%;
@@ -172,7 +175,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     margin-bottom: -3rem;
 
     @include media-breakpoint-up(sm) {
-      border-radius:0;
+      border-radius: 0;
       transform: none;
       padding-top: 0;
       margin-bottom: 0;
@@ -214,7 +217,6 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       @include media-breakpoint-up(lg) {
         flex: 2;
       }
-     
     }
 
     a {
@@ -223,10 +225,16 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
 
   &__course-table {
-    
     .section-summary {
       border: none;
       margin: 0;
+    }
+
+    .sectionname {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //font-weight: normal;
     }
 
     margin: 1.5rem 1rem;
@@ -287,6 +295,17 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       background-color: #ccd9df;
       border-radius: 0.125rem;
     }
+
+    .sectionbadges {
+      margin-left: auto;
+    }
+
+    ul.section.img-text {
+      display: none;
+    }
+
+    
+
   }
 
   &__side {
@@ -310,12 +329,46 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 
   &__badges-certificates {
     .badges-container {
+      margin-bottom: 1rem;
       li:nth-child(n + 4) {
         display: none;
       }
     }
+    .certificates-container {
+      .certificat_list {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 1rem;
+        a:nth-child(n + 4),
+          span:nth-child(n + 4) {
+            display: none;
+          }
+        .certificate-img {
+          hyphens: auto;
+          text-align: center;
+          width: 33.3%;
+          display: flex;
+          flex-direction: column;
+          &::before {
+            content: "";
+            // width: 100px;
+             height: 100px;
+            background-image: url([[pix:theme|certificate_icon]]);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+        }
+        span.certificate-img {
+          opacity: 0.2;
+        }
+      }
+    }
   }
   &__community {
+    .discussion-preview {
+      margin-bottom: 1rem;
+    }
   }
 
   .mobile-tiles {
@@ -333,10 +386,16 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       }
     }
   }
-
 }
 
 /*------------------------------------------------------------ SECTION LAYOUT ------------------------------------------------------------ */
+
+.editing {
+  #section-0 {
+    padding-top: 2rem;
+    margin: 0 130px;
+  }
+}
 
 .course-content {
   background-color: white;
@@ -373,7 +432,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 }
 .scroll-down {
   .course-content .single-section .section-navigation {
-    transition: transform 0.2s ease-in-out, opacity 0.1s ease-in-out
+    transition: transform 0.2s ease-in-out, opacity 0.1s ease-in-out;
   }
 }
 
@@ -383,7 +442,6 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   z-index: 1;
   background-color: white;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
-  
 
   .progress-container {
     margin: 1rem 1rem;
@@ -426,6 +484,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     width: 100%;
     text-align: center;
     margin-bottom: 0;
+   
 
     @include media-breakpoint-up(sm) {
       text-align: left;

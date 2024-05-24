@@ -1,0 +1,77 @@
+.mooin4-modal {
+    .modal-dialog {
+      max-width: 540px;
+      margin: 5rem auto;
+    }
+  
+    .modal-content {
+      //width: 340px;
+      height: 340px;
+      max-width: 540px;
+      max-height: 340px;
+      background-color: #f2f2f2;
+      border-radius: 8px;
+      border: none;
+  
+      .modal-header {
+        padding-top: 9px;
+        border: none;
+  
+        .modal-title {
+          margin: 0 auto;
+          font-weight: 700;
+          font-size: 1rem;
+          line-height: 30px;
+        }
+  
+        .close {
+          font-size: 18px;
+          color: $primary;
+          opacity: 1;
+          position: absolute;
+          right: 9px;
+          top: 9px;
+        }
+      }
+  
+      .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+  
+        p {
+          min-height: 3rem;
+          font-size: 20px;
+          text-align: center;
+          margin: 0 2rem;
+        }
+  
+        .bi {
+          font-size: 100px;
+          color: rgba(56, 148, 107, 0.5);
+          height: 100px;
+  
+        }
+      }
+  
+      .modal-footer {
+        border: none;
+        flex-wrap: nowrap;
+        padding-bottom: 23px;
+        gap: 32px;
+  
+        button,
+        a {
+          border: none;
+          max-width: 156px;
+          margin: 0 auto;
+          gap: .5rem;
+  
+          i {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
