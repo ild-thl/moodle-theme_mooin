@@ -196,6 +196,11 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
         color: $primary;
       }
     }
+    .news-post-preview {
+      p {
+        margin-bottom: 0;
+      }
+    }
   }
   &__course-progress {
     margin: 1.5rem 1rem;
@@ -336,8 +341,9 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     }
     .certificates-container {
       .certificat_list {
+        width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        //justify-content: space-evenly;
         margin-top: 1rem;
         a:nth-child(n + 4),
           span:nth-child(n + 4) {
