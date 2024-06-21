@@ -119,9 +119,11 @@ ul.badges-list {
   display: flex;
   padding-left: 0;
   width: 100%;
+  flex-wrap: wrap;
 
   li {
     width: 33.3%;
+    
   }
 
   img {
