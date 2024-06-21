@@ -66,7 +66,11 @@
         {{!{ output.full_header }}
         {{/showfullheader}}
 
-
+         {{#secondarymoremenu}}
+                <div class="secondary-navigation d-print-none">
+                    {{> core/moremenu}}
+                </div>
+            {{/secondarymoremenu}}
 
         <div id="page-content" class="row d-print-block">
             <div id="region-main-box" class="col-12">
