@@ -207,6 +207,9 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
         margin-bottom: 0;
       }
     }
+    .notification-badge--mobile {
+      right: 0.25rem;
+    }
   }
   &__course-progress {
     margin: 1.5rem 1rem;
@@ -393,6 +396,10 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       &:hover {
         color: $primary;
       }
+    }
+    .notification-badge--mobile {
+      right: 0;
+      top: -5px;
     }
   }
 }
