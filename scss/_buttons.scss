@@ -34,7 +34,7 @@
 }
 
 button.moointopics-btn.comp_btn {
-  width: 20.625rem;
+  width: 330px;
   font-size: 0.75rem;
   font-weight: 500;
   border-radius: 0.5rem;
@@ -44,6 +44,10 @@ button.moointopics-btn.comp_btn {
   color: #373A3C;
   outline: none;
   box-shadow: none;
+
+  @include media-breakpoint-down(md) {
+    width: min(330px, 100%);
+  }
 
   i {
     font-size: 2rem;

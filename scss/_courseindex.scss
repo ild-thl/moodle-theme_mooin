@@ -72,40 +72,6 @@
       font-size: 1rem;
     }
   }
-
-  // .active {
-  //   background-color: #004161;
-  //   color: white;
-  //   border-radius: 0.5rem;
-  //   a.courseindex-link {
-  //     color: white;
-  //   }
-  // }
-
-  // .courseindex-item.pageitem {
-  //   background-color: unset;
-  //   color: #495057;
-  //   a {
-  //     color: #495057;
-  //   }
-  // }
-
-  // .active {
-  //   .courseindex-item.pageitem {
-  //     background-color: unset;
-  //     color: white;
-  //     a {
-  //       color: white;
-  //     }
-  //   }
-  //   .courseindex-item:hover {
-  //     color: white;
-  //   }
-  //   .courseindex-link:hover {
-  //     color: white;
-  //   }
-  // }
-
   .chapter-container {
     margin-left: 1.3rem;
   }
@@ -117,10 +83,18 @@ body:not(.editing) {
   }
 }
 
-// .editing .dragicon {
-//   display: block;
-// }
-// .draggable:hover .dragicon {
-//   visibility: visible;
-//   cursor: move;
-// }
+.courseindex .courseindex-item.courseindex-section-title a {
+  font-weight: normal;
+}
+.courseindex .courseindex-item.courseindex-section-title a.chapter {
+  font-weight: bold;
+}
+
+.courseindex .courseindex-item.courseindex-section-title.pageitem a {
+  font-weight: bold;
+}
+
+
+[role="treeitem"]:not([aria-expanded="true"]):focus {
+  box-shadow: none;
+}

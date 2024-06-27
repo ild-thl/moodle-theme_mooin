@@ -413,19 +413,19 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 .single-section .moointopics {
   margin: 1.25rem 1rem;
   margin-bottom: 0;
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     margin: 1.25rem 8.125rem;
   }
 }
 #moointopics-breadcrumb-container {
   margin-left: 1rem;
   transition: 0.2s ease-in-out;
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     margin: 0 8rem;
   }
 
   .breadcrumb {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       margin-bottom: 0;
       padding: 0;
     }
@@ -453,8 +453,8 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
 
   .progress-container {
-    margin: 1rem 1rem;
-    @include media-breakpoint-up(sm) {
+    margin: 0rem 1rem;
+    @include media-breakpoint-up(md) {
       margin: 0 130px;
     }
 
@@ -467,7 +467,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   align-items: center;
   margin: 0 1rem;
   height: 3rem;
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     margin: 0 4rem;
   }
 
@@ -483,7 +483,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   .larrow,
   .rarrow {
     font-size: 2rem;
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       font-size: 3rem;
     }
   }
@@ -493,10 +493,19 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     width: 100%;
     text-align: center;
     margin-bottom: 0;
+    hyphens: auto;
+      clear: none;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      white-space: normal;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       text-align: left;
       width: 740px;
+      margin: 0 1rem;
     }
   }
 }
@@ -506,10 +515,25 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 .course-content .single-section .mdl-bottom {
   margin: 1rem 4rem;
   padding-bottom: 2rem;
+  
   .larrow,
   .rarrow {
     line-height: 0;
     font-size: 1.5rem;
+  }
+  
+  @include media-breakpoint-down(sm) {
+    gap: 0.5rem;
+    margin: 1rem;
+  }
+  @include media-breakpoint-down(xs) {
+    gap: 0.5rem;
+    margin: 1rem;
+    a {
+      font-size: 0.75rem;
+      white-space: nowrap;
+      padding: 0 0.3rem;
+    }
   }
 }
 
@@ -575,7 +599,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       margin: 0 1rem;
       padding: 0;
       @include media-breakpoint-up(md) {
-        margin: 0 130px;
+        margin: 0 130px !important;
       }
     }
     nav {
@@ -685,6 +709,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     padding: 0.25rem 0;
     .breadcrumb {
       padding: 0;
+      margin: 0 !important;
     }
   }
   
