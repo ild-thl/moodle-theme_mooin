@@ -30,7 +30,7 @@
     background-color: #004161;
     &:hover {
       text-decoration: none;
-      color: #fff
+      color: #fff;
     }
   }
 }
@@ -42,8 +42,8 @@ button.moointopics-btn.comp_btn {
   border-radius: 0.5rem;
   margin: 30px auto;
   border: none;
-  background-color: #B8C1CA !important;
-  color: #373A3C;
+  background-color: #b8c1ca !important;
+  color: #373a3c;
   outline: none;
   box-shadow: none;
 
@@ -57,10 +57,26 @@ button.moointopics-btn.comp_btn {
   }
 }
 
-a[role=button], a:not([class]):focus {
+a[role="button"],
+a:not([class]):focus {
   &:focus {
     box-shadow: none;
     background-color: transparent;
   }
 }
 
+.moointopics-btn.unenrol-btn {
+  color: black;
+  background: #b8c1ca;
+  margin: 0 auto;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem;
+  .bi {
+    font-size: 1.5rem;
+  }
+  //font-size: 0.75rem;
+}
