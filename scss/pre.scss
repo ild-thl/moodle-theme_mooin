@@ -2,7 +2,7 @@
 @import "./bootstrap-icons";
 
 
-$primary: #004161;
+$primary: $primary !default;
 $font-size-base: 1rem !default;
 //$enable-rfs: false;
 $drawer-width: 320px !default;

@@ -16,7 +16,7 @@
 //   width: 50%;
 //   height: 2.3125rem;
 //   color: white;
-//   background-color: #004161;
+//   background-color: $primary;
 //   display: flex;
 //   align-items: center;
 //   justify-content: center;
@@ -37,13 +37,13 @@
 //   border-radius: 0.4rem;
 //   width: 50%;
 //   height: 2.3125rem;
-//   color: #004161;
-//   border-color: #004161;
+//   color: $primary;
+//   border-color: $primary;
 //   background-color: #ffffff;
-//   border: 1px solid #004161;
+//   border: 1px solid $primary;
 
 //   a {
-//     color: #004161;
+//     color: $primary;
 //   }
 //   display: flex;
 //   align-items: center;

@@ -40,19 +40,19 @@
 
   .mooin4-btn-primary {
     color: white;
-    background-color: #004161;
+    background-color: $primary;
     a {
       color: white;
     }
   }
   .mooin4-btn-special {
-    color: #004161;
-    border-color: #004161;
+    color: $primary;
+    border-color: $primary;
     background-color: #ffffff;
-    border: 1px solid #004161;
+    border: 1px solid $primary;
 
     a {
-      color: #004161;
+      color: $primary;
     }
   }
   .btn-chat {

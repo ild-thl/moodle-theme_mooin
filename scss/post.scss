@@ -619,7 +619,7 @@ ol {
     position: relative;
     margin-left: 0.5rem;
     color: white;
-    background-color: #004161;
+    background-color: $primary;
 
     a {
       padding-left: 0.15rem;
@@ -639,14 +639,14 @@ ol {
   .mdl-left {
     position: relative;
     margin-right: 0.5rem;
-    color: #004161;
-    border-color: #004161;
+    color: $primary;
+    border-color: $primary;
     background-color: #ffffff;
-    border: 1px solid #004161;
+    border: 1px solid $primary;
 
     a {
       padding-right: 0.15rem;
-      color: #004161;
+      color: $primary;
       display: flex;
       align-items: center;
       @extend .stretched-link;
@@ -725,7 +725,7 @@ ol {
     position: relative;
     margin-left: 0.5rem;
     color: white;
-    background-color: #004161;
+    background-color: $primary;
 
     a {
       padding-left: 0.15rem;
@@ -745,14 +745,14 @@ ol {
   .mdl-left {
     position: relative;
     margin-right: 0.5rem;
-    color: #004161;
-    border-color: #004161;
+    color: $primary;
+    border-color: $primary;
     background-color: #ffffff;
-    border: 1px solid #004161;
+    border: 1px solid $primary;
 
     a {
       padding-right: 0.15rem;
-      color: #004161;
+      color: $primary;
       display: flex;
       align-items: center;
       @extend .stretched-link;
@@ -994,7 +994,7 @@ ol {
 }
 
 .modal_btn_next_chapter {
-  // background-color: #004161;
+  // background-color: $primary;
   // padding: 4px;
   // margin: 12px;
   // color: slategray;
