@@ -5,6 +5,8 @@
 @import "./courseindex";
 @import "./tablet";
 @import "./modals";
+@import "./text-highlighting";
+@import "./text-highlighting-old";
 
 /*------------------------------------------------------------ GENERAL LAYOUT ------------------------------------------------------------ */
 .format-moointopics.pagelayout-course {
@@ -346,7 +348,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       }
     }
     .certificates-container {
-      .certificat_list {
+      .certificate_list {
         width: 100%;
         display: flex;
         //justify-content: space-evenly;
@@ -650,7 +652,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       margin: 1rem;
       padding-bottom: 2rem;
 
-      .certificat_list {
+      .certificate_list {
         display: flex;
         flex-wrap: wrap;
 
