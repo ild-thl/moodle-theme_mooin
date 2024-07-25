@@ -601,6 +601,9 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 #page-course-format-moointopics-badges,
 #page-course-format-moointopics-certificates,
 #page-course-format-moointopics-all_discussionforums {
+  #page {
+    flex: 1 0 auto;
+  }
   .moointopics-breadcrumb-container {
     position: sticky;
     top: 0;
@@ -626,6 +629,8 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     max-width: 1000px;
     margin: 0 auto;
     background-color: #fff;
+
+    
     &--badges {
       margin: 1rem;
       padding-bottom: 2rem;
@@ -740,7 +745,10 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     max-width: 1000px;
     margin: 0 auto;
     background: white;
-    padding: 0 130px;
+    padding: 0 1rem;
+    @include media-breakpoint-up(md) {
+      padding: 1rem 130px;
+    }
   }
 
   #map_id {
