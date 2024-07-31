@@ -48,6 +48,16 @@
     }
   }
 
+  @include media-breakpoint-down(lg) {
+    #theme_boost-drawers-courseindex {
+      position: fixed;
+      z-index: 1050;
+    }
+    #page {
+      margin-left: 0;
+    }
+  }
+
   // /* Moodle 4 Courseindex */
   // .courseindex-section[data-number="0"] {
   //   display: none;
@@ -82,8 +92,11 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     background-color: #fff;
     width: 800px;
     border-radius: $boder-radius;
-    margin: 0 auto;
+    //margin: 0 auto;
     padding-bottom: 1rem;
+    @include media-breakpoint-down(lg) {
+      margin: 0 auto;
+    }
   }
 
   &__header {
@@ -237,6 +250,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 
     a {
       flex: 1;
+      white-space: nowrap;
     }
   }
 
@@ -250,6 +264,15 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      a {
+        display: flex;
+        align-items: start;
+      }
+
+      i {
+        margin-right: 0.5rem;
+      }
       //font-weight: normal;
     }
 
@@ -286,9 +309,14 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
         a {
           color: #373a3c;
           font-weight: 600;
+          height: 100%;
           &:hover {
             text-decoration: none;
           }
+        }
+        .chapternumber {
+          white-space: nowrap;
+          align-self: start;
         }
       }
     }
@@ -322,10 +350,11 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
 
   &__side {
-    max-width: 25rem;
+    width: 25rem;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    flex-shrink: 0;
   }
 
   &__badges-certificates,
@@ -343,6 +372,24 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   &__badges-certificates {
     .badges-container {
       margin-bottom: 1rem;
+      .no-badges-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+      .no-badges-img {
+        flex: 1;
+        height: 10rem;
+        background-image: url([[pix:theme|no_badges]]);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .blue-info-text {
+        flex: 1;
+      }
       li:nth-child(n + 4) {
         display: none;
       }
@@ -375,6 +422,24 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
         }
         span.certificate-img {
           opacity: 0.2;
+        }
+      }
+      .no-certificates-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        .no-certificates-img {
+          flex: 1;
+          height: 10rem;
+          background-image: url([[pix:theme|no_certificates]]);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        .blue-info-text {
+          flex: 1;
         }
       }
     }
@@ -630,7 +695,6 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     margin: 0 auto;
     background-color: #fff;
 
-    
     &--badges {
       margin: 1rem;
       padding-bottom: 2rem;
@@ -649,6 +713,26 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
           }
         }
       }
+
+      .no-badges-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+      .no-badges-img {
+        width: 200px;
+        height: 10rem;
+        background-image: url([[pix:theme|no_badges]]);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .blue-info-text {
+        //flex: 1;
+      }
+
       @include media-breakpoint-up(md) {
         margin: 1rem 130px;
       }
@@ -670,6 +754,9 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
             width: 25%;
           }
         }
+        span.certificate-img {
+          opacity: 0.2;
+        }
       }
 
       .certificate-img {
@@ -688,6 +775,27 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
           background-position: center;
         }
       }
+
+      .no-certificates-container {
+        margin-top: 1rem;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        .no-certificates-img {
+          width: 200px;
+          height: 10rem;
+          background-image: url([[pix:theme|no_certificates]]);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        .blue-info-text {
+          //flex: 1;
+        }
+      }
+
       @include media-breakpoint-up(md) {
         margin: 1rem 130px;
       }

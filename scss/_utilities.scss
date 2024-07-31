@@ -152,6 +152,33 @@ ul.badges-list {
   font-size: 2rem;
 }
 
+.pagelayout-course {
+  .breadcrumb {
+    flex-wrap: nowrap;
+
+    .course-title {
+      max-width: 160px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @include media-breakpoint-down(md) {
+        max-width: calc(100vw - 200px);
+      }
+    }
+    .chapter {
+      max-width: 500px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .lesson {
+      white-space: nowrap;
+    }
+  }
+}
+
+
 // a:not(.collapsed) {
 //   .bi-caret-right-fill {
 //     display: inline-block;
