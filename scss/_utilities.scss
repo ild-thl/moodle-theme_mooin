@@ -155,6 +155,8 @@ ul.badges-list {
 .pagelayout-course {
   .breadcrumb {
     flex-wrap: nowrap;
+    margin-left: 0rem !important;
+    padding-left: 0rem !important;
 
     .course-title {
       max-width: 500px;
