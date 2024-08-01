@@ -9,6 +9,16 @@
 @import "./text-highlighting-old";
 
 /*------------------------------------------------------------ GENERAL LAYOUT ------------------------------------------------------------ */
+.pagelayout-incourse {
+  #topofscroll {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  #page-header {
+    max-width: none;
+  }
+}
+
 .format-moointopics.pagelayout-course {
   #page-content {
     height: 100%;

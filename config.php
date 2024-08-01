@@ -31,3 +31,7 @@ $THEME->haseditswitch = true;
 $THEME->scss = function($theme) {                                                                                                   
     return theme_mooinboost_get_main_scss_content($theme);                                                                               
 };
+
+$THEME->activityheaderconfig = [
+    'notitle' => true
+];

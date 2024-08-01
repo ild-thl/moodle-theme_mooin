@@ -128,7 +128,9 @@
                 {{/hasblocks}}
             </div>
             <!-- No Full-Header -->
-            <!--{{{ output.full_header }}}-->
+            {{#incourse}}
+            {{{ output.full_header }}}
+            {{/incourse}}
             
            
             {{#secondarymoremenu}}
@@ -144,7 +146,7 @@
                     </div>
                     {{/hasregionmainsettingsmenu}}
                     {{#incourse}}
-                        {{{output.navbar}}}
+                        <!--{{{output.navbar}}}-->
                     {{/incourse}}
                     <section id="region-main" aria-label="{{#str}}content{{/str}}">
 

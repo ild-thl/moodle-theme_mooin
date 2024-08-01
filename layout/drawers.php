@@ -92,8 +92,6 @@ $headercontent = $header->export_for_template($renderer);
 $isCourseContext = (isset($COURSE) && $COURSE->id != SITEID);
 $isCourseFrontPage = $isCourseContext && $PAGE->url == course_get_url($COURSE);
 
-//$PAGE->requires->js_call_amd('theme_mooinboost/navigation-header', 'scrollHeader');
-
 $incourse = false;
 if ($PAGE->pagelayout == 'incourse') {
     $incourse = true;
