@@ -115,6 +115,39 @@
   list-style: none;
 }
 
+.badges-list li a {
+  position: relative;
+}
+.coursefrontpage__side {
+  .badges-list li a::before {
+    font-family: "bootstrap-icons";
+    content: "\F430";
+    color: $primary;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    left: 3.5rem;
+    top: -2.5rem;
+    z-index: 1;
+  }
+}
+.subpage--badges {
+  .badges-list li a::before {
+    font-family: "bootstrap-icons";
+    content: "\F430";
+    color: $primary;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    left: 6.0rem;
+    top: -3.7rem; 
+    z-index: 1;
+  }
+}
+
+
 ul.badges-list {
   display: flex;
   padding-left: 0;
@@ -155,8 +188,12 @@ ul.badges-list {
 .pagelayout-course {
   .breadcrumb {
     flex-wrap: nowrap;
-    margin-left: 0rem !important;
+    margin-left: 1rem;
     padding-left: 0rem !important;
+    @include media-breakpoint-up(md) {
+      margin-left: 0rem !important;
+      padding-left: 0rem !important;
+    }
 
     .course-title {
       max-width: 500px;
@@ -176,6 +213,19 @@ ul.badges-list {
     }
     .lesson {
       white-space: nowrap;
+    }
+  }
+}
+
+.new-badge-layer {
+  a {
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url([[pix:theme|./badges/newbadge]]);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 3;
     }
   }
 }
