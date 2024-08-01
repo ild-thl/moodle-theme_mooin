@@ -22,6 +22,15 @@
   }
 }
 
+.single-section {
+  .seperator {
+    margin: 0 4rem;
+    @include media-breakpoint-down(sm) {
+      margin: 0 1rem;
+    }
+  }
+}
+
 .progressbar {
   width: 100%;
   height: 1rem;

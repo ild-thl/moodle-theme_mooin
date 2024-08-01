@@ -35,6 +35,9 @@
   #page-content {
     height: 100%;
   }
+  #page {
+    height: 100%
+  }
   div[role=main] {
     height: 100%;
   }
@@ -518,10 +521,11 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 
 .course-content {
   background-color: white;
+  height: 100%;
 }
 
 .single-section .moointopics {
-  margin: 1.25rem 1rem;
+  margin: 0rem 1rem;
   margin-bottom: 0;
   @include media-breakpoint-up(md) {
     margin: 1.25rem 8.125rem;
@@ -626,6 +630,14 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   margin: 1rem 4rem;
   padding-bottom: 2rem;
 
+  .prevsection, .nextsection {
+    white-space: nowrap;
+    width: 160px;
+    @include media-breakpoint-down(sm) {
+      flex: 1;
+    }
+  }
+
   .larrow,
   .rarrow {
     line-height: 0;
@@ -633,7 +645,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
 
   @include media-breakpoint-down(sm) {
-    gap: 0.5rem;
+    gap: 1rem;
     margin: 1rem;
   }
   @include media-breakpoint-down(xs) {
