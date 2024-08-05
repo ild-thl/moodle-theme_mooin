@@ -274,6 +274,17 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       .bi {
         font-size: 1.25rem;
       }
+
+      @include media-breakpoint-down(md) {
+        gap: 30px;
+        .moointopics-btn--primary {
+          padding: 0;
+        }
+      }
+      @include media-breakpoint-down(xs) {
+        gap: 1rem;
+        
+      }
     }
 
     .progress-container {
@@ -532,7 +543,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
 }
 #moointopics-breadcrumb-container {
-  margin-left: 1rem;
+  margin: 0 1rem;
   transition: 0.2s ease-in-out;
   @include media-breakpoint-up(md) {
     margin: 0 8rem;

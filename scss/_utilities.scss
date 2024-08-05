@@ -197,7 +197,7 @@ ul.badges-list {
 .pagelayout-course {
   .breadcrumb {
     flex-wrap: nowrap;
-    margin-left: 1rem;
+    //margin-left: 1rem;
     padding-left: 0rem !important;
     @include media-breakpoint-up(md) {
       margin-left: 0rem !important;
@@ -205,23 +205,30 @@ ul.badges-list {
     }
 
     .course-title {
-      max-width: 500px;
+      max-width: 300px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      flex: 0 1 auto;
 
       @include media-breakpoint-down(md) {
-        max-width: calc(100vw - 200px);
+        max-width: none;
+        //flex: 0 1 auto;
       }
     }
     .chapter {
-      max-width: 500px;
+      max-width: 300px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      flex: 0 1 auto;
+      @include media-breakpoint-down(md) {
+        flex: 0 0 auto;
+      }
     }
     .lesson {
       white-space: nowrap;
+      flex: 0 0 auto;
     }
   }
 }
