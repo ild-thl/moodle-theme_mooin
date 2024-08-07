@@ -955,6 +955,29 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   .leaflet-bottom {
     z-index: 500;
   }
+}
 
-  
+//Newsforum
+.format-moointopics.forumtype-news {
+  #page {
+    background: #f8f8f8;
+  }
+  #topofscroll {
+    max-width: 1000px;
+    @include media-breakpoint-up(md) {
+      padding: 0;
+    }
+    
+  }
+  #page-header {
+    max-width: 1000px;
+    padding-bottom: 0.5rem;
+  }
+  #page-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .moremenu {
+    margin: 0;
+  }
 }
