@@ -32,6 +32,7 @@
       .discussion-preview {
         flex: 1;
         margin-bottom: 0;
+        width: 0;
 
         .no-discussion-img {
           background-image: url([[pix:theme|no_posts]]);
