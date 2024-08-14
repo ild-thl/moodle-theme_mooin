@@ -36,13 +36,11 @@
     height: 100%;
   }
   #page {
-    height: 100%
-  }
-  div[role=main] {
     height: 100%;
   }
-
-
+  div[role="main"] {
+    height: 100%;
+  }
 
   #page {
     background-color: $background-color;
@@ -120,7 +118,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   gap: 1.875rem;
 
   @include media-breakpoint-up(sm) {
-    margin-top: 1.875rem;
+    //margin-top: 1.875rem;
   }
 
   &__main {
@@ -230,6 +228,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     transform: translateY(-3rem);
     padding-top: 0.5rem;
     margin-bottom: -3rem;
+    padding-bottom: 1rem;
 
     @include media-breakpoint-up(sm) {
       border-radius: 0;
@@ -284,7 +283,6 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       }
       @include media-breakpoint-down(xs) {
         gap: 1rem;
-        
       }
     }
 
@@ -519,6 +517,34 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 
   .unenrol-btn {
     margin-left: 3rem;
+    &:hover {
+      text-decoration: none;
+    }
+    @include media-breakpoint-down(sm) {
+      color: black;
+      background: #b8c1ca;
+      margin: 0 auto;
+      text-transform: uppercase;
+      border: none;
+      box-shadow: none;
+      display: flex;
+      gap: 0.5rem;
+      margin: 1rem;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+      &::after {
+      font-family: "bootstrap-icons";
+      content: "\F1C3";
+      padding-left: 0.5rem;
+      font-size: 1.5rem;
+    }
+    }
   }
 }
 
@@ -540,14 +566,14 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   margin: 0rem 1rem;
   margin-bottom: 0;
   @include media-breakpoint-up(md) {
-    margin: 1.25rem 8.125rem;
+    margin: 0rem 8.125rem;
   }
 }
 #moointopics-breadcrumb-container {
   margin: 0 1rem;
   transition: 0.2s ease-in-out;
   @include media-breakpoint-up(md) {
-    margin: 0  8.125rem;
+    margin: 0 8.125rem;
   }
 
   .breadcrumb {
@@ -639,10 +665,11 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   padding-right: 0;
 }
 .course-content .single-section .mdl-bottom {
-  margin: 1rem 4rem;
+  margin: 2rem 4rem 1rem 4rem;
   padding-bottom: 2rem;
 
-  .prevsection, .nextsection {
+  .prevsection,
+  .nextsection {
     white-space: nowrap;
     width: 160px;
     @include media-breakpoint-down(sm) {
@@ -716,6 +743,10 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       opacity: 0;
     }
   }
+}
+
+.activity-item.activityinline {
+  padding: 0;
 }
 
 /*------------------------------------------------------------ SUBPAGES ------------------------------------------------------------ */
@@ -968,7 +999,6 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     @include media-breakpoint-up(md) {
       padding: 0;
     }
-    
   }
   #page-header {
     max-width: 1000px;

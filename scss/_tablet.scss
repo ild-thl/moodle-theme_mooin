@@ -46,6 +46,13 @@
       }
       .participants-container {
         flex: 1;
+        position: relative;
+
+        .participants-link {
+          position: absolute;
+          right: 0.5rem;
+          bottom: 0.5rem;
+        }
       }
     }
   }

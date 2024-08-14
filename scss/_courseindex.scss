@@ -28,7 +28,7 @@
       margin: 0.125rem;
     }
     a:hover {
-      text-decoration: none;
+      text-decoration: none !important;
       background-color: $primary;
       color: $white;
       border-radius: 0.5rem;
@@ -95,6 +95,8 @@ body:not(.editing) {
   }
 }
 
+
+
 .courseindex .courseindex-item.courseindex-section-title a {
   font-weight: normal;
 }
@@ -104,9 +106,16 @@ body:not(.editing) {
 
 .courseindex .courseindex-item.courseindex-section-title.pageitem a {
   font-weight: bold;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 
 [role="treeitem"]:not([aria-expanded="true"]):focus {
   box-shadow: none;
+}
+
+#theme_boost-drawers-courseindex a:hover {
+  text-decoration: none !important;
 }
