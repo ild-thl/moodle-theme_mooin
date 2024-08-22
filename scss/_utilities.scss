@@ -239,6 +239,10 @@ ul.badges-list {
   }
 }
 
+ol.breadcrumb {
+  margin-left: 0px !important;
+}
+
 .new-badge-layer {
   a {
     &::after {
