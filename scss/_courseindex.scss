@@ -119,3 +119,6 @@ body:not(.editing) {
 #theme_boost-drawers-courseindex a:hover {
   text-decoration: none !important;
 }
+.drawer-toggles .drawer-toggler {
+  z-index: 551;
+}
