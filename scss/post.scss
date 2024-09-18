@@ -20,7 +20,7 @@
   }
 }
 
-.format-moointopics.pagelayout-course {
+.format-mooin4.pagelayout-course {
   #page-content {
     height: 100%;
   }
@@ -72,7 +72,7 @@
     padding-bottom: 0;
   }
 
-  .moointopics {
+  .mooin4 {
     padding-left: 0;
     margin-bottom: 0;
   }
@@ -141,7 +141,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     top: 0px;
     text-align: center;
 
-    .moointopics-btn {
+    .mooin4-btn {
       width: 100%;
       .bi {
         font-size: 1.25rem;
@@ -278,7 +278,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 
       @include media-breakpoint-down(md) {
         gap: 30px;
-        .moointopics-btn--primary {
+        .mooin4-btn--primary {
           padding: 0;
         }
       }
@@ -563,14 +563,14 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   height: 100%;
 }
 
-.single-section .moointopics {
+.single-section .mooin4 {
   margin: 0rem 1rem;
   margin-bottom: 0;
   @include media-breakpoint-up(md) {
     margin: 0rem 8.125rem;
   }
 }
-#moointopics-breadcrumb-container {
+#mooin4-breadcrumb-container {
   margin: 0 1rem;
   transition: 0.2s ease-in-out;
   @include media-breakpoint-up(md) {
@@ -751,13 +751,13 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 }
 
 /*------------------------------------------------------------ SUBPAGES ------------------------------------------------------------ */
-#page-course-format-moointopics-badges,
-#page-course-format-moointopics-certificates,
-#page-course-format-moointopics-all_discussionforums {
+#page-course-format-mooin4-badges,
+#page-course-format-mooin4-certificates,
+#page-course-format-mooin4-all_discussionforums {
   #page {
     flex: 1 0 auto;
   }
-  .moointopics-breadcrumb-container {
+  .mooin4-breadcrumb-container {
     position: sticky;
     top: 0;
     margin-left: 0;
@@ -950,7 +950,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 }
 
 //Participants is still rendered without template so it needs extra scss
-#page-course-format-moointopics-participants {
+#page-course-format-mooin4-participants {
   .sticky-container {
     position: sticky;
     z-index: 550;
@@ -961,7 +961,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     background-color: white;
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
   }
-  #moointopics-breadcrumb-container {
+  #mooin4-breadcrumb-container {
     padding: 0.25rem 0;
     .breadcrumb {
       padding: 0;
@@ -969,7 +969,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     }
   }
 
-  .moointopics-subpage-bg {
+  .mooin4-subpage-bg {
     max-width: 1000px;
     margin: 0 auto;
     background: white;
@@ -991,7 +991,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 }
 
 //Newsforum
-.format-moointopics.forumtype-news {
+.format-mooin4.forumtype-news {
   #page {
     background: #f8f8f8;
   }
