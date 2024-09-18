@@ -4,7 +4,7 @@
 defined('MOODLE_INTERNAL') || die();
 
                                                                                           
-$THEME->name = 'mooinboost';                                                                                                             
+$THEME->name = 'mooin4';                                                                                                             
                                                                                                                                                                                                                                                        
 $THEME->sheets = [];                                                                                                                
                                                                                                                                     
@@ -29,7 +29,7 @@ $THEME->haseditswitch = true;
 // $THEME->rarrow = '<i class="bi bi-caret-right-fill"></i>';
 
 $THEME->scss = function($theme) {                                                                                                   
-    return theme_mooinboost_get_main_scss_content($theme);                                                                               
+    return theme_mooin4_get_main_scss_content($theme);                                                                               
 };
 
 $THEME->activityheaderconfig = [

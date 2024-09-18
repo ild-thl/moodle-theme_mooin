@@ -14,12 +14,12 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-namespace theme_mooinboost\output;
+namespace theme_mooin4\output;
 
 use moodle_url;
 use html_writer;
 use get_string;
-//use theme_mooinboost\classes\boostnavbar;
+//use theme_mooin4\classes\boostnavbar;
 
 defined('MOODLE_INTERNAL') || die;
 
@@ -30,7 +30,7 @@ defined('MOODLE_INTERNAL') || die;
  * @copyright  2012 Bas Brands, www.basbrands.nl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class theme_mooinboost_core_renderer extends \core_renderer {
+class theme_mooin4_core_renderer extends \core_renderer {
 
     /**
      * Returns HTML to display a "Turn editing on/off" button in a form.
