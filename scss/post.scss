@@ -78,7 +78,7 @@
   }
   .coursefrontpagelayout {
     #section-0 {
-      display: none;
+      //display: none;
     }
   }
 
@@ -554,8 +554,14 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 .editing {
   #section-0 {
     padding-top: 2rem;
-    margin: 0 130px;
+    margin: 0 30px;
   }
+}
+
+#section-0 {
+    .section-item   {
+        border-color: red;
+    }
 }
 
 .course-content {
