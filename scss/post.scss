@@ -47,6 +47,7 @@
     background-color: $background-color;
   }
   #topofscroll {
+    min-height: 100vh;
     padding-top: 0;
   }
   #page.drawers {
