@@ -162,6 +162,10 @@ if ($PAGE->pagelayout == 'incourse') {
     $incourse = true;
 }
 
+
+$context = context_course::instance($COURSE->id);
+$canseesecondarymoremenu = has_capability('moodle/course:update', $context, $USER); // Check if user has editing rights like a teacher or admin.
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
@@ -182,9 +186,11 @@ $templatecontext = [
     'overflow' => $overflow,
     'headercontent' => $headercontent,
     'addblockbutton' => $addblockbutton,
-    // Tinjohn added.
+    // Mooin4 added.
     'iscoursefrontpage' => $isCourseFrontPage,
     'incourse' => $incourse,
+    // Tinajohn added.
+    'canseesecondarymoremenu' => $canseesecondarymoremenu,
 ];
 
 // Include the template content for the course related hints.
