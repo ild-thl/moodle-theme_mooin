@@ -132,12 +132,13 @@
             {{{ output.full_header }}}
             {{/incourse}}
             
-           
-            {{#secondarymoremenu}}
-                <div class="secondary-navigation d-print-none">
-                    {{> core/moremenu}}
-                </div>
-            {{/secondarymoremenu}}
+             {{#canseesecondarymoremenu}}
+                {{#secondarymoremenu}}
+                    <div class="secondary-navigation d-print-none">
+                        {{> core/moremenu}}
+                    </div>
+                {{/secondarymoremenu}}
+            {{/canseesecondarymoremenu}}
             <div id="page-content" class="d-print-block">
                 <div id="region-main-box">
                     {{#hasregionmainsettingsmenu}}
