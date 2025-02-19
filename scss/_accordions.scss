@@ -161,6 +161,12 @@ p + .accordion {
 .full_color.blue-gray .accordion_content {
   background-color: rgba(104, 116, 151, 0.5);
 }
+.accordion.red .accordion_content{
+  color: $gray-900 !important; /* text color */
+}
+
+
+
 .acc_h {
   margin-top: 10px;
   width: 100%;
