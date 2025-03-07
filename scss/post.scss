@@ -259,6 +259,9 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
         font-size: 1.5rem;
         color: $primary;
       }
+      .news-icon-container {
+        display: flex;
+      }
     }
     .news-post-preview {
       p {
