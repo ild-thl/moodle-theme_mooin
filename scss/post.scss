@@ -37,7 +37,7 @@
     height: 100%;
   }
   #page {
-   /* height: 100%; */
+    /* height: 100%; */
   }
   div[role="main"] {
     height: 100%;
@@ -248,10 +248,19 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     .news-mobile {
       .news-title {
         font-weight: 500;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        white-space: normal;
       }
       .bi {
         font-size: 1.5rem;
         color: $primary;
+      }
+      .news-icon-container {
+        display: flex;
       }
     }
     .news-post-preview {
@@ -554,16 +563,15 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       font-size: 0.75rem;
       font-weight: 500;
       display: flex;
-  align-items: center;
-  justify-content: center;
-
+      align-items: center;
+      justify-content: center;
 
       &::after {
-      font-family: "bootstrap-icons";
-      content: "\F1C3";
-      padding-left: 0.5rem;
-      font-size: 1.5rem;
-    }
+        font-family: "bootstrap-icons";
+        content: "\F1C3";
+        padding-left: 0.5rem;
+        font-size: 1.5rem;
+      }
     }
   }
 }
@@ -578,9 +586,9 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 }
 
 #section-0 {
-    .section-item   {
-        border-color: red;
-    }
+  .section-item {
+    border-color: red;
+  }
 }
 
 .course-content {
@@ -1042,5 +1050,5 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 /*------------------------------------------------------------ SUBPAGES ------------------------------------------------------------ */
 
 .activity {
-    border-top: 0px solid #dee2e6;
+  border-top: 0px solid #dee2e6;
 }

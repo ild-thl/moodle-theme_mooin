@@ -162,7 +162,6 @@ if ($PAGE->pagelayout == 'incourse') {
     $incourse = true;
 }
 
-
 $context = context_course::instance($COURSE->id);
 $canseesecondarymoremenu = has_capability('moodle/course:update', $context, $USER); // Check if user has editing rights like a teacher or admin.
 
