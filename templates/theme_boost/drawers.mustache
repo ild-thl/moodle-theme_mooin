@@ -128,11 +128,11 @@
                 {{/hasblocks}}
             </div>
             <!-- No Full-Header -->
+            {{> theme_boost_union/infobanners }}
             {{#incourse}}
             {{{ output.full_header }}}
             {{/incourse}}
-            
-             {{#canseesecondarymoremenu}}
+            {{#canseesecondarymoremenu}}
                 {{#secondarymoremenu}}
                     <div class="secondary-navigation d-print-none">
                         {{> core/moremenu}}

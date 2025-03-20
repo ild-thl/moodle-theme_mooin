@@ -504,6 +504,24 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     .discussion-preview {
       margin-bottom: 1rem;
     }
+    .no-participantscap-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .no-participantscap-img {
+        flex: 1;
+        height: 10rem;
+        background-image: url([[pix:theme|no_community_cap]]);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .blue-info-text {
+        flex: 1;
+    }
   }
 
   .mobile-tiles {
