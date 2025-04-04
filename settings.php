@@ -24,6 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+/*
 if ($hassiteconfig || has_capability('theme/boost_union:configure', context_system::instance())) {
 
         // How this file works:
@@ -139,10 +140,12 @@ if ($hassiteconfig || has_capability('theme/boost_union:configure', context_syst
                  *********************************************************/
 
                 // Add settings page to the admin settings category.
+
+                /*
                 $ADMIN->add('theme_boost_union', $page);
         }
 }
-
+*/
 if ($ADMIN->fulltree) {
         $temp = new admin_settingpage('themesettingmooin4', get_string('configtitle', 'theme_mooin4'));
 
