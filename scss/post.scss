@@ -37,7 +37,7 @@
     height: 100%;
   }
   #page {
-    /* height: 100%; */
+   /* height: 100%; */
   }
   div[role="main"] {
     height: 100%;
@@ -70,6 +70,7 @@
   }
 
   .secondary-navigation {
+    color: var(--secondary-color);
     padding-bottom: 0;
   }
 
@@ -165,7 +166,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     }
 
     .desktop-placeholder {
-      background-image: url([[pix:theme|./header_placeholder_desktop]]);
+      background-image: url([[pix:theme|./header_placeholder_grey]]);
     }
     .mobile-placeholder {
       background-image: url([[pix:theme|./header_placeholder_mobile]]);
@@ -248,19 +249,10 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     .news-mobile {
       .news-title {
         font-weight: 500;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        display: -webkit-box !important;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        white-space: normal;
       }
       .bi {
         font-size: 1.5rem;
-        color: $primary;
-      }
-      .news-icon-container {
-        display: flex;
+        color: var(--primary-color);
       }
     }
     .news-post-preview {
@@ -351,12 +343,13 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     a {
       font-size: 1rem;
       font-weight: 400;
-      color: #004161;
+      color: var(--primary-color);
     }
 
     .section:not(.chapter) {
       .course-section-header {
         padding-left: 1.3rem;
+        color: var(--primary-color);
       }
     }
 
@@ -392,7 +385,9 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     }
 
     .active {
-      background-color: #ccd9df;
+      background-color: var(--primary-light) !important; 
+      border-color: var(--secondary-color) !important;
+      border: 1px solid;
       border-radius: 0.125rem;
     }
 
@@ -438,7 +433,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       .no-badges-img {
         flex: 1;
         height: 10rem;
-        background-image: url([[pix:theme|no_badges]]);
+        background-image: url([[pix:theme|no_badges_grey]]);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -489,7 +484,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
         .no-certificates-img {
           flex: 1;
           height: 10rem;
-          background-image: url([[pix:theme|no_certificates]]);
+          background-image: url([[pix:theme|no_certificate_grey]]);
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
@@ -535,7 +530,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     a {
       flex: 1;
       &:hover {
-        color: $primary;
+        color: var(--secondary-color);
       }
     }
     .notification-badge--mobile {
@@ -563,15 +558,16 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       font-size: 0.75rem;
       font-weight: 500;
       display: flex;
-      align-items: center;
-      justify-content: center;
+  align-items: center;
+  justify-content: center;
+
 
       &::after {
-        font-family: "bootstrap-icons";
-        content: "\F1C3";
-        padding-left: 0.5rem;
-        font-size: 1.5rem;
-      }
+      font-family: "bootstrap-icons";
+      content: "\F1C3";
+      padding-left: 0.5rem;
+      font-size: 1.5rem;
+    }
     }
   }
 }
@@ -586,9 +582,9 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 }
 
 #section-0 {
-  .section-item {
-    border-color: red;
-  }
+    .section-item   {
+        border-color: red;
+    }
 }
 
 .course-content {
@@ -858,7 +854,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       .no-badges-img {
         width: 200px;
         height: 10rem;
-        background-image: url([[pix:theme|no_badges]]);
+        background-image: url([[pix:theme|no_badges_grey]]);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -920,7 +916,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
         .no-certificates-img {
           width: 200px;
           height: 10rem;
-          background-image: url([[pix:theme|no_certificates]]);
+          background-image: url([[pix:theme|no_certificate_grey]]);
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
@@ -958,7 +954,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
         width: 100px;
       }
       .unread-btn-mobile {
-        border: 1px solid $primary;
+        border: 1px solid var(--secondary-color);
         border-radius: 0.4rem;
         padding: 0 0.5rem;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -967,7 +963,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
           font-family: "bootstrap-icons";
           content: "\F32E";
           font-size: 1.5rem;
-          color: $primary;
+          color: var(--secondary-color);
         }
       }
     }
@@ -1043,6 +1039,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     margin: 0 auto;
   }
   .moremenu {
+    color: var(--secondary-color);
     margin: 0;
   }
 }
@@ -1050,5 +1047,5 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 /*------------------------------------------------------------ SUBPAGES ------------------------------------------------------------ */
 
 .activity {
-  border-top: 0px solid #dee2e6;
+    border-top: 0px solid #dee2e6;
 }

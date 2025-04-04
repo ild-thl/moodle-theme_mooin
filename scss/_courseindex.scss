@@ -19,6 +19,7 @@
       margin-bottom: 0;
     }
     a {
+      color:var(--secondary-color);
       height: 40px;
       font-size: 1.125rem;
       display: flex;
@@ -29,12 +30,12 @@
     }
     a:hover {
       text-decoration: none !important;
-      background-color: $primary;
+      background-color: var(--primary-color);
       color: $white;
       border-radius: 0.5rem;
     }
     a.active {
-      background-color: $primary;
+      background-color: var(--primary-color);
       font-weight: 700;
       color: $white;
       border-radius: 0.5rem;
@@ -122,3 +123,4 @@ body:not(.editing) {
 .drawer-toggles .drawer-toggler {
   z-index: 551;
 }
+

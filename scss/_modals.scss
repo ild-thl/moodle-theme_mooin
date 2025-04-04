@@ -3,6 +3,9 @@
       max-width: 540px;
       margin: 5rem auto;
     }
+    :focus{
+      border-color: var(--secondary-color);
+    }
   
     .modal-content {
       //width: 340px;
@@ -26,7 +29,7 @@
   
         .close {
           font-size: 18px;
-          color: $primary;
+          color: var(--primary-color);
           opacity: 1;
           position: absolute;
           right: 9px;
@@ -49,7 +52,7 @@
   
         .bi {
           font-size: 100px;
-          color: rgba(56, 148, 107, 0.5);
+          color: var(--primary-color);
           height: 100px;
   
         }

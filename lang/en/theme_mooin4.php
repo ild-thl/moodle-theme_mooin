@@ -54,3 +54,48 @@ $string['extrascssinheritancesetting_desc'] = 'With this setting, you control if
 
 // Privacy API.
 $string['privacy:metadata'] = 'The Boost Union Child theme does not store any personal data about any user.';
+
+// Strings für Farbpaletten 
+$string['colorpalette'] = 'Color palette';
+$string['colorpalette_desc'] = 'Choose the color palette for the theme.';
+$string['palette_green'] = 'Green';
+$string['palette_blue'] = 'Blue';
+$string['palette_pastellblue'] = 'Pastell Blue';
+$string['palette_custom'] = 'Custom (editable)';
+
+//Strings für Colorpicker der Custom-Palette
+$string['primarycolor'] = 'Primary Color';
+$string['primarycolor_desc'] = 'Set the primary color of your theme';
+$string['secondarycolor'] = 'Secondary Color';
+$string['secondarycolor_desc'] = 'Set the secondary color of your theme';
+$string['backgroundcolor'] = 'Background Color';
+$string['backgroundcolor_desc'] = 'Set the background color of your theme';
+$string['innerprogress'] = 'Inner Progressbar Color';
+$string['innerprogress_desc'] = 'Set the inner progress color';
+$string['backgroundprogress'] = 'Background Progressbar Color';
+$string['backgroundprogress_desc'] = 'Set the background progress color';
+$string['signalcolor'] = 'Signal Color';
+$string['signalcolor_desc'] = 'Set the signal color';
+$string['linkcolor'] = 'Link Color';
+$string['linkcolor_desc'] = 'Set the link color';
+$string['generalcolor'] = 'General-Box Color';
+$string['generalcolor_desc'] = 'Set the general-box color';
+$string['bordergeneral'] = 'Bordercolor General-Box';
+$string['bordergeneral_desc'] = 'Set the general-box border color';
+$string['importantcolor'] = 'Important-Box Color';
+$string['importantcolor_desc'] = 'Set the important-box color';
+$string['borderimportant'] = 'Bordercolor Important-Box';
+$string['borderimportant_desc'] = 'Set the important-box border color';
+$string['taskcolor'] = 'Task-Box Color';
+$string['taskcolor_desc'] = 'Set the task-box color';
+$string['bordertask'] = 'Bordercolor Task-Box';
+$string['bordertask_desc'] = 'Set the task-box border color';
+$string['factcolor'] = 'Fact-Box Color';
+$string['factcolor_desc'] = 'Set the fact-box color';
+$string['borderfact'] = 'Bordercolor Fact-Box';
+$string['borderfact_desc'] = 'Set the fact-box border color';
+$string['primarylight'] = 'Primary Light';
+$string['primarylight_desc'] = 'Set a lighter version of the primary color through the transparency in the second input.';
+$string['primarylight_opacity'] = 'Transparency Primary Light';
+$string['primarylight_opacity_desc'] = 'Set the transparency of primary light (0-100%).';
+
