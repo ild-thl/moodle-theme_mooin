@@ -8,6 +8,7 @@
 @import "./text-highlighting";
 @import "./text-highlighting-old";
 @import "./accordions";
+@import "./bootstrap-icons.scss";
 
 /*------------------------------------------------------------ GENERAL LAYOUT ------------------------------------------------------------ */
 .pagelayout-incourse {
@@ -597,6 +598,14 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   margin-bottom: 0;
   @include media-breakpoint-up(md) {
     margin: 0rem 8.125rem;
+  }
+
+  a{
+    text-decoration: underline; 
+    &::after {
+      font-family: "bootstrap-icons";
+      content: "\F470";
+    }
   }
 }
 #mooin4-breadcrumb-container {
