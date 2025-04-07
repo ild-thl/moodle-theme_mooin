@@ -99,3 +99,5 @@ $string['primarylight_desc'] = 'Set a lighter version of the primary color throu
 $string['primarylight_opacity'] = 'Transparency Primary Light';
 $string['primarylight_opacity_desc'] = 'Set the transparency of primary light (0-100%).';
 
+$string['color_heading'] = 'mooin Color settings';
+

@@ -139,15 +139,80 @@ if ($hassiteconfig || has_capability('theme/boost_union:configure', context_syst
                  * Add your Boost Union Child settings here.
                  *********************************************************/
 
-                // Add settings page to the admin settings category.
+// Add settings page to the admin settings category.
 
-                /*
+/*
                 $ADMIN->add('theme_boost_union', $page);
         }
 }
 */
 if ($ADMIN->fulltree) {
         $temp = new admin_settingpage('themesettingmooin4', get_string('configtitle', 'theme_mooin4'));
+
+        // Require the necessary libraries.
+        require_once($CFG->dirroot . '/theme/boost_union/lib.php');
+        require_once($CFG->dirroot . '/theme/boost_union/locallib.php');
+        require_once($CFG->dirroot . '/theme/mooin4/lib.php');
+        require_once($CFG->dirroot . '/theme/mooin4/locallib.php');
+
+        // Prepare options array for select settings.
+        // Due to MDL-58376, we will use binary select settings instead of checkbox settings throughout this theme.
+        $yesnooption = [
+                THEME_BOOST_UNION_SETTING_SELECT_YES => get_string('yes'),
+                THEME_BOOST_UNION_SETTING_SELECT_NO => get_string('no'),
+        ];
+
+
+        // Create inheritance heading.
+        $name = 'theme_mooin4/inheritanceheading';
+        $title = get_string('inheritanceheading', 'theme_mooin4', null, true);
+        $setting = new admin_setting_heading($name, $title, null);
+        $temp->add($setting);
+
+        // Prepare inheritance options.
+        $inheritanceoptions = [
+                THEME_MOOIN4_SETTING_INHERITANCE_INHERIT =>
+                get_string('inheritanceinherit', 'theme_mooin4'),
+                THEME_MOOIN4_SETTING_INHERITANCE_DUPLICATE =>
+                get_string('inheritanceduplicate', 'theme_mooin4'),
+        ];
+
+        // Setting: Pre SCSS inheritance setting.
+        $name = 'theme_mooin4/prescssinheritance';
+        $title = get_string('prescssinheritancesetting', 'theme_mooin4', null, true);
+        $description = get_string('prescssinheritancesetting_desc', 'theme_mooin4', null, true) . '<br />' .
+                get_string('inheritanceoptionsexplanation', 'theme_mooin4', null, true);
+        $setting = new admin_setting_configselect(
+                $name,
+                $title,
+                $description,
+                THEME_MOOIN4_SETTING_INHERITANCE_INHERIT,
+                $inheritanceoptions
+        );
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $temp->add($setting);
+
+        // Setting: Extra SCSS inheritance setting.
+        $name = 'theme_mooin4/extrascssinheritance';
+        $title = get_string('extrascssinheritancesetting', 'theme_mooin4', null, true);
+        $description = get_string('extrascssinheritancesetting_desc', 'theme_mooin4', null, true) . '<br />' .
+                get_string('inheritanceoptionsexplanation', 'theme_mooin4', null, true);
+        $setting = new admin_setting_configselect(
+                $name,
+                $title,
+                $description,
+                THEME_MOOIN4_SETTING_INHERITANCE_INHERIT,
+                $inheritanceoptions
+        );
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $temp->add($setting);
+
+
+        $name = 'theme_mooin4/color_heading';
+        $title = get_string('color_heading', 'theme_mooin4', null, true);
+        $setting = new admin_setting_heading($name, $title, null);
+        $temp->add($setting);
+
 
         //Dropdown for Color Palettes
         $name = 'theme_mooin4/colorpalette';
