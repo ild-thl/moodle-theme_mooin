@@ -638,6 +638,13 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
 }
 
+#courseindex-content{
+  .active{
+    .bi-check{
+      color: $white !important; 
+    }
+  }
+}
 .navigation-wrapper {
   position: sticky;
   top: 0px;
