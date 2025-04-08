@@ -600,15 +600,13 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     margin: 0rem 8.125rem;
   }
 
-  a{
-    text-decoration: underline;
-  }
-  
-  .description > a{
-    text-decoration: underline; 
-    &::after {
-      font-family: "bootstrap-icons";
-      content: "\F470";
+  .description {
+    a{
+      text-decoration: underline; 
+      &::after {
+        font-family: "bootstrap-icons";
+        content: "\F470";
+      }
     }
   }
 }
