@@ -58,6 +58,7 @@ $string['privacy:metadata'] = 'The Boost Union Child theme does not store any pe
 // Strings für Farbpaletten 
 $string['colorpalette'] = 'Color palette';
 $string['colorpalette_desc'] = 'Choose the color palette for the theme.';
+$string['classic_mooin'] = 'Classic mooin';
 $string['palette_green'] = 'Green';
 $string['palette_blue'] = 'Blue';
 $string['palette_pastellblue'] = 'Pastell Blue';

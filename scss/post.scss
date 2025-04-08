@@ -601,6 +601,10 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
 
   a{
+    text-decoration: underline;
+  }
+  
+  .description > a{
     text-decoration: underline; 
     &::after {
       font-family: "bootstrap-icons";

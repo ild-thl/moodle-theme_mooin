@@ -218,8 +218,9 @@ if ($ADMIN->fulltree) {
         $name = 'theme_mooin4/colorpalette';
         $title = get_string('colorpalette', 'theme_mooin4');
         $description = get_string('colorpalette_desc', 'theme_mooin4');
-        $default = 'palette-green';
+        $default = 'classic-mooin';
         $choices = [
+                'classic-mooin' => get_string('classic_mooin', 'theme_mooin4'),
                 'palette-green' => get_string('palette_green', 'theme_mooin4'),
                 'palette-blue' => get_string('palette_blue', 'theme_mooin4'),
                 'palette-pastellblue' => get_string('palette_pastellblue', 'theme_mooin4'),

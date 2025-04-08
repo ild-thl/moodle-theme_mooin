@@ -27,6 +27,35 @@
 }
 
 // Define additional color palettes
+body.classic-mooin {
+    --primary-color: #004161; 
+    --primary-light: #ccd9df;
+    --secondary-color: #004161; 
+
+    --background-color: #f8f8f8; 
+    --inner-progress: rgba(56, 148, 107, 0.5);
+    --background-progress: #c5ddd3;
+
+    --signal-color: red;
+    --link-color:#004161;
+
+    .bi-check, 
+    .mooin4-modal .modal-content .modal-body .bi, 
+    button.mooin4-btn.comp_btn i{
+        color: var(--inner-progress);
+    }
+
+    button.mooin4-btn.comp_btn{
+        background-color: #b8c1ca !important; 
+        color: #373a3c;
+    }
+
+    .coursefrontpage__course-table .active{
+        background-color: #ccd9df !important;
+        border: none !important;
+    }
+}
+
 body.palette-green {
     --primary-color: #488709; 
     --primary-light: #48870931;
