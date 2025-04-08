@@ -162,7 +162,12 @@ if ($ADMIN->fulltree) {
                 THEME_BOOST_UNION_SETTING_SELECT_NO => get_string('no'),
         ];
 
-
+        $alertstring = get_string('settings_alert', 'theme_mooin4', null, true);
+        $temp->add(new admin_setting_heading(
+                'alert_message',
+                '',
+                html_writer::tag('div', $alertstring, array('class' => 'alert alert-warning'))
+            ));
         // Create inheritance heading.
         $name = 'theme_mooin4/inheritanceheading';
         $title = get_string('inheritanceheading', 'theme_mooin4', null, true);

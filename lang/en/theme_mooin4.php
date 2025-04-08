@@ -101,4 +101,4 @@ $string['primarylight_opacity'] = 'Transparency Primary Light';
 $string['primarylight_opacity_desc'] = 'Set the transparency of primary light (0-100%).';
 
 $string['color_heading'] = 'mooin Color settings';
-
+$string['settings_alert'] = 'Please note that the changes made in custom color palette is only available when Extra SCSS inheritance = Duplicate.';
