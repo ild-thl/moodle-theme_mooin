@@ -1186,16 +1186,18 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 }
 
 .coursefrontpage__course-table {
-  .sectionname {
-
-    a {
-      color: var(--secondary-color) !important;
-    }
-
+  a {
+    color: var(--secondary-color) !important;
+  }
+  .show {
     a:hover {
       color: var(--primary-color) !important;
-      text-decoration: underline !important;
+      text-decoration: underline;
     }
+  }
+  .chapter:hover{
+    color: var(--secondary-color) !important;
+    text-decoration: none !important;
   }
 }
 
