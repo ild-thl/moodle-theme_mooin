@@ -1189,17 +1189,29 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   a {
     color: var(--secondary-color) !important;
   }
+
   .show {
     a:hover {
       color: var(--primary-color) !important;
       text-decoration: underline;
     }
   }
-  .chapter:hover{
+
+  .chapter:hover {
     color: var(--secondary-color) !important;
     text-decoration: none !important;
   }
 }
+
+#courseindex-content {
+  .chapter {
+    .courseindex-link {
+      color: var(--secondary-color) !important;
+      text-decoration: none !important;
+    }
+  }
+}
+
 
 /*------------------------------------------------------------ SUBPAGES ------------------------------------------------------------ */
 
