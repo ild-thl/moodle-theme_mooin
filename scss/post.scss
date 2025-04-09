@@ -1218,3 +1218,15 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 .activity {
   border-top: 0px solid #dee2e6;
 }
+
+//toggle front page tiles
+.hide-block {
+  display: none !important;
+}
+
+.format-mooin4 {
+  .coursefrontpage {
+    justify-content: center !important;
+    display: flex;
+  }
+}
