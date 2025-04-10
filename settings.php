@@ -146,6 +146,8 @@ if ($hassiteconfig || has_capability('theme/boost_union:configure', context_syst
         }
 }
 */
+
+
 if ($ADMIN->fulltree) {
         $temp = new admin_settingpage('themesettingmooin4', get_string('configtitle', 'theme_mooin4'));
 
@@ -167,7 +169,7 @@ if ($ADMIN->fulltree) {
                 'alert_message',
                 '',
                 html_writer::tag('div', $alertstring, array('class' => 'alert alert-warning'))
-            ));
+        ));
         // Create inheritance heading.
         $name = 'theme_mooin4/inheritanceheading';
         $title = get_string('inheritanceheading', 'theme_mooin4', null, true);
@@ -212,7 +214,7 @@ if ($ADMIN->fulltree) {
         $setting->set_updatedcallback('theme_reset_all_caches');
         $temp->add($setting);
 
-
+        //color menu
         $name = 'theme_mooin4/color_heading';
         $title = get_string('color_heading', 'theme_mooin4', null, true);
         $setting = new admin_setting_heading($name, $title, null);
@@ -233,6 +235,7 @@ if ($ADMIN->fulltree) {
         ];
         $temp->add(new admin_setting_configselect($name, $title, $description, $default, $choices));
 
+        
         // Infobox
         $temp->add(new admin_setting_heading(
                 'custompalette_info',
@@ -258,7 +261,7 @@ if ($ADMIN->fulltree) {
                 "theme_mooin4/primarycolor",
                 get_string('primarycolor', 'theme_mooin4'),
                 get_string("primarycolor_desc", 'theme_mooin4'),
-                '#488709'
+                '#004161'
         ));
 
         $temp->add(new admin_setting_configcolourpicker(
@@ -279,12 +282,12 @@ if ($ADMIN->fulltree) {
 
 
         $colors = [
-                'secondarycolor' => '#FF5733',
-                'backgroundcolor' => '#F0F0F0',
-                'innerprogress' => '#00FF00',
-                'backgroundprogress' => '#CCCCCC',
-                'signalcolor' => '#FF0000',
-                'linkcolor' => '#0000FF',
+                'secondarycolor' => '#004161',
+                'backgroundcolor' => '#f8f8f8',
+                'innerprogress' => 'rgba(56, 148, 107, 0.5)',
+                'backgroundprogress' => '#c5ddd3',
+                'signalcolor' => 'red',
+                'linkcolor' => '#004161',
                 'generalcolor' => '#808080',
                 'bordergeneral' => '#999999',
                 'importantcolor' => '#FFD700',
@@ -307,3 +310,79 @@ if ($ADMIN->fulltree) {
 
         $ADMIN->add('themes', $temp);
 }
+
+echo '<script>' . '
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Custom palette script loaded");
+    //Get all elements für the custom-palette
+    const paletteSelector = document.querySelector("#id_s_theme_mooin4_colorpalette");
+    const colorPickers = document.querySelectorAll(".admin_colourpicker.clearfix"); 
+    const primaryLightInput = document.querySelector("#id_s_theme_mooin4_primarylight");
+    const opacitySlider = document.querySelector("#id_s_theme_mooin4_primarylight_opacity");
+    const infoBox = document.querySelector("#custom-palette-info");
+
+     // If any of the required elements are missing, log an error and stop further execution
+    if (!paletteSelector || !primaryLightInput || !opacitySlider) {
+        console.error("Fehler: Ein erforderliches Element fehlt.");
+        return;
+    }
+
+    // This function controls the visibility of the color pickers and info box
+    function updateVisibility() {
+        // Check if the selected value of the palette selector is "custom"
+        const isCustom = paletteSelector.value === "custom"; 
+
+        // Show or hide all needed elements
+        colorPickers.forEach(picker => {
+            let row = picker.closest(".form-item.row") || picker.closest(".form-group");
+            if (row && picker !== primaryLightInput.closest(".admin_colourpicker.clearfix")) {
+                row.style.display = isCustom ? "flex" : "none";
+            }
+        });
+
+        primaryLightInput.closest(".form-item.row")?.style.setProperty("display", isCustom ? "flex" : "none");
+        opacitySlider.closest(".form-item.row")?.style.setProperty("display", isCustom ? "flex" : "none");
+
+        if (infoBox) {
+            infoBox.style.display = isCustom ? "block" : "none";
+        }
+    }
+
+     // Updates the CSS variable and Moodle form value for the primary light color
+    function updatePrimaryLight() {
+         // Get the current color and opacity value from primary light
+        let primaryColor = primaryLightInput.value; 
+        let opacity = parseInt(opacitySlider.value, 10) || 100; 
+
+        // If the HEX string includes 8 characters, remove the last two characters
+        if (primaryColor.length === 9) {
+            primaryColor = primaryColor.substring(0, 7);
+        }
+
+        // Convert the opacity percentage (0–100) to a HEX alpha value (00–FF)
+        const opacityHex = Math.round(opacity * 255 / 100).toString(16).padStart(2, "0");
+
+        // Update the CSS variable "--primary-light" with the new color and opacity
+        document.documentElement.style.setProperty("--primary-light", primaryColor + opacityHex);
+
+        //Update the Moodle form fields in the frontend to persist the new values
+        setMoodleFormValue("theme_mooin4_primarylight", primaryColor);
+        setMoodleFormValue("theme_mooin4_primarylight_opacity", opacity);
+    }
+
+    //shows new values in frontend form
+    function setMoodleFormValue(id, value) {
+        const input = document.querySelector(`#id_s_${id}`);
+        if (input) input.value = value;
+    }
+
+    opacitySlider.addEventListener("input", updatePrimaryLight);
+    primaryLightInput.addEventListener("input", updatePrimaryLight);
+    paletteSelector.addEventListener("change", updateVisibility);
+
+    // Initiale Einstellungen beim Laden
+    updateVisibility();
+    updatePrimaryLight();
+});' . '</script>'; 
+
+
