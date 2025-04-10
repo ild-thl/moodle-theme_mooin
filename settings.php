@@ -237,25 +237,11 @@ if ($ADMIN->fulltree) {
 
         
         // Infobox
-        $temp->add(new admin_setting_heading(
-                'custompalette_info',
-                '',
-                '<div id="custom-palette-info" class="alert alert-info">
-                <strong>Hinweis:</strong> Du kannst hier eigene Farben definieren. Wähle dazu die gewünschten Werte in den Farbpickern aus.
-                <br><strong>Tipp für Barrierefreiheit:</strong> Prüfe die eingesetzten Farben mit Barrierefreiheits-Tools wie 
-                <a href="https://color.adobe.com/de/create/color-contrast-analyzer" target="_blank" 
-                style="text-decoration: underline; color: var(--link-color); font-weight: bold;">
-                Adobe Color</a>
-                <br>
-                - Mindest Kontrast für Schrift ≤ 17pt: 4,5 zu 1
-                <br>
-                - Mindest Kontrast für Schrift ≥ 17pt und Grafikkomponenten: 3 zu 1
-                <br><br>
-                Um Farbänderungen zu speichern und sichtbar zu machen, unten auf "Save changes" klicken und dann unter 
-                "Site administration > Development > Purge caches" den Cache leeren.
-            </div>'
-        ));
-
+        $name = 'theme_mooin4/custompalette_info';
+        $title = ''; // Kein Titel nötig
+        $info = get_string('custompalette_info', 'theme_mooin4');
+        $temp->add(new admin_setting_heading($name, $title, $info));
+        
 
         $temp->add(new admin_setting_configcolourpicker(
                 "theme_mooin4/primarycolor",
