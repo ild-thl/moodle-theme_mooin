@@ -101,7 +101,7 @@ $string['primarylight_opacity'] = 'Transparenz Primärfarbe Light';
 $string['primarylight_opacity_desc'] = 'Legen Sie die Transparenz der Primärfarbe Light fest (0-100%).';
 
 $string['color_heading'] = 'mooin4 Farbeinstellungen';
-$string['settings_alert'] = 'Um Farbänderungen zu speichern und sichtbar zu machen, unten auf "Speichern" klicken und dann unter 
+$string['settings_alert'] = 'Um Farbänderungen für Custom Farben zu speichern und sichtbar zu machen, unten auf "Speichern" klicken und dann unter 
                 "Site administration > Development > Purge caches" den Cache leeren.';
 
 $string['custompalette_info'] = '
