@@ -151,9 +151,9 @@ if ($hassiteconfig || has_capability('theme/boost_union:configure', context_syst
 require_once($CFG->libdir . '/adminlib.php');
 global $ADMIN;
 
-if (isset($ADMIN) && $hassiteconfig || has_capability('theme/boost_union:configure', context_system::instance())) {
+if ((isset($ADMIN) && $hassiteconfig) || has_capability('theme/boost_union:configure', context_system::instance())) {
         $temp = new admin_settingpage('theme_mooin4', get_string('pluginname', 'theme_mooin4'));
-        if ($ADMIN->fulltree) {
+        if (is_object($ADMIN) && $ADMIN->fulltree) {
                 $temp = new admin_settingpage('themesettingmooin4', get_string('configtitle', 'theme_mooin4'));
 
                 // Require the necessary libraries.
