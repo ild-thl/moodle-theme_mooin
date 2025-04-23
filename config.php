@@ -27,11 +27,11 @@ defined('MOODLE_INTERNAL') || die();
 
 // mooin4 original
 
-$THEME->sheets = [];                                                             
-$THEME->editor_sheets = [];                                                              
-$THEME->enable_dock = false;                                                                                                                                                                                                                           
-$THEME->yuicssmodules = array();                                                                                                      
-$THEME->requiredblocks = '';   
+$THEME->sheets = [];
+$THEME->editor_sheets = [];
+$THEME->enable_dock = false;
+$THEME->yuicssmodules = array();
+$THEME->requiredblocks = '';
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 $THEME->haseditswitch = true;
 $THEME->activityheaderconfig = [
@@ -53,7 +53,7 @@ require_once($CFG->dirroot . '/theme/mooin4/locallib.php');
 
 // Next, we overwrite only the settings which differ between Boost Union and Boost Union Child.
 $THEME->name = 'mooin4';
-$THEME->scss = function($theme) {
+$THEME->scss = function ($theme) {
     return theme_mooin4_get_main_scss_content($theme);
 };
 $THEME->parents = ['boost_union', 'boost'];
@@ -98,14 +98,14 @@ if (is_siteadmin()) {
 }
 
 //integrate Custom-Palette
-$THEME->scss = function($theme) {
+$THEME->scss = function ($theme) {
     $palette = get_config('theme_mooin4', 'colorpalette');
 
     //initialize :root
     $customcss = ":root {";
 
     if ($palette === 'custom') {
-       // Map theme variable to CSS variable name
+        // Map theme variable to CSS variable name
         $colors = [
             'primary-color' => 'primarycolor',
             'primary-light' => 'primarylight',
@@ -126,7 +126,7 @@ $THEME->scss = function($theme) {
             'border-fact' => 'borderfact'
         ];
 
-       // Retrieve and apply colors from the database
+        // Retrieve and apply colors from the database
         foreach ($colors as $cssVar => $configKey) {
             $value = get_config('theme_mooin4', $configKey);
             if (!empty($value)) {
@@ -146,7 +146,7 @@ $THEME->scss = function($theme) {
             // Validate if the primary light color is a correct 6-digit HEX code
             if (preg_match('/^#[a-fA-F0-9]{6}$/', $primaryLight)) {
                 $storedValue = "{$primaryLight}{$opacityHex}"; // Generate 8-character HEX value
-                set_config('primarylight', $storedValue, 'theme_mooin4'); 
+                set_config('primarylight', $storedValue, 'theme_mooin4');
                 $customcss .= " --primary-light: {$storedValue} !important;";
 
                 // Store only the 6-character HEX for the input field display
@@ -160,6 +160,8 @@ $THEME->scss = function($theme) {
     //close :root 
     $customcss .= " }";
 
+
     return theme_mooin4_get_main_scss_content($theme) . $customcss;
 };
 
+$THEME->javascripts = array('custom');
