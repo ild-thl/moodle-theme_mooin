@@ -129,3 +129,10 @@ body:not(.editing) {
   color: $white !important;
 }
 
+.active .courseindex-item {
+  background-color: var(--secondary-color) !important;
+}
+
+.active .courseindex-item:hover {
+  background-color: var(--primary-color) !important;
+}
