@@ -883,7 +883,10 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 /*------------------------------------------------------------ SUBPAGES ------------------------------------------------------------ */
 #page-course-format-mooin4-badges,
 #page-course-format-mooin4-certificates,
-#page-course-format-mooin4-all_discussionforums {
+#page-course-format-mooin4-all_discussionforums,
+#page-course-format-mooin1pager-badges,
+#page-course-format-mooin1pager-certificates,
+#page-course-format-mooin1pager-all_discussionforums {
   #page {
     flex: 1 0 auto;
   }
@@ -1111,7 +1114,8 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 }
 
 //Participants is still rendered without template so it needs extra scss
-#page-course-format-mooin4-participants {
+#page-course-format-mooin4-participants,
+#page-course-format-mooin1pager-participants {
   .sticky-container {
     position: sticky;
     z-index: 550;
