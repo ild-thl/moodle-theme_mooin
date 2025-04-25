@@ -677,7 +677,8 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
 }
 
-#mooin4-breadcrumb-container {
+#mooin4-breadcrumb-container,
+#mooin1pager-breadcrumb-container {
   margin: 0 1rem;
   transition: 0.2s ease-in-out;
 
@@ -832,7 +833,8 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   transform: none;
   transition: 0.2s ease-in-out;
 
-  #mooin4-breadcrumb-container {
+  #mooin4-breadcrumb-container,
+  #mooin1pager-breadcrumb-container {
     transform: none;
   }
 
@@ -857,7 +859,8 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 .scroll-down {
   transition: 0.2s ease-in-out;
 
-  #mooin4-breadcrumb-container {
+  #mooin4-breadcrumb-container,
+  #mooin1pager-breadcrumb-container {
     position: relative;
   }
 
@@ -891,7 +894,8 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     flex: 1 0 auto;
   }
 
-  .mooin4-breadcrumb-container {
+  .mooin4-breadcrumb-container,
+  #mooin1pager-breadcrumb-container {
     position: sticky;
     top: 0;
     margin-left: 0;
@@ -1127,7 +1131,8 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
   }
 
-  #mooin4-breadcrumb-container {
+  #mooin4-breadcrumb-container,
+  #mooin1pager-breadcrumb-container {
     padding: 0.25rem 0;
 
     .breadcrumb {
@@ -1136,7 +1141,8 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     }
   }
 
-  .mooin4-subpage-bg {
+  .mooin4-subpage-bg,
+  .mooin1pager-subpage-bg {
     max-width: 1000px;
     margin: 0 auto;
     background: white;
