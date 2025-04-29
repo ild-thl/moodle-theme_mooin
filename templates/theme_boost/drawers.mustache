@@ -129,9 +129,9 @@
             </div>
             <!-- No Full-Header -->
             {{> theme_boost_union/infobanners }}
-            {{#incourse}}
-            {{{ output.full_header }}}
-            {{/incourse}}
+            {{#userisediting}}
+                {{{ output.full_header }}}
+            {{/userisediting}}
             {{#canseesecondarymoremenu}}
                 {{#secondarymoremenu}}
                     <div class="secondary-navigation d-print-none">
