@@ -22,7 +22,7 @@
 
 .format-mooin4.pagelayout-course {
   #page-content {
-    height: 100%;
+     /* do not set white strip at the end  height: 100%; */
   }
   #region-main-box {
     height: 100%;
@@ -31,9 +31,6 @@
     height: 100%;
   }
   .subpage {
-    height: 100%;
-  }
-  #page-content {
     height: 100%;
   }
   #page {
