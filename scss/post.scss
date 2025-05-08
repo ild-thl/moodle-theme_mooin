@@ -22,8 +22,9 @@
 
 .format-mooin4.pagelayout-course {
   #page-content {
-     /* do not set white strip at the end  height: 100%; */
+    /* do not use 100% height here - info for merge conflicts */
   }
+
   #region-main-box {
     height: 100%;
   }
@@ -38,6 +39,17 @@
   }
   div[role="main"] {
     height: 100%;
+  }
+
+  div[class="course-content"] {
+   /* Mindesthöhe: 100% des sichtbaren Bereichs */
+   min-height: 100vh;
+
+   /* Höhe passt sich an, wenn mehr Inhalt vorhanden ist */
+   height: auto;
+ 
+   /* Verhindert, dass es länger als der sichtbare Bereich wird, wenn nicht nötig */
+   overflow: hidden;
   }
 
   #page {
