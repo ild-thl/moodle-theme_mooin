@@ -58,21 +58,79 @@
   // }
 }
 
+.alert-info{
+  background-color: var(--general-color);
+  color: #000000;
+  border: 2px solid;
+  border-color: var(--border-general);
+}
+
+.alert-danger{
+  background-color: var(--important-color);
+  color:var(--signal-color);
+  border: 2px solid;
+  border-color: var(--border-important);
+}
+
+.alert-warning{
+  background-color: var(--task-color);
+  color: #000000;
+  border: 2px solid;
+  border-color: var(--border-task);
+
+  a {
+  color: var(--link-color);
+  }
+}
+
+.alert-heading {
+  color: var(--secondary-color) !important;
+}
+
+.alert-success{
+  background-color: var(--general-color);
+  color:var(--secondary-color);
+  border: 2px solid;
+  border-color: var(--border-general);
+}
+
+
 //Hervorhebung Hinweis
 .hint-box {
-  @include text-layout(#86d9de, "\F332");
+  //@include text-layout(#86d9de, "\F332");
+  background-color: var(--fact-color);
+  color:#000000;
+  border: 2px solid;
+  border-color: var(--border-fact);
 }
 .info-box {
-  @include text-layout(#6688a6, "\F430");
+  //@include text-layout(#6688a6, "\F430");
+  background-color: var(--general-color);
+  color: #000000;
+  border: 2px solid;
+  border-color: var(--secondary-color);
 }
+
 .link-box {
-  @include text-layout(#d6cd7f, "\F471");
+  //@include text-layout(#d6cd7f, "\F471");
+  background-color: var(--general-color);
+  color: #000000;
+  border: 2px solid;
+  border-color: var(--secondary-color);
 }
 .important-box {
-  @include text-layout(#d67e7a, "\F3CB");
+  //@include text-layout(#d67e7a, "\F3CB");
+  background-color: var(--important-color);
+  color:var(--signal-color);
+  border: 2px solid;
+  border-color: var(--border-important);
 }
 .exercise-box {
-  @include text-layout(#38946b, "\F4C9");
+  //@include text-layout(#38946b, "\F4C9");
+  background-color: var(--task-color);
+  color: #000000;
+  border: 2px solid;
+  border-color: var(--border-task);
 }
 
 .custom-icon-box {

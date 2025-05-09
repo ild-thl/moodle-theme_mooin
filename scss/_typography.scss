@@ -23,8 +23,12 @@ h1 {
   font-size: 2.125rem;
   font-weight: bold;
   line-height: 3.188rem;
+  //color: var(--primary-color);
+  color: $gray-900; // changes made here to match the default theme
 }
 h2 {
+  //color: var(--primary-color);
+  color: $gray-900; // changes made here to match the default theme
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 2.25rem;
@@ -33,20 +37,26 @@ h3 {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.5rem;
+  //color: var(--primary-color);
+  color: $gray-900; // changes made here to match the default theme
 }
 h4 {
   font-size: 1.25rem;
   font-weight: bold;
   line-height: 1.5rem;
+  /*color: var(--primary-color);*/
+  color: $gray-900; // changes made here to match the default theme
 }
 h5 {
   font-size: 1.125rem;
   font-weight: bold;
   line-height: 1.5rem;
+  //color: var(--primary-color);
+  color: $gray-900; // changes made here to match the default theme
 }
 
 .caption {
-  color: $primary;
+  color: var(--secondary-color);
   font-size: 1rem;
   font-weight: 700;
 
@@ -66,5 +76,21 @@ h5 {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 25px;
-  color: #004161;
+  color: var(--secondary-color); // new
+}
+
+.text-danger{
+  color: var(--signal-color) !important;
+}
+
+.text-info{
+  color: var(--primary-color) !important;
+}
+
+.invalid-feedback{
+  color: var(--signal-color) !important;
+}
+
+.text-success{
+  color: var(--primary-color) !important;
 }
