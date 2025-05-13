@@ -26,6 +26,7 @@
 .single-section {
   .seperator {
     margin: 0 4rem;
+
     @include media-breakpoint-down(sm) {
       margin: 0 1rem;
     }
@@ -54,9 +55,11 @@
 .news-preview {
   padding: 0.5rem 1rem;
 }
+
 .discussion-preview {
   padding: 0.5rem;
 }
+
 .news-preview,
 .discussion-preview {
   border: 1px solid #e7e7e7;
@@ -70,6 +73,7 @@
   .news-title {
     font-weight: 500;
   }
+
   .news-text {
     text-overflow: ellipsis;
     overflow: hidden;
@@ -84,6 +88,7 @@
       // line-clamp: 3;
       // max-height: 5rem;
     }
+
     p {
       margin: 0;
     }
@@ -93,6 +98,7 @@
     text-align: end;
   }
 }
+
 .discussion-preview {
   .news-text {
     text-overflow: ellipsis;
@@ -109,11 +115,13 @@
 .news-preview,
 .discussion-preview,
 .participants-container {
-  .userpicture, .userinitials.size-35 {
+
+  .userpicture,
+  .userinitials.size-35 {
     width: 1.3rem;
     height: 1.3rem;
   }
-  
+
 }
 
 
@@ -133,13 +141,15 @@
     font-size: 1.25rem;
     color: var(--secondary-color);
 
-    &:hover{
+    &:hover {
       color: var(--primary-color);
     }
   }
+
   .bi-gear-fill {
     font-size: 1rem;
   }
+
   .all-badges-link,
   .detail-link,
   .participants-link {
@@ -154,6 +164,7 @@
 .badges-list li a {
   position: relative;
 }
+
 .coursefrontpage__side {
   .badges-list li a::before {
     font-family: "bootstrap-icons";
@@ -168,6 +179,7 @@
     z-index: 1;
   }
 }
+
 .subpage--badges {
   .badges-list li a::before {
     font-family: "bootstrap-icons";
@@ -178,7 +190,7 @@
     border-radius: 50%;
     font-size: 1.8rem;
     left: 6.0rem;
-    top: -3.7rem; 
+    top: -3.7rem;
     z-index: 1;
   }
 }
@@ -192,7 +204,7 @@ ul.badges-list {
 
   li {
     width: 33.3%;
-    
+
   }
 
   img {
@@ -208,6 +220,7 @@ ul.badges-list {
 
 .chat-icon {
   position: relative;
+
   .bi-chat-right-text-fill {
     position: absolute;
     left: 3px;
@@ -226,6 +239,7 @@ ul.badges-list {
     flex-wrap: nowrap;
     //margin-left: 1rem;
     padding-left: 0rem !important;
+
     @include media-breakpoint-up(md) {
       margin-left: 0rem !important;
       padding-left: 0rem !important;
@@ -243,16 +257,19 @@ ul.badges-list {
         //flex: 0 1 auto;
       }
     }
+
     .chapter {
       max-width: 300px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       flex: 0 1 auto;
+
       @include media-breakpoint-down(md) {
         flex: 0 0 auto;
       }
     }
+
     .lesson {
       white-space: nowrap;
       flex: 0 0 auto;
@@ -264,31 +281,19 @@ ol.breadcrumb {
   margin-left: 0px !important;
 }
 
-.new-badge-layer {
-  a {
-    &::after {
-      content: "";
-      position: absolute;
-      background-image: url([[pix:theme|./badges/newbadge]]);
-      background-size: contain;
-      background-repeat: no-repeat;
-      z-index: 3;
-    }
-  }
+.new-badge-layer, .new-certificate-layer {
+  position: relative;
 }
 
-
-// a:not(.collapsed) {
-//   .bi-caret-right-fill {
-//     display: inline-block;
-//     transform: rotate(90deg);
-//     transition: 0.3s ease-in-out;
-//   }
-// }
-// a.collapsed {
-//   .bi-caret-right-fill {
-//     display: inline-block;
-//     transform: rotate(0deg);
-//     transition: 0.3s ease-in-out;
-//   }
-// }
+.new-badge-layer::after, .new-certificate-layer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  background-image: url([[pix:theme|newbadge]]);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 3;
+}
