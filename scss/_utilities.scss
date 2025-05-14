@@ -165,7 +165,7 @@
   position: relative;
 }
 
-.coursefrontpage__side {
+
   .badges-list li a::before {
     font-family: "bootstrap-icons";
     content: "\F430";
@@ -178,7 +178,7 @@
     top: -2.5rem;
     z-index: 1;
   }
-}
+
 
 .subpage--badges {
   .badges-list li a::before {
@@ -297,3 +297,4 @@ ol.breadcrumb {
   background-repeat: no-repeat;
   z-index: 3;
 }
+
