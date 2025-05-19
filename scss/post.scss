@@ -22,7 +22,8 @@
   }
 }
 
-.format-mooin4.pagelayout-course, .format-mooin1pager.pagelayout-course {
+.format-mooin4.pagelayout-course,
+.format-mooin1pager.pagelayout-course {
   #page-content {
     height: 100%;
   }
@@ -124,6 +125,8 @@
 .courseindex-section[data-number="0"] {
   display: none;
 }
+
+
 
 /*------------------------------------------------------------ COURSEFRONTPAGE ------------------------------------------------------------ */
 body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
