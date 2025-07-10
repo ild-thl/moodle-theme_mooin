@@ -259,7 +259,8 @@ if ((isset($ADMIN) && $hassiteconfig) || has_capability('theme/boost_union:confi
                         "theme_mooin4/primarylight",
                         get_string('primarylight', 'theme_mooin4'),
                         get_string("primarylight_desc", 'theme_mooin4'),
-                        get_config('theme_mooin4', 'primarylight_display') // Only stores the 6-digit HEX
+                        '#ccd9df'
+
                 ));
 
 
