@@ -678,6 +678,18 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       }
     }
   }
+  /* Bild-Links werden überschrieben (Symbol wird ausgeblendet) */
+  .description a img+ ::after,
+  .description a:has(img)::after {
+      /* falls unterstützt */
+      content: "";
+  }
+
+  .description a:not(:has(img))::after {
+      font-family: "bootstrap-icons";
+      content: "\F470";
+  }
+
 }
 
 #mooin4-breadcrumb-container,
