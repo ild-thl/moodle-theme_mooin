@@ -81,6 +81,13 @@
     margin-right: 0 !important;
     padding-right: 0 !important;
   }
+  #theme_boost-drawers-blocks.drawer-right.show {
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.25);
+  }
+  //DiSEA Sidebar Block Styling
+  .drawer.drawer-right .block_disealytics .panel {
+    border-color: $primary;
+  }
 
   #region-main {
     background-color: $background-color;
@@ -129,8 +136,6 @@
 .courseindex-section[data-number="0"] {
   display: none;
 }
-
-
 
 /*------------------------------------------------------------ COURSEFRONTPAGE ------------------------------------------------------------ */
 body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
@@ -633,7 +638,6 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       align-items: center;
       justify-content: center;
 
-
       &::after {
         font-family: "bootstrap-icons";
         content: "\F1C3";
@@ -683,17 +687,16 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     }
   }
   /* Bild-Links werden überschrieben (Symbol wird ausgeblendet) */
-  .description a img+ ::after,
+  .description a img + ::after,
   .description a:has(img)::after {
-      /* falls unterstützt */
-      content: "";
+    /* falls unterstützt */
+    content: "";
   }
 
   .description a:not(:has(img))::after {
-      font-family: "bootstrap-icons";
-      content: "\F470";
+    font-family: "bootstrap-icons";
+    content: "\F470";
   }
-
 }
 
 #mooin4-breadcrumb-container,
@@ -868,8 +871,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     transition: margin 0.2s;
     opacity: 1;
 
-    @media (max-height: 600px),
-    screen and (orientation: portrait) {
+    @media (max-height: 600px), screen and (orientation: portrait) {
       transition: transform 0.2s ease-in-out, opacity 0.5s ease-in-out;
     }
   }
@@ -1240,7 +1242,6 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     }
   }
 }
-
 
 /*------------------------------------------------------------ SUBPAGES ------------------------------------------------------------ */
 
