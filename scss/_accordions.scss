@@ -21,7 +21,7 @@ p + .accordion {
   display: block !important;
   margin-bottom: 0;
   margin-right: 10px;
-  background-color: #ededed;
+  background-color:var(--background-color);
   font-weight: 600;
   line-height: 22px;
   cursor: pointer;
@@ -36,7 +36,7 @@ p + .accordion {
 .accordion_content {
   max-height: 0;
   overflow: hidden;
-  background-color: #fefefe;
+  background-color: var(--background-color);
   -webkit-transition: max-height 0.35s;
   -o-transition: max-height 0.35s;
   transition: max-height 0.35s;
@@ -161,17 +161,11 @@ p + .accordion {
 .full_color.blue-gray .accordion_content {
   background-color: rgba(104, 116, 151, 0.5);
 }
-.accordion.red .accordion_content{
-  color: $gray-900 !important; /* text color */
-}
-
-
-
 .acc_h {
   margin-top: 10px;
   width: 100%;
   height: auto;
-  background-color: #f0f0f0;
+  background-color: var(--background-color);
   border: solid 1px #d4d4d4;
   cursor: pointer;
   z-index: 1000;

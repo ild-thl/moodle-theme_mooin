@@ -138,3 +138,12 @@ function theme_mooin4_extend_busettingsoverview() {
 
     return $cards;
 }
+
+
+//NEW 
+function theme_mooin4_page_init(moodle_page $page) {
+    $palette = get_config('theme_mooin4', 'colorpalette');
+    if ($palette) {
+        $page->add_body_class($palette);
+    }
+}

@@ -1,8 +1,135 @@
 @import "./fonts";
 @import "./bootstrap-icons.scss";
 
-$mooin-color: #004161 !default;
+
+// Define default colors as CSS variables
+:root {
+    --primary-color: #488709; 
+    --primary-light: #48870910;
+    --secondary-color: #2f4523; 
+
+    --background-color: #f0f4f8; 
+    --inner-progress: #488709;
+    --background-progress: #f4f1e9;
+
+    --signal-color: #AD2FC2;
+    --link-color:#AD2FC2;
+
+    //Information-Box colors
+    --general-color: #7a8c617e;
+    --border-general:#2f4523;;
+    --important-color:#dacfe6ed;
+    --border-important:#ad2fc2;
+    --task-color:#dce6cf86;
+    --border-task:#488709;
+    --fact-color:#e6dccf;
+    --border-fact:#806159;
+}
+
+// Define additional color palettes
+body.classic-mooin {
+    --primary-color: #004161; 
+    --primary-light: #ccd9df;
+    --secondary-color: #004161; 
+
+    --background-color: #f8f8f8; 
+    --inner-progress: rgba(56, 148, 107, 0.5);
+    --background-progress: #c5ddd3;
+
+    --signal-color: red;
+    --link-color:#004161;
+
+    .bi-check, 
+    .mooin4-modal .modal-content .modal-body .bi, 
+    button.mooin4-btn.comp_btn i{
+        color: var(--inner-progress);
+    }
+
+    button.mooin4-btn.comp_btn{
+        background-color: #b8c1ca !important; 
+        color: #373a3c;
+    }
+
+    .coursefrontpage__course-table .active{
+        background-color: #ccd9df !important;
+        border: none !important;
+    }
+}
+
+body.palette-green {
+    --primary-color: #488709; 
+    --primary-light: #48870931;
+    --secondary-color: #2f4523; 
+
+    --background-color: #f0f4f8; 
+    --inner-progress: #488709;
+    --background-progress: #f4f1e9;
+
+    --signal-color: #AD2FC2;
+    --link-color:#AD2FC2;
+
+    //Information-Box colors
+    --general-color: #dce6cf86;
+    --border-general:#488709;
+    --important-color:#dacfe6ed;
+    --border-important:#ad2fc2;
+    --task-color:#b5c28dbd;
+    --border-task:#2f4523;
+    --fact-color:#e6dccf;
+    --border-fact:#806159;
+}
+
+
+body.palette-pastellblue {
+    --primary-color: #5E9CA6; 
+    --primary-light:#5e9ca632;
+    --secondary-color: #063852;
+
+    --background-color: #e3f2fd; 
+    --inner-progress: #063852;
+    --background-progress: #cadbd7;
+
+    --signal-color: #BA0D2D;
+    --link-color:#008391;
+
+    //Information-Box colors
+    --general-color: #cfe3e6;
+    --border-general:#5E9CA6;
+    --important-color: #ffbec4da;
+    --border-important: #BA0D2D;
+    --task-color:#d3d1e6ac;
+    --border-task:#706BBF;
+    --fact-color:#e6d3cfbf;
+    --border-fact:#916C80;
+}
+
+body.palette-blue {
+    --primary-color: #359ac2; 
+    --primary-light:#359ac228;
+    --secondary-color: #063852; 
+
+    --background-color: #e3f2fd; 
+    --inner-progress: #063852;
+    --background-progress: #d0e1f9;
+
+    --signal-color: #BA0D2D;
+    --link-color:#008391;
+
+    //Information colors
+    --general-color: #359ac251;
+    --border-general:#063852;
+    --important-color: #ffbec4da;
+    --border-important: #BA0D2D;
+    --task-color:#d3d1e6;
+    --border-task: #706BBF;
+    --fact-color:#E6D3CF;
+    --border-fact:#916C80;
+}
+
+//$mooin-color + $primary only as fallback, if some elements are not provided with colour palettes  
+$mooin-color: #676767 !default;
 $primary: $mooin-color !default;
+
 $boder-radius: 0.625rem !default;
 $background-color: #f8f8f8 !default;
 $course-content-maxwidth: 1000px !default;

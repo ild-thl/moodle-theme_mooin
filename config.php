@@ -27,11 +27,11 @@ defined('MOODLE_INTERNAL') || die();
 
 // mooin4 original
 
-$THEME->sheets = [];                                                             
-$THEME->editor_sheets = [];                                                              
-$THEME->enable_dock = false;                                                                                                                                                                                                                           
-$THEME->yuicssmodules = array();                                                                                                      
-$THEME->requiredblocks = '';   
+$THEME->sheets = [];
+$THEME->editor_sheets = [];
+$THEME->enable_dock = false;
+$THEME->yuicssmodules = array();
+$THEME->requiredblocks = '';
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 $THEME->haseditswitch = true;
 $THEME->activityheaderconfig = [
@@ -53,7 +53,7 @@ require_once($CFG->dirroot . '/theme/mooin4/locallib.php');
 
 // Next, we overwrite only the settings which differ between Boost Union and Boost Union Child.
 $THEME->name = 'mooin4';
-$THEME->scss = function($theme) {
+$THEME->scss = function ($theme) {
     return theme_mooin4_get_main_scss_content($theme);
 };
 $THEME->parents = ['boost_union', 'boost'];
@@ -88,3 +88,80 @@ if (!empty($scsspre)) {
     $THEME->settings->scsspre = $scsspre;
 }
 unset($scsspre);
+
+$THEME->javascripts = ['custom'];
+
+//NEW
+// integrate settings.php
+if (is_siteadmin()) {
+    require_once(__DIR__ . '/settings.php');
+}
+
+//integrate Custom-Palette
+$THEME->scss = function ($theme) {
+    $palette = get_config('theme_mooin4', 'colorpalette');
+
+    //initialize :root
+    $customcss = ":root {";
+
+    if ($palette === 'custom') {
+        // Map theme variable to CSS variable name
+        $colors = [
+            'primary-color' => 'primarycolor',
+            'primary-light' => 'primarylight',
+            'secondary-color' => 'secondarycolor',
+            'secondary-light' => 'secondarylight',
+            'background-color' => 'backgroundcolor',
+            'inner-progress' => 'innerprogress',
+            'background-progress' => 'backgroundprogress',
+            'signal-color' => 'signalcolor',
+            'link-color' => 'linkcolor',
+            'general-color' => 'generalcolor',
+            'border-general' => 'bordergeneral',
+            'important-color' => 'importantcolor',
+            'border-important' => 'borderimportant',
+            'task-color' => 'taskcolor',
+            'border-task' => 'bordertask',
+            'fact-color' => 'factcolor',
+            'border-fact' => 'borderfact'
+        ];
+
+        // Retrieve and apply colors from the database
+        foreach ($colors as $cssVar => $configKey) {
+            $value = get_config('theme_mooin4', $configKey);
+            if (!empty($value)) {
+                $customcss .= " --$cssVar: $value !important;";
+            }
+        }
+
+        // Handle transparency for primary-light color
+        $opacity = get_config('theme_mooin4', 'primarylight_opacity');
+        $primaryLight = get_config('theme_mooin4', 'primarylight');
+
+        if (!empty($primaryLight) && !empty($opacity)) {
+            // Convert opacity percentage (0–100) to HEX format (00–FF)
+            $opacityHex = dechex(intval($opacity) * 255 / 100);
+            $opacityHex = str_pad($opacityHex, 2, "0", STR_PAD_LEFT); // Immer 2 Zeichen lang
+
+            // Validate if the primary light color is a correct 6-digit HEX code
+            if (preg_match('/^#[a-fA-F0-9]{6}$/', $primaryLight)) {
+                $storedValue = "{$primaryLight}{$opacityHex}"; // Generate 8-character HEX value
+                set_config('primarylight', $storedValue, 'theme_mooin4');
+                $customcss .= " --primary-light: {$storedValue} !important;";
+
+                // Store only the 6-character HEX for the input field display
+                set_config('primarylight_display', $primaryLight, 'theme_mooin4');
+            } else {
+                $customcss .= " --primary-light: {$primaryLight} !important;";
+            }
+        }
+    }
+
+    //close :root 
+    $customcss .= " }";
+
+
+    return theme_mooin4_get_main_scss_content($theme) . $customcss;
+};
+
+$THEME->javascripts = array('custom');
