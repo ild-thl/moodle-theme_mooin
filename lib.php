@@ -40,7 +40,6 @@ function theme_mooin4_get_main_scss_content($theme) {
 
     // As a start, get the compiled main SCSS from Boost Union.
     // This way, Boost Union Child will ship the same SCSS code as Boost Union itself.
-    // TINJOHN Update 4.5 $scss = theme_boost_union_get_main_scss_content(theme_config::load('boost_union'));
     $scss = theme_boost_union_get_main_scss_content(\core\output\theme_config::load('boost_union'));
     // And add Boost Union Child's main SCSS file to the stack.
     $scss .= file_get_contents($CFG->dirroot . '/theme/mooin4/scss/post.scss');
