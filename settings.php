@@ -22,6 +22,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+use theme_boost_union\admin_settingspage_tabs_with_tertiary;
+
 defined('MOODLE_INTERNAL') || die();
 
 /*
@@ -32,14 +34,13 @@ if ($hassiteconfig || has_capability('theme/boost_union:configure', context_syst
         // You will understand it as soon as you look at /theme/boost_union/settings.php.
         // This settings file here is built in a way that it adds another settings page to this existing settings
         // category. You can add all child-theme-specific settings to this settings page here.
-
         // However, there is still the $settings variable which is expected by Moodle core to be filled with the theme
         // settings and which is automatically linked from the theme selector page.
         // To avoid that there appears a broken "Boost Union Child" settings page, we redirect the user to a settings
         // overview page if he opens this page.
         $mainsettingspageurl = new moodle_url('/admin/settings.php', ['section' => 'themesettingmooin4']);
         if ($ADMIN->fulltree && $PAGE->has_set_url() && $PAGE->url->compare($mainsettingspageurl)) {
-                redirect(new moodle_url('/admin/settings.php', ['section' => 'theme_mooin4']));
+                redirect(new \core\url('/admin/settings.php', ['section' => 'theme_mooin4']));
         }
 
         // Create empty settings page structure to make the site administration work on non-admin pages.
@@ -72,9 +73,9 @@ if ($hassiteconfig || has_capability('theme/boost_union:configure', context_syst
                 ];
 
 
-                // Create Boost Union Child settings page with tabs
+                // Create Boost Union Child settings page with tabs and tertiary navigation
                 // (and allow users with the theme/boost_union:configure capability to access it).
-                $page = new theme_boost_admin_settingspage_tabs(
+                $page = new admin_settingspage_tabs_with_tertiary(
                         'theme_mooin4',
                         get_string('configtitle', 'theme_mooin4', null, true),
                         'theme/boost_union:configure'
