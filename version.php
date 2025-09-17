@@ -37,5 +37,5 @@ $plugin->requires = 2022112805;
 // This is the component name of the plugin - it always starts with 'theme_'                                                        
 // for themes and should be the same as the name of the folder.                                                                     
 $plugin->component = 'theme_mooin4';
-$plugin->dependencies = ['theme_boost_union' => 2024100751];
+$plugin->dependencies = ['theme_boost_union' => 2024100729];
 

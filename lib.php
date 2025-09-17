@@ -132,7 +132,7 @@ function theme_mooin4_extend_busettingsoverview() {
         'label' => get_string('pluginname', 'theme_mooin4'),
         'desc' => get_string('settingsoverview_buc_desc', 'theme_mooin4'),
         'btn' => 'primary',
-        'url' => new \core\url('/admin/settings.php', ['section' => 'theme_boost_union_child']),
+        'url' => new \core\url('/admin/settings.php', ['section' => 'theme_mooin4']),
     ];
 
     return $cards;
