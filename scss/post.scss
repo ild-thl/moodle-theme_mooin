@@ -1255,3 +1255,107 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     display: flex;
   }
 }
+
+
+/*------------------------------------------------------------ mooin1pager-specific ------------------------------------------------------------ */
+
+.format-mooin1pager {
+  @media screen and (min-width: 576px) {
+    #mooin-sections>.course-section {
+      margin: 1.5rem 1.875rem;
+    }
+
+    #mooin-sections {
+      margin-top: 2rem !important;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    #mooin-sections>.course-section {
+      margin: 1.5rem 1rem;
+    }
+  }
+
+  .mooin1pager-btn {
+    position: relative;
+    font-weight: 500;
+    font-size: .6rem;
+    line-height: .9rem;
+    text-transform: uppercase;
+    border-radius: .4rem;
+    height: 2.3125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 4px rgb(0 0 0 / .25);
+    text-decoration: none;
+    padding: 0 1rem;
+    border: 1px solid #004161;
+    color: #004161;
+    background-color: #fff;
+  }
+
+  @media (min-width: 350px) {
+    .mooin1pager-btn {
+      font-size: .75rem;
+    }
+  }
+
+  .mooin1pager-btn:hover {
+    text-decoration: none;
+  }
+
+  .course-section .section-item {
+    border-radius: 0.25rem !important;
+  }
+
+  #region-main-box {
+    justify-content: center !important;
+    display: flex;
+  }
+
+  .hide-block {
+    display: none !important;
+  }
+
+  .courseindex-item.pageitem {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+  }
+
+
+  /* add link icon after text links */
+  .description {
+    a {
+
+      &::after {
+        font-family: "bootstrap-icons";
+        content: "\F470";
+      }
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /* do not show link symbol when img is linked */
+  .description a img+ ::after,
+  .description a:has(img)::after {
+    /* if supported */
+    content: "";
+  }
+
+  .description a:not(:has(img))::after {
+    font-family: "bootstrap-icons";
+    content: "\F470";
+  }
+
+  #region-main {
+    min-width: 100%;
+  }
+
+  .coursefrontpage__main {
+    margin: 0 auto !important;
+  }
+}
