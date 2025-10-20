@@ -1260,3 +1260,41 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     display: flex;
   }
 }
+
+
+
+.block_disealytics #title {
+    margin-top: -19px;
+    color: var(--secondary-color);
+}
+
+.block_disealytics .navigation-icons {
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: -30px;
+}
+
+.block_disealytics .navigation-icons a {
+    height: 19px;
+    font-size: 11px;
+}
+
+.block_disealytics .fa-cog
+ {
+    font-size: 16px;
+    margin-right: 8px;
+    color: var(--primary);
+    margin-top: 5.5px;
+
+}
+
+.block_disealytics-editing .editing-headline {
+    font-size: 0.9rem;          /* etwas kleiner, damit es in die Box passt */
+    line-height: 1.2;           /* kompakterer Zeilenabstand */
+    white-space: normal;        /* falls nötig: umbrechen erlauben */
+    text-align: center;         /* optional: zentriert in der Box */
+    margin: 0;                  /* Standardabstand entfernen */
+    padding: 0 5px;             /* etwas Innenabstand links/rechts */
+}
