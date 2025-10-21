@@ -28,8 +28,8 @@
 defined('MOODLE_INTERNAL') || die();                                                                                                
                                                                                                                                     
 
-$plugin->version   = 2025030300;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->release   = 'v4.4.'; 
+$plugin->version   = 2025081300;        // The current plugin version (Date: YYYYMMDDXX).
+$plugin->release   = 'v4.5.'; 
 
 // This is the version of Moodle this plugin requires.                                                                              
 $plugin->requires = 2022112805;                                                                                                   
@@ -37,4 +37,5 @@ $plugin->requires = 2022112805;
 // This is the component name of the plugin - it always starts with 'theme_'                                                        
 // for themes and should be the same as the name of the folder.                                                                     
 $plugin->component = 'theme_mooin4';
-$plugin->dependencies = ['theme_boost_union' => 2023010548];
+$plugin->dependencies = ['theme_boost_union' => 2024100729];
+

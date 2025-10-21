@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    if (window.location.href.indexOf("admin/settings.php?section=themesettingmooin4") > -1) {
+    if (window.location.href.indexOf("admin/settings.php?section=theme_mooin4") > -1) {
 
-        console.log("Custom palette script loaded");
+        //console.log("Custom palette script loaded");
         //Get all elements für the custom-palette
         const paletteSelector = document.querySelector("#id_s_theme_mooin4_colorpalette");
         const colorPickers = document.querySelectorAll(".admin_colourpicker.clearfix");
@@ -72,5 +72,5 @@ document.addEventListener("DOMContentLoaded", function () {
         updateVisibility();
         updatePrimaryLight();
 
-    }
+    } 
 });
