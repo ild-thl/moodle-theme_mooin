@@ -148,6 +148,10 @@
 
   .bi-gear-fill {
     font-size: 1rem;
+    color: var(--primary);
+    &:hover {
+      color: var(--dark-color);
+    }
   }
 
   .all-badges-link,
@@ -300,4 +304,8 @@ ol.breadcrumb {
 
 body.editing #page-header{
   display: none !important;
+}
+
+.btn.info-tip .bi-info-circle-fill {
+  color: var(--primary);
 }
