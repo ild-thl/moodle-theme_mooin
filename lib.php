@@ -156,10 +156,87 @@ function theme_mooin4_alter_css_urls(&$urls) {
     theme_boost_union_alter_css_urls($urls);
 }
 
-//NEW 
+/**
+ * Page init callback to inject custom colors as inline CSS.
+ * This avoids SCSS caching issues - inline CSS is not cached and regenerated on every page load.
+ *
+ * @param moodle_page $page The page object.
+ */
 function theme_mooin4_page_init(moodle_page $page) {
     $palette = get_config('theme_mooin4', 'colorpalette');
+    
+    // Add body class for the selected palette.
     if ($palette) {
         $page->add_body_class($palette);
+    }
+    
+    // If custom palette is selected, inject inline CSS with custom colors.
+    if ($palette === 'custom') {
+        // Map theme variable to CSS variable name.
+        $colors = [
+            'primary-color' => 'primarycolor',
+            'primary-light' => 'primarylight',
+            'secondary-color' => 'secondarycolor',
+            'secondary-light' => 'secondarylight',
+            'background-color' => 'backgroundcolor',
+            'inner-progress' => 'innerprogress',
+            'background-progress' => 'backgroundprogress',
+            'signal-color' => 'signalcolor',
+            'link-color' => 'linkcolor',
+            'general-color' => 'generalcolor',
+            'border-general' => 'bordergeneral',
+            'important-color' => 'importantcolor',
+            'border-important' => 'borderimportant',
+            'task-color' => 'taskcolor',
+            'border-task' => 'bordertask',
+            'fact-color' => 'factcolor',
+            'border-fact' => 'borderfact'
+        ];
+        
+        // Build inline CSS.
+        $customcss = "<style id='theme-mooin4-custom-colors'>\n:root {";
+        
+        // Retrieve and apply colors from the database.
+        foreach ($colors as $cssVar => $configKey) {
+            $value = get_config('theme_mooin4', $configKey);
+            if (!empty($value)) {
+                $customcss .= "\n  --$cssVar: $value !important;";
+            }
+        }
+        
+        // Handle transparency for primary-light color.
+        $opacity = get_config('theme_mooin4', 'primarylight_opacity');
+        $primaryLight = get_config('theme_mooin4', 'primarylight');
+        
+        if (!empty($primaryLight) && !empty($opacity)) {
+            // Convert opacity percentage (0–100) to HEX format (00–FF).
+            $opacityHex = dechex(intval($opacity) * 255 / 100);
+            $opacityHex = str_pad($opacityHex, 2, "0", STR_PAD_LEFT);
+            
+            // Validate if the primary light color is a correct 6-digit HEX code.
+            if (preg_match('/^#[a-fA-F0-9]{6}$/', $primaryLight)) {
+                $storedValue = "{$primaryLight}{$opacityHex}";
+                set_config('primarylight', $storedValue, 'theme_mooin4');
+                $customcss .= "\n  --primary-light: {$storedValue} !important;";
+                
+                // Store only the 6-character HEX for the input field display.
+                set_config('primarylight_display', $primaryLight, 'theme_mooin4');
+            } else {
+                $customcss .= "\n  --primary-light: {$primaryLight} !important;";
+            }
+        }
+        
+        $customcss .= "\n}\n</style>";
+        
+        // Add inline CSS to the page head via $CFG->additionalhtmlhead.
+        // This is the standard Moodle way to add custom HTML to the head section.
+        global $CFG;
+        if (!isset($CFG->additionalhtmlhead)) {
+            $CFG->additionalhtmlhead = '';
+        }
+        // Only add if not already added (check for our style tag ID).
+        if (strpos($CFG->additionalhtmlhead, 'theme-mooin4-custom-colors') === false) {
+            $CFG->additionalhtmlhead .= "\n" . $customcss;
+        }
     }
 }
