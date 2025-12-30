@@ -659,7 +659,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     margin: 0 30px;
   }
 
-  // Section 0 - Lektion 0, Menü und Button auf einer Zeile
+  // Section 0 - Lesson 0, menu and button in one line
   .course-section-header[data-number="0"] {
     display: flex;
     flex-direction: row;
@@ -667,14 +667,14 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     align-items: center;
     gap: 0.5rem;
 
-    // Warnhinweis nimmt volle Breite ein (eigene Zeile darüber)
+    // Warning notice takes full width (own line above)
     [data-for="sectioninfo"] {
       width: 100%;
       order: -1;
       margin-bottom: 1rem;
     }
 
-    // Titel-Container (Lektion 0 + Menü) - gleiche Klasse, aber Kind-Element
+    // Title container (Lesson 0 + Menu) - same class, but child element
     >.course-section-header.d-flex {
       display: inline-flex;
       flex-direction: row;
@@ -684,19 +684,19 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       flex-shrink: 0;
     }
 
-    // Content-Container mit Button -> display: contents damit Kinder (Warnung + Button) direkte Flex-Items werden
+    // Content container with button -> display: contents so children (Warning + Button) become direct flex items
     >.content {
       display: contents;
     }
 
 
-    // Button Styling
+    // Button styling
     .section-modchooser {
       margin: 0;
     }
   }
 
-  // Lektionen - Elemente in einer Zeile darstellen
+  // Lessons - display elements in one line
   .course-section-header {
     display: flex;
     flex-direction: row;
@@ -704,7 +704,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     flex-wrap: nowrap;
     gap: 0.5rem;
 
-    // Section-Name und bearbeiten-Icon in einer Zeile
+    // Section name and edit icon in one line
     .sectionname,
     .inplaceeditable {
       display: inline-flex;
@@ -713,19 +713,19 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       flex-shrink: 0;
     }
 
-    // Drag-Icon und andere Elemente richtig ausrichten
+    // Align drag icon and other elements correctly
     .dragicon {
       flex-shrink: 0;
     }
 
-    // Actions-Menü am Ende der Zeile
+    // Actions menu at the end of the line
     .section-actions {
       margin-left: auto;
       flex-shrink: 0;
     }
   }
 
-  // Activity-Items in einer Zeile
+  // Activity items in one line
   .activity-item {
 
     .activity-instance,
