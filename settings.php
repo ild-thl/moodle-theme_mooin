@@ -41,26 +41,26 @@ if ((isset($ADMIN) && $hassiteconfig) || has_capability('theme/boost_union:confi
         // settings and which is automatically linked from the theme selector page.
         // To avoid that there appears a broken "Boost Union Child" settings page, we redirect the user to a settings
         // overview page if he opens this page.
-        $mainsettingspageurl = new moodle_url('/admin/settings.php', ['section' => 'themesettingmooin4']);
-        if (is_object($ADMIN) && $ADMIN->fulltree && $PAGE->has_set_url() && $PAGE->url->compare($mainsettingspageurl)) {
-                redirect(new \core\url('/admin/settings.php', ['section' => 'theme_mooin4']));
-        }
+    $mainsettingspageurl = new moodle_url('/admin/settings.php', ['section' => 'themesettingmooin4']);
+    if (is_object($ADMIN) && $ADMIN->fulltree && $PAGE->has_set_url() && $PAGE->url->compare($mainsettingspageurl)) {
+        redirect(new \core\url('/admin/settings.php', ['section' => 'theme_mooin4']));
+    }
 
-        // Create empty settings page structure to make the site administration work on non-admin pages.
-        if (is_object($ADMIN) && !$ADMIN->fulltree) {
-                // Create Boost Union Child settings page
-                // (and allow users with the theme/boost_union:configure capability to access it).
-                $tab = new admin_settingpage(
-                        'theme_mooin4',
-                        get_string('configtitle', 'theme_mooin4', null, true),
-                        'theme/boost_union:configure'
-                );
-                $ADMIN->add('theme_boost_union', $tab);
-        }
+    // Create empty settings page structure to make the site administration work on non-admin pages.
+    if (is_object($ADMIN) && !$ADMIN->fulltree) {
+        // Create Boost Union Child settings page
+        // (and allow users with the theme/boost_union:configure capability to access it).
+        $tab = new admin_settingpage(
+            'theme_mooin4',
+            get_string('configtitle', 'theme_mooin4', null, true),
+            'theme/boost_union:configure'
+        );
+        $ADMIN->add('theme_boost_union', $tab);
+    }
 
-        // Create full settings page structure.
-        // phpcs:disable moodle.ControlStructures.ControlSignature.Found
-        else if (is_object($ADMIN) && $ADMIN->fulltree) {
+    // Create full settings page structure.
+    // phpcs:disable moodle.ControlStructures.ControlSignature.Found
+    else if (is_object($ADMIN) && $ADMIN->fulltree) {
 
                 // Require the necessary libraries.
                 require_once($CFG->dirroot . '/theme/boost_union/lib.php');
@@ -137,7 +137,7 @@ if ((isset($ADMIN) && $hassiteconfig) || has_capability('theme/boost_union:confi
 
 
 
-                //color menu
+                // Color menu.
                 $name = 'theme_mooin4/color_heading';
                 $title = get_string('color_heading', 'theme_mooin4', null, true);
                 $setting = new admin_setting_heading($name, $title, null);
@@ -145,7 +145,7 @@ if ((isset($ADMIN) && $hassiteconfig) || has_capability('theme/boost_union:confi
                 $tab->add($setting);
 
 
-                //Dropdown for Color Palettes
+                // Dropdown for Color Palettes.
                 $name = 'theme_mooin4/colorpalette';
                 $title = get_string('colorpalette', 'theme_mooin4');
                 $description = get_string('colorpalette_desc', 'theme_mooin4');
@@ -155,16 +155,16 @@ if ((isset($ADMIN) && $hassiteconfig) || has_capability('theme/boost_union:confi
                         'palette-green' => get_string('palette_green', 'theme_mooin4'),
                         'palette-blue' => get_string('palette_blue', 'theme_mooin4'),
                         'palette-pastellblue' => get_string('palette_pastellblue', 'theme_mooin4'),
-                        'custom' => get_string('palette_custom', 'theme_mooin4')
+                        'custom' => get_string('palette_custom', 'theme_mooin4'),
                 ];
                 $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
                 $setting->set_updatedcallback('theme_reset_all_caches');
                 $tab->add($setting);
 
 
-                // Infobox
+                // Infobox.
                 $name = 'theme_mooin4/custompalette_info';
-                $title = ''; // Kein Titel nötig
+                $title = ''; // Kein Titel nötig.
                 $info = get_string('custompalette_info', 'theme_mooin4');
                 $tab->add(new admin_setting_heading($name, $title, $info));
 
@@ -212,11 +212,11 @@ if ((isset($ADMIN) && $hassiteconfig) || has_capability('theme/boost_union:confi
                         'borderimportant' => '#FFA500',
                         'taskcolor' => '#00CED1',
                         'bordertask' => '#008B8B',
-                        'factcolor' => '#8A2BE2',
-                        'borderfact' => '#4B0082'
+                'factcolor' => '#8A2BE2',
+                'borderfact' => '#4B0082',
                 ];
 
-                // Loop through each color setting and create a color picker input for the admin
+                // Loop through each color setting and create a color picker input for the admin.
                 foreach ($colors as $name => $default) {
                         $setting = new admin_setting_configcolourpicker(
                                 "theme_mooin4/{$name}",
@@ -228,13 +228,11 @@ if ((isset($ADMIN) && $hassiteconfig) || has_capability('theme/boost_union:confi
                         $tab->add($setting);
                 }
 
-                
-
                 // Add tab to settings page.
                 $page->add($tab);
-                // Add settings page to the admin settings category.    
+                // Add settings page to the admin settings category.
                 $ADMIN->add('theme_boost_union', $page);
-        }
+    }
 }
 
 // Include custom JavaScript on admin pages.

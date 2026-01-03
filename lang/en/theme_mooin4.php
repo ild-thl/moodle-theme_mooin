@@ -30,7 +30,7 @@ defined('MOODLE_INTERNAL') || die();
 
 // General.
 $string['pluginname'] = 'Mooin 4.x ALS Boost Union Child';
-$string['choosereadme'] = 'Theme mooin4 is a child theme of Boost Union.'; 
+$string['choosereadme'] = 'Theme mooin4 is a child theme of Boost Union.';
 $string['configtitle'] = 'Mooin4 ALS Boost Union Child';
 $string['settingsoverview_buc_desc'] = 'Mooin4 customizes Boost Union.';
 
@@ -55,7 +55,7 @@ $string['extrascssinheritancesetting_desc'] = 'With this setting, you control if
 // Privacy API.
 $string['privacy:metadata'] = 'The Boost Union Child theme does not store any personal data about any user.';
 
-// Strings für Farbpaletten 
+// Strings für Farbpaletten.
 $string['colorpalette'] = 'Color palette';
 $string['colorpalette_desc'] = 'Choose the color palette for the theme.';
 $string['classic_mooin'] = 'Classic mooin';
@@ -64,7 +64,7 @@ $string['palette_blue'] = 'Blue';
 $string['palette_pastellblue'] = 'Pastell Blue';
 $string['palette_custom'] = 'Custom (editable)';
 
-//Strings für Colorpicker der Custom-Palette
+// Strings für Colorpicker der Custom-Palette.
 $string['primarycolor'] = 'Primary Color';
 $string['primarycolor_desc'] = 'Set the primary color of your theme';
 $string['secondarycolor'] = 'Secondary Color';
@@ -101,14 +101,14 @@ $string['primarylight_opacity'] = 'Transparency Primary Light';
 $string['primarylight_opacity_desc'] = 'Set the transparency of primary light (0-100%).';
 
 $string['color_heading'] = 'mooin4 Color settings';
-$string['settings_alert'] = 'To save color changes for custom colors and make them visible, click on “Save changes” at the bottom and then under 
+$string['settings_alert'] = 'To save color changes for custom colors and make them visible, click on “Save changes” at the bottom and then under
                 “Site administration > Development > Purge caches” to empty the cache.';
 
 $string['custompalette_info'] = '
 <div id="custom-palette-info" class="alert alert-info">
                 <strong>Note:</strong> You can define your own colors here. To do this, select the desired values in the color pickers.
-                <br><strong>Tip for accessibility:</strong> Check the colors used with accessibility tools such as 
-                <a href="https://color.adobe.com/de/create/color-contrast-analyzer" target="_blank" 
+                <br><strong>Tip for accessibility:</strong> Check the colors used with accessibility tools such as
+                <a href="https://color.adobe.com/de/create/color-contrast-analyzer" target="_blank"
                 style="text-decoration: underline; color: var(--link-color); font-weight: bold;">
                 Adobe Color</a>
                 <br>
@@ -116,6 +116,6 @@ $string['custompalette_info'] = '
                 <br>
                 - Minimum contrast for font ≥ 17pt and graphic components: 3 to 1
                 <br><br>
-               To save color changes and make them visible, click on “Save changes” below and then empty the cache 
-               under “Site administration > Development > Purge caches”. 
+               To save color changes and make them visible, click on “Save changes” below and then empty the cache
+               under “Site administration > Development > Purge caches”.
             </div>';

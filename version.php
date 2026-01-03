@@ -24,18 +24,18 @@
 
  // Every file should have GPL and copyright in the header - we skip it in tutorials but you should not skip it for real.
 
-// This line protects the file from being accessed by a URL directly.                                                               
-defined('MOODLE_INTERNAL') || die();                                                                                                
-                                                                                                                                    
+// This line protects the file from being accessed by a URL directly.
+defined('MOODLE_INTERNAL') || die();
+
 
 $plugin->version   = 2025081300;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->release   = 'v4.5.'; 
+$plugin->release   = 'v4.5.';
 
-// This is the version of Moodle this plugin requires.                                                                              
-$plugin->requires = 2022112805;                                                                                                   
-                                                                                                                                    
-// This is the component name of the plugin - it always starts with 'theme_'                                                        
-// for themes and should be the same as the name of the folder.                                                                     
+// This is the version of Moodle this plugin requires.
+$plugin->requires = 2022112805;
+
+// This is the component name of the plugin - it always starts with 'theme_'
+// for themes and should be the same as the name of the folder.
 $plugin->component = 'theme_mooin4';
 $plugin->dependencies = ['theme_boost_union' => 2024100729];
 

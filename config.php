@@ -25,18 +25,16 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-// mooin4 original
+// Mooin4 original.
 
 $THEME->sheets = [];
 $THEME->editor_sheets = [];
 $THEME->enable_dock = false;
-$THEME->yuicssmodules = array();
+$THEME->yuicssmodules = [];
 $THEME->requiredblocks = '';
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 $THEME->haseditswitch = true;
-$THEME->activityheaderconfig = [
-    'notitle' => true
-];
+$THEME->activityheaderconfig = ['notitle' => true];
 $THEME->requiredblocks = '';
 
 // Let codechecker ignore some sniffs for this file as we do not need a login check here..
@@ -92,8 +90,7 @@ unset($scsspre);
 
 $THEME->javascripts = ['custom'];
 
-//NEW
-// integrate settings.php
+// Integrate settings.php.
 if (is_siteadmin()) {
     require_once(__DIR__ . '/settings.php');
 }

@@ -30,7 +30,7 @@ defined('MOODLE_INTERNAL') || die();
 
 // General.
 $string['pluginname'] = 'Mooin 4.x ALS Boost Union Child';
-$string['choosereadme'] = 'Theme mooin4 ist ein child theme von Boost Union.'; 
+$string['choosereadme'] = 'Theme mooin4 ist ein child theme von Boost Union.';
 $string['configtitle'] = 'Mooin4 ALS Boost Union Child';
 $string['settingsoverview_buc_desc'] = 'Mooin4 passt Boost Union individuell an.';
 
@@ -55,7 +55,7 @@ $string['extrascssinheritancesetting_desc'] = 'Mit dieser Einstellung steuern Si
 // Privacy API.
 $string['privacy:metadata'] = 'Das Boost Union Child-Theme speichert keine persönlichen Daten der Nutzer.';
 
-// Strings für Farbpaletten 
+// Strings for Farbpaletten.
 $string['colorpalette'] = 'Farbpalette';
 $string['colorpalette_desc'] = 'Wählen Sie die Farbpalette für das Theme.';
 $string['classic_mooin'] = 'Classic mooin';
@@ -64,7 +64,7 @@ $string['palette_blue'] = 'Blue';
 $string['palette_pastellblue'] = 'Pastell Blue';
 $string['palette_custom'] = 'Custom (bearbeitbar)';
 
-//Strings für Colorpicker der Custom-Palette
+// Strings for Colorpicker der Custom-Palette.
 $string['primarycolor'] = 'Primärfarbe';
 $string['primarycolor_desc'] = 'Legen Sie die Grundfarbe des Themes fest';
 $string['secondarycolor'] = 'Sekundärfarbe';
@@ -101,14 +101,14 @@ $string['primarylight_opacity'] = 'Transparenz Primärfarbe Light';
 $string['primarylight_opacity_desc'] = 'Legen Sie die Transparenz der Primärfarbe Light fest (0-100%).';
 
 $string['color_heading'] = 'mooin4 Farbeinstellungen';
-$string['settings_alert'] = 'Um Farbänderungen für Custom Farben zu speichern und sichtbar zu machen, unten auf "Speichern" klicken und dann unter 
+$string['settings_alert'] = 'Um Farbänderungen für Custom Farben zu speichern und sichtbar zu machen, unten auf "Speichern" klicken und dann unter
                 "Site administration > Development > Purge caches" den Cache leeren.';
 
 $string['custompalette_info'] = '
 <div id="custom-palette-info" class="alert alert-info">
                 <strong>Hinweis:</strong> Sie können hier eigene Farben definieren. Wählen Sie dazu die gewünschten Werte in den Farbpickern aus.
-                <br><strong>Tipp für Barrierefreiheit:</strong> Prüfen Sie die eingesetzten Farben mit Barrierefreiheits-Tools wie 
-                <a href="https://color.adobe.com/de/create/color-contrast-analyzer" target="_blank" 
+                <br><strong>Tipp für Barrierefreiheit:</strong> Prüfen Sie die eingesetzten Farben mit Barrierefreiheits-Tools wie
+                <a href="https://color.adobe.com/de/create/color-contrast-analyzer" target="_blank"
                 style="text-decoration: underline; color: var(--link-color); font-weight: bold;">
                 Adobe Color</a>
                 <br>
@@ -116,6 +116,6 @@ $string['custompalette_info'] = '
                 <br>
                 - Mindest Kontrast für Schrift ≥ 17pt und Grafikkomponenten: 3 zu 1
                 <br><br>
-                Um Farbänderungen zu speichern und sichtbar zu machen, unten auf "Save changes" klicken und dann unter 
+                Um Farbänderungen zu speichern und sichtbar zu machen, unten auf "Save changes" klicken und dann unter
                 "Site administration > Development > Purge caches" den Cache leeren.
             </div>';
