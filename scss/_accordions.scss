@@ -11,6 +11,22 @@
 p + .accordion {
   margin-top: 20px;
 }
+h1 + .accordion,
+h2 + .accordion,
+h3 + .accordion,
+h4 + .accordion,
+h5 + .accordion,
+h6 + .accordion {
+  margin-top: 20px;
+}
+.accordion + h1,
+.accordion + h2,
+.accordion + h3,
+.accordion + h4,
+.accordion + h5,
+.accordion + h6 {
+  margin-top: 20px;
+}
 .accordion input {
   position: absolute;
   opacity: 0;
