@@ -11,6 +11,11 @@
 @import "./bootstrap-icons.scss";
 
 /*------------------------------------------------------------ GENERAL LAYOUT ------------------------------------------------------------ */
+#page-course-view-mooin4, #page-course-view-mooin1pager{
+  background-color: $background-color; 
+}
+
+
 .pagelayout-incourse {
   #topofscroll {
     margin-top: 0 !important;
