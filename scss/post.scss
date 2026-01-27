@@ -199,7 +199,8 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       background-image: url([[pix:theme|./header_placeholder_mobile]]);
     }
 
-    .header-image,
+    .header-image-desktop,
+    .header-image-mobile,
     .desktop-placeholder,
     .mobile-placeholder {
       object-fit: cover;
@@ -210,6 +211,25 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 
       @include media-breakpoint-up(sm) {
         aspect-ratio: 2.8571428571;
+      }
+    }
+
+    // Default (mobile <576px): show mobile image/placeholder, hide desktop ones
+    .header-image-desktop,
+    .desktop-placeholder {
+      display: none;
+    }
+
+    // >=576px: show desktop image/placeholder, hide mobile ones
+    @include media-breakpoint-up(sm) {
+      .header-image-mobile,
+      .mobile-placeholder {
+        display: none;
+      }
+
+      .header-image-desktop,
+      .desktop-placeholder {
+        display: block;
       }
     }
 
