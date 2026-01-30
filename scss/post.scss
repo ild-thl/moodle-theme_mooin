@@ -131,6 +131,11 @@
   display: none;
 }
 
+body:not(.editing) .h5pactivity {
+  border: 1px solid #EEE !important; 
+  margin-top: .5rem !important;
+}
+
 
 
 /*------------------------------------------------------------ COURSEFRONTPAGE ------------------------------------------------------------ */
