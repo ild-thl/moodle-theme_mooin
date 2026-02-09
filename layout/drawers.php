@@ -165,6 +165,15 @@ if ($PAGE->pagelayout == 'incourse') {
 $context = context_course::instance($COURSE->id);
 $canseesecondarymoremenu = has_capability('moodle/course:update', $context, $USER); // Check if user has editing rights like a teacher or admin.
 
+$showrightsidebar = false;
+if (!empty($COURSE) && $COURSE->format === 'mooin4') {
+    $format = course_get_format($COURSE->id);
+    $formatoptions = $format->get_format_options();
+    if (isset($formatoptions['show_right_sidebar'])) {
+        $showrightsidebar = (bool)$formatoptions['show_right_sidebar'];
+    }
+}
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
@@ -190,6 +199,8 @@ $templatecontext = [
     'incourse' => $incourse,
     // Tinajohn added.
     'canseesecondarymoremenu' => $canseesecondarymoremenu,
+    // Laura added.
+    'showrightsidebar' => $showrightsidebar,
 ];
 
 // Include the template content for the course related hints.
