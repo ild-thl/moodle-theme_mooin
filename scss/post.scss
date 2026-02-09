@@ -11,6 +11,11 @@
 @import "./bootstrap-icons.scss";
 
 /*------------------------------------------------------------ GENERAL LAYOUT ------------------------------------------------------------ */
+#page-course-view-mooin4, #page-course-view-mooin1pager{
+  background-color: $background-color; 
+}
+
+
 .pagelayout-incourse {
   #topofscroll {
     margin-top: 0 !important;
@@ -137,6 +142,13 @@
   display: none;
 }
 
+body:not(.editing) .h5pactivity {
+  border: 1px solid #EEE !important; 
+  margin-top: .5rem !important;
+}
+
+
+
 /*------------------------------------------------------------ COURSEFRONTPAGE ------------------------------------------------------------ */
 body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   max-width: 1224px;
@@ -203,7 +215,8 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       background-image: url([[pix:theme|./header_placeholder_mobile]]);
     }
 
-    .header-image,
+    .header-image-desktop,
+    .header-image-mobile,
     .desktop-placeholder,
     .mobile-placeholder {
       object-fit: cover;
@@ -214,6 +227,25 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 
       @include media-breakpoint-up(sm) {
         aspect-ratio: 2.8571428571;
+      }
+    }
+
+    // Default (mobile <576px): show mobile image/placeholder, hide desktop ones
+    .header-image-desktop,
+    .desktop-placeholder {
+      display: none;
+    }
+
+    // >=576px: show desktop image/placeholder, hide mobile ones
+    @include media-breakpoint-up(sm) {
+      .header-image-mobile,
+      .mobile-placeholder {
+        display: none;
+      }
+
+      .header-image-desktop,
+      .desktop-placeholder {
+        display: block;
       }
     }
 
