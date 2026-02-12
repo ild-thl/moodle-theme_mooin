@@ -82,13 +82,16 @@
     padding: 0;
     margin-bottom: 0;
   }
+
   #page.drawers.show-drawer-right {
     margin-right: 0 !important;
     padding-right: 0 !important;
   }
+
   #theme_boost-drawers-blocks.drawer-right.show {
     box-shadow: -8px 0 24px rgba(0, 0, 0, 0.25);
   }
+
   //DiSEA Sidebar Block Styling
   .drawer.drawer-right .block_disealytics .panel {
     border-color: $primary;
@@ -718,8 +721,9 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       }
     }
   }
+
   /* Bild-Links werden überschrieben (Symbol wird ausgeblendet) */
-  .description a img + ::after,
+  .description a img+ ::after,
   .description a:has(img)::after {
     /* falls unterstützt */
     content: "";
@@ -903,7 +907,8 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     transition: margin 0.2s;
     opacity: 1;
 
-    @media (max-height: 600px), screen and (orientation: portrait) {
+    @media (max-height: 600px),
+    screen and (orientation: portrait) {
       transition: transform 0.2s ease-in-out, opacity 0.5s ease-in-out;
     }
   }
@@ -1296,37 +1301,36 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 
 
 .block_disealytics #title {
-    margin-top: -19px;
-    color: var(--secondary-color);
+  margin-top: -19px;
+  color: var(--secondary-color);
 }
 
 .block_disealytics .navigation-icons {
-    margin-bottom: 8px;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    margin-top: -30px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: -30px;
 }
 
 .block_disealytics .navigation-icons a {
-    height: 19px;
-    font-size: 11px;
+  height: 19px;
+  font-size: 11px;
 }
 
-.block_disealytics .fa-cog
- {
-    font-size: 16px;
-    margin-right: 8px;
-    color: var(--primary);
-    margin-top: 5.5px;
+.block_disealytics .fa-cog {
+  font-size: 16px;
+  margin-right: 8px;
+  color: var(--primary);
+  margin-top: 5.5px;
 
 }
 
 .block_disealytics-editing .editing-headline {
-    font-size: 0.9rem;          
-    line-height: 1.2;           
-    white-space: normal;        
-    text-align: center;         
-    margin: 0;                  
-    padding: 0 5px;             
+  font-size: 0.9rem;
+  line-height: 1.2;
+  white-space: normal;
+  text-align: center;
+  margin: 0;
+  padding: 0 5px;
 }
