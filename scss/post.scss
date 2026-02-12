@@ -690,6 +690,91 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
     padding-top: 2rem;
     margin: 0 30px;
   }
+
+  // Section 0 - Lesson 0, menu and button in one line
+  .course-section-header[data-number="0"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+
+    // Warning notice takes full width (own line above)
+    [data-for="sectioninfo"] {
+      width: 100%;
+      order: -1;
+      margin-bottom: 1rem;
+    }
+
+    // Title container (Lesson 0 + Menu) - same class, but child element
+    >.course-section-header.d-flex {
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    // Content container with button -> display: contents so children (Warning + Button) become direct flex items
+    >.content {
+      display: contents;
+    }
+
+
+    // Button styling
+    .section-modchooser {
+      margin: 0;
+    }
+  }
+
+  // Lessons - display elements in one line
+  .course-section-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+
+    // Section name and edit icon in one line
+    .sectionname,
+    .inplaceeditable {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    // Align drag icon and other elements correctly
+    .dragicon {
+      flex-shrink: 0;
+    }
+
+    // Actions menu at the end of the line
+    .section-actions {
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+  }
+
+  // Activity items in one line
+  .activity-item {
+
+    .activity-instance,
+    .activity-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 0.5rem;
+    }
+
+    .activityname {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+  }
 }
 
 #section-0 {
