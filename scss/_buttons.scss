@@ -170,3 +170,19 @@ a:not([class]):focus {
   }
 }
 
+.mooin4-btn--primary.dimmed_text,
+.dimmed_text.mooin4-btn--primary {
+  color: #fff !important;
+  
+  &:hover {
+    color: #fff !important;
+  }
+}
+
+#page-course-view-mooin4 .nextsection a.dimmed_text.mooin4-btn.mooin4-btn--primary {
+  color: #fff !important;
+  
+  &:hover {
+    color: #fff !important;
+  }
+}
