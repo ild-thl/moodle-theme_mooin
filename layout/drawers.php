@@ -35,7 +35,7 @@
  * * Include smart menus
  * * Include course index modification
  *
- * @package   theme_boost_union
+ * @package   theme_mooin4
  * @copyright 2022 Luca Bösch, BFH Bern University of Applied Sciences luca.boesch@bfh.ch
  * @copyright based on code from theme_boost by Bas Brands
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -109,7 +109,7 @@ if (!$courseindex) {
     $courseindexopen = false;
 }
 // Tinjohn readded - weiter untern
-// $bodyattributes = $OUTPUT->body_attributes($extraclasses);
+// $bodyattributes = $OUTPUT->body_attributes($extraclasses);.
 $forceblockdraweropen = $OUTPUT->firstview_fakeblocks();
 
 $secondarynavigation = false;
@@ -124,7 +124,7 @@ if ($PAGE->has_secondary_navigation()) {
     }
 }
 
-// from mooin - not used
+// From mooin - not used.
 // $primary = new core\navigation\output\primary($PAGE);
 // Load the navigation from boost_union primary navigation, the extended version of core primary navigation.
 // It includes the smart menus and menu items, for multiple locations.
@@ -153,9 +153,9 @@ $bodyattributes = $OUTPUT->body_attributes($extraclasses); // In the original la
 $header = $PAGE->activityheader;
 $headercontent = $header->export_for_template($renderer);
 
-// Mooin4 added
-$isCourseContext = (isset($COURSE) && $COURSE->id != SITEID);
-$isCourseFrontPage = $isCourseContext && $PAGE->url == course_get_url($COURSE);
+// Mooin4 added.
+$iscoursecontext = (isset($COURSE) && $COURSE->id != SITEID);
+$iscoursefrontpage = $iscoursecontext && $PAGE->url == course_get_url($COURSE);
 
 $incourse = false;
 if ($PAGE->pagelayout == 'incourse') {
@@ -163,7 +163,8 @@ if ($PAGE->pagelayout == 'incourse') {
 }
 
 $context = context_course::instance($COURSE->id);
-$canseesecondarymoremenu = has_capability('moodle/course:update', $context, $USER); // Check if user has editing rights like a teacher or admin.
+$canseesecondarymoremenu = has_capability('moodle/course:update', $context, $USER);
+// Check if user has editing rights like a teacher or admin.
 
 $showrightsidebar = false;
 if (!empty($COURSE) && $COURSE->format === 'mooin4') {
@@ -195,7 +196,7 @@ $templatecontext = [
     'headercontent' => $headercontent,
     'addblockbutton' => $addblockbutton,
     // Mooin4 added.
-    'iscoursefrontpage' => $isCourseFrontPage,
+    'iscoursefrontpage' => $iscoursefrontpage,
     'incourse' => $incourse,
     // Tinajohn added.
     'canseesecondarymoremenu' => $canseesecondarymoremenu,
