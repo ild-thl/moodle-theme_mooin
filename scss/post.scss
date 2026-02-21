@@ -788,6 +788,22 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
 }
 
+/* ---- Link-Icon in Forumsbeiträgen (wie im Kursinhalt) ---- */
+.post-content-container,
+.post-message,
+.news-text {
+  a:not(:has(img))::after {
+    font-family: "bootstrap-icons";
+    content: "\F470";
+  }
+
+  /* Bild-Links: kein Icon */
+  a img+ ::after,
+  a:has(img)::after {
+    content: "";
+  }
+}
+
 #mooin4-breadcrumb-container,
 #mooin1pager-breadcrumb-container {
   margin: 0 1rem;
