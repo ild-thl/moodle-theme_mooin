@@ -80,6 +80,7 @@
     display: -webkit-box !important;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    line-clamp: 2;
     white-space: normal;
     //max-height: 3rem;
 
@@ -106,6 +107,7 @@
     display: -webkit-box !important;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+    line-clamp: 4;
     white-space: normal;
     //max-height: 5rem;
   }
@@ -149,6 +151,7 @@
   .bi-gear-fill {
     font-size: 1rem;
     color: var(--primary);
+
     &:hover {
       color: var(--dark-color);
     }
@@ -170,18 +173,18 @@
 }
 
 
-  .badges-list li a::before {
-    font-family: "bootstrap-icons";
-    content: "\F430";
-    color: var(--primary-color);
-    position: absolute;
-    background-color: white;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    left: 3.5rem;
-    top: -2.5rem;
-    z-index: 1;
-  }
+.badges-list li a::before {
+  font-family: "bootstrap-icons";
+  content: "\F430";
+  color: var(--primary-color);
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  left: 3.5rem;
+  top: -2.5rem;
+  z-index: 1;
+}
 
 
 .subpage--badges {
@@ -285,11 +288,13 @@ ol.breadcrumb {
   margin-left: 0px !important;
 }
 
-.new-badge-layer, .new-certificate-layer {
+.new-badge-layer,
+.new-certificate-layer {
   position: relative;
 }
 
-.new-badge-layer::after, .new-certificate-layer::after {
+.new-badge-layer::after,
+.new-certificate-layer::after {
   content: "";
   position: absolute;
   top: 0;
@@ -302,10 +307,28 @@ ol.breadcrumb {
   z-index: 3;
 }
 
-body.editing #page-header{
+body.editing #page-header {
   display: none !important;
 }
 
 .btn.info-tip .bi-info-circle-fill {
   color: var(--primary);
+}
+
+.notyetavailable-badge {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  vertical-align: middle;
+  margin-bottom: 2px;
+
+  .bi-lock-fill {
+    font-size: 0.85rem;
+  }
 }
