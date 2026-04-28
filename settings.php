@@ -28,7 +28,7 @@ use theme_boost_union\admin_settingspage_tabs_with_tertiary;
 defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->libdir . '/adminlib.php');
-global $ADMIN;
+global $ADMIN, $PAGE;
 
 if ((isset($ADMIN) && $hassiteconfig) || has_capability('theme/boost_union:configure', context_system::instance())) {
 
