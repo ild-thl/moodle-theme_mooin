@@ -93,6 +93,15 @@
     p {
       margin: 0;
     }
+
+    img {
+      max-width: 7rem;
+      max-height: 3.5rem;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      vertical-align: middle;
+    }
   }
 
   .discussion-link {
@@ -110,6 +119,15 @@
     line-clamp: 4;
     white-space: normal;
     //max-height: 5rem;
+
+    img {
+      max-width: 7rem;
+      max-height: 3.5rem;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      vertical-align: middle;
+    }
   }
 }
 

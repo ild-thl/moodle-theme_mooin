@@ -834,6 +834,20 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   a:has(img)::after {
     content: "";
   }
+
+}
+
+.path-mod-forum {
+  .post-content-container,
+  .post-message {
+    img {
+      max-width: 12rem;
+      max-height: 12rem;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+  }
 }
 
 #mooin4-breadcrumb-container,
