@@ -238,4 +238,9 @@ if ((isset($ADMIN) && $hassiteconfig) || has_capability('theme/boost_union:confi
 // Include custom JavaScript on admin pages.
 if (isset($PAGE)) {
     $PAGE->requires->js(new moodle_url('/theme/mooin4/javascript/custom.js'));
+    // solange h5p.js der h5plib den Bug ignoriert, dass Safari kein 
+    // about:blank mit anschließender Füllung mit cross-site unterstützt, muss das hier überschrieben werden
+    // eigentlich nur die static 
+    $PAGE->requires->js(new moodle_url('/theme/mooin4/javascript/h5p-override-h5pinit.js'));
+    //$PAGE->requires->js(new moodle_url('/theme/mooin4/javascript/h5p-override-h5pjquery.js'));
 }
