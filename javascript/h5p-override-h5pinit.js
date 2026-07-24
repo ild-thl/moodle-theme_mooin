@@ -51,6 +51,10 @@ H5P.init = function (target) {
       metadata: contentData.metadata
     };
 
+    // Apply theme density
+    let density = H5PIntegration.theme?.density ?? 'large';
+    $element.addClass('h5p-' + density);
+
     H5P.getUserData(contentId, 'state', function (err, previousState) {
       if (previousState) {
         library.userDatas = {
@@ -129,7 +133,11 @@ H5P.init = function (target) {
       var $actions = actionBar.getDOMElement();
 
       actionBar.on('reuse', function () {
-        H5P.openReuseDialog($actions, contentData, library, instance, contentId);
+        H5P.openReuseDialog($actions, contentData, {
+          library: contentData.library,
+          params: JSON.parse(contentData.jsonContent),
+          metadata: contentData.metadata
+        }, instance, contentId);
         instance.triggerXAPI('accessed-reuse');
       });
       actionBar.on('copyrights', function () {
@@ -326,27 +334,33 @@ H5P.init = function (target) {
     const contentLanguage = contentData && contentData.metadata && contentData.metadata.defaultLanguage
       ? contentData.metadata.defaultLanguage : 'en';
 
+
     const writeDocument = function () {
+      const dochtml = '<!doctype html><html class="h5p-iframe" lang="' + contentLanguage + '"><head>' + H5P.getHeadTags(contentId) + '</head><body><div class="h5p-content" data-content-id="' + contentId + '"/></body></html>';
       // Use srcdoc for modern browsers (Safari 5.1+, all others)
       // This avoids XSS warnings and doesn't require a static file
       if ('srcdoc' in iframe) {
-        iframe.srcdoc = '<!doctype html><html class="h5p-iframe" lang="' + contentLanguage + '"><head>' + H5P.getHeadTags(contentId) + '</head><body><div class="h5p-content" data-content-id="' + contentId + '"/></body></html>';
+        iframe.srcdoc = dochtml;
       } else {
         // Fallback for older browsers
         iframe.contentDocument.open();
-        iframe.contentDocument.write('<!doctype html><html class="h5p-iframe" lang="' + contentLanguage + '"><head>' + H5P.getHeadTags(contentId) + '</head><body><div class="h5p-content" data-content-id="' + contentId + '"/></body></html>');
+        iframe.contentDocument.write(dochtml);
         iframe.contentDocument.close();
       }
     };
+    
 
     $iframe.addClass('h5p-initialized');
-    $iframe.addClass('mooin-h5p-init-override'); // Add a custom class to the iframe for styling purposes
-    
-    // Call immediately if contentDocument is accessible
-    if (iframe.contentDocument !== null) {
+    $iframe.addClass('mooin-h5p-init-override');
+
+    if (iframe.contentDocument === null) {
+      // In some Edge cases the iframe isn't always loaded when the page is ready.
+      $iframe.on('load', writeDocument);
+      $iframe.attr('src', 'about:blank');
+    }
+    else {
       writeDocument();
-    } else {
-        $iframe.on('load', writeDocument);
     }
   });
 };
+

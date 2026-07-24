@@ -10,7 +10,7 @@ H5P.init = function (target) {
   originalH5PInit.call(this, target);
   
   // Then re-process iframes with the corrected writeDocument
-  H5P.jQuery('iframe.h5p-iframe', target).each(function () {
+  H5P.jQuery('iframe.h5p-iframe:not(.mooin-h5p-jquery-override)', target).each(function () {
     const iframe = this;
     const $iframe = H5P.jQuery(iframe);
     
@@ -20,18 +20,21 @@ H5P.init = function (target) {
       ? contentData.metadata.defaultLanguage : 'en';
 
     const writeDocument = function () {
+      const dochtml = '<!doctype html><html class="h5p-iframe" lang="' + contentLanguage + '"><head>' + H5P.getHeadTags(contentId) + '</head><body><div class="h5p-content" data-content-id="' + contentId + '"/></body></html>';
       // Use srcdoc for modern browsers (Safari 5.1+, all others)
+      // This avoids XSS warnings and doesn't require a static file
       if ('srcdoc' in iframe) {
-        iframe.srcdoc = '<!doctype html><html class="h5p-iframe" lang="' + contentLanguage + '"><head>' + H5P.getHeadTags(contentId) + '</head><body><div class="h5p-content" data-content-id="' + contentId + '"/></body></html>';
+        iframe.srcdoc = dochtml;
       } else {
         // Fallback for older browsers
         iframe.contentDocument.open();
-        iframe.contentDocument.write('<!doctype html><html class="h5p-iframe" lang="' + contentLanguage + '"><head>' + H5P.getHeadTags(contentId) + '</head><body><div class="h5p-content" data-content-id="' + contentId + '"/></body></html>');
+        iframe.contentDocument.write(dochtml);
         iframe.contentDocument.close();
       }
     };
-
-    $iframe.addClass('mooin-h5p-init-override');
+    
+    $iframe.addClass('h5p-initialized');
+    $iframe.addClass('mooin-h5p-jquery-override');
     
     if (iframe.contentDocument !== null) {
       writeDocument();
