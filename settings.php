@@ -238,4 +238,16 @@ if ((isset($ADMIN) && $hassiteconfig) || has_capability('theme/boost_union:confi
 // Include custom JavaScript on admin pages.
 if (isset($PAGE)) {
     $PAGE->requires->js(new moodle_url('/theme/mooin4/javascript/custom.js'));
+        // H5P verwendet in h5p.js zunächst about:blank und befüllt anschließend das
+        // iframe. Safari unterstützt dieses Vorgehen bei Cross-Site-Inhalten nicht
+        // zuverlässig. Deshalb wird H5P.init vorübergehend überschrieben.
+        //
+        // Der vollständige Override verarbeitet die Iframes nur einmal und ist
+        // dadurch etwas performanter. Er dupliziert jedoch große Teile der
+        // H5P-Core-Implementierung und muss bei H5P-Updates mitgepflegt werden.
+    $PAGE->requires->js(new moodle_url('/theme/mooin4/javascript/h5p-override-h5pinit.js'));
+        // Fallback bei Konflikten mit dem vollständigen Override: Der Wrapper ruft
+        // die originale H5P.init-Funktion auf und passt anschließend nur die
+        // iframe-Erzeugung an. Er überschreibt nicht H5P.jQuery:
+    // $PAGE->requires->js(new moodle_url('/theme/mooin4/javascript/h5p-init-wrapper.js'));
 }
