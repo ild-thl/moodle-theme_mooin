@@ -29,7 +29,7 @@ defined('MOODLE_INTERNAL') || die();
 // phpcs:disable moodle.Files.LangFilesOrdering.IncorrectOrder
 
 // General.
-$string['pluginname'] = 'Mooin 4.x ALS Boost Union Child';
+$string['pluginname'] = 'Mooin ALS Boost Union Child';
 $string['choosereadme'] = 'Theme mooin4 ist ein child theme von Boost Union.';
 $string['configtitle'] = 'Mooin4 ALS Boost Union Child';
 $string['settingsoverview_buc_desc'] = 'Mooin4 passt Boost Union individuell an.';

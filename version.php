@@ -30,7 +30,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2026090100;
 $plugin->release   = 'v5.2-alpha';
-$plugin->requires = 2026042001;
+$plugin->requires = 2026042000;
 $plugin->maturity = MATURITY_ALPHA;
 $plugin->component = 'theme_mooin4';
 $plugin->dependencies = ['theme_boost_union' => 2026042012];

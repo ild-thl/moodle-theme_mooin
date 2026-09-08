@@ -58,10 +58,14 @@
     {{{ output.standard_top_of_body_html }}}
 
     {{> theme_boost/navbar }}
-    
+
     {{#courseindex}}
         {{< theme_boost/drawer }}
             {{$id}}theme_boost-drawers-courseindex{{/id}}
+            {{$drawerheadercontent}}
+                {{> theme_boost/courseindexdrawercontrols}}
+            {{/drawerheadercontent}}
+            {{$drawerheading}}{{> theme_boost/courseindexdrawerheading}}{{/drawerheading}}
             {{$drawerclasses}}drawer drawer-left {{#courseindexopen}}show{{/courseindexopen}}{{/drawerclasses}}
             {{$drawercontent}}
                 {{{courseindex}}}
@@ -70,6 +74,10 @@
             {{$drawerstate}}show-drawer-left{{/drawerstate}}
             {{$tooltipplacement}}right{{/tooltipplacement}}
             {{$closebuttontext}}{{#str}}closecourseindex, core{{/str}}{{/closebuttontext}}
+            {{$closebuttonicon}}
+                <span class="dir-rtl-hide">{{#pix}} e/sidebar_left, core {{/pix}}</span>
+                <span class="dir-ltr-hide">{{#pix}} e/sidebar_right, core {{/pix}}</span>
+            {{/closebuttonicon}}
         {{/ theme_boost/drawer}}
     {{/courseindex}}
     {{#hasblocks}}
@@ -78,10 +86,10 @@
                 {{$id}}theme_boost-drawers-blocks{{/id}}
                 {{$drawerclasses}}drawer drawer-right{{#blockdraweropen}} show{{/blockdraweropen}}{{/drawerclasses}}
                 {{$drawercontent}}
-                    <section class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
+                    <div class="d-print-none">
                         {{{ addblockbutton }}}
                         {{{ sidepreblocks }}}
-                    </section>
+                    </div>
                 {{/drawercontent}}
                 {{$drawerpreferencename}}drawer-open-block{{/drawerpreferencename}}
                 {{$forceopen}}{{#forceblockdraweropen}}1{{/forceblockdraweropen}}{{/forceopen}}
@@ -89,56 +97,62 @@
                 {{$tooltipplacement}}left{{/tooltipplacement}}
                 {{$drawercloseonresize}}1{{/drawercloseonresize}}
                 {{$closebuttontext}}{{#str}}closeblockdrawer, core{{/str}}{{/closebuttontext}}
+                {{$closebuttonicon}}
+                    <span class="dir-rtl-hide">{{#pix}} e/sidebar_right, core {{/pix}}</span>
+                    <span class="dir-ltr-hide">{{#pix}} e/sidebar_left, core {{/pix}}</span>
+                {{/closebuttonicon}}
             {{/ theme_boost/drawer}}
         {{/showrightsidebar}}
     {{/hasblocks}}
-    <div id="page" data-region="mainpage" data-usertour="scroller" class=" {{#iscoursefrontpage}}coursefrontpagelayout{{/iscoursefrontpage}} drawers {{#courseindexopen}}show-drawer-left{{/courseindexopen}} {{#blockdraweropen}}show-drawer-right{{/blockdraweropen}} drag-container">
+    <div id="page" data-region="mainpage" data-usertour="scroller" class="{{#iscoursefrontpage}}coursefrontpagelayout{{/iscoursefrontpage}} drawers {{#courseindexopen}}show-drawer-left{{/courseindexopen}} {{#blockdraweropen}}show-drawer-right{{/blockdraweropen}} drag-container">
         <div id="topofscroll" class="main-inner">
             <div class="drawer-toggles d-flex">
                 {{#courseindex}}
                     <div class="drawer-toggler drawer-left-toggle open-nav d-print-none">
                         <button
-                            class="btn icon-no-margin"
+                            class="btn btn-icon icon-size-3"
                             data-toggler="drawers"
                             data-action="toggle"
                             data-target="theme_boost-drawers-courseindex"
-                            data-toggle="tooltip"
-                            data-placement="right"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="right"
                             title="{{#str}}opendrawerindex, core{{/str}}"
                         >
-                            <span class="sr-only">{{#str}}opendrawerindex, core{{/str}}</span>
-                            {{#pix}} t/index_drawer, moodle {{/pix}}
+                            <span class="visually-hidden">{{#str}}opendrawerindex, core{{/str}}</span>
+                            <span class="dir-rtl-hide">{{#pix}} e/sidebar_left, core {{/pix}}</span>
+                            <span class="dir-ltr-hide">{{#pix}} e/sidebar_right, core {{/pix}}</span>
                         </button>
                     </div>
                 {{/courseindex}}
                 {{#hasblocks}}
                     {{#showrightsidebar}}
-                        <div class="drawer-toggler drawer-right-toggle ml-auto d-print-none">
+                        <div class="drawer-toggler drawer-right-toggle ms-auto d-print-none">
                             <button
-                                class="btn icon-no-margin"
+                                class="btn btn-icon icon-size-3"
                                 data-toggler="drawers"
                                 data-action="toggle"
                                 data-target="theme_boost-drawers-blocks"
-                                data-toggle="tooltip"
-                                data-placement="right"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="right"
                                 title="{{#str}}opendrawerblocks, core{{/str}}"
                             >
-                                <span class="sr-only">{{#str}}opendrawerblocks, core{{/str}}</span>
-                                <span class="dir-rtl-hide">{{#pix}}t/blocks_drawer, core{{/pix}}</span>
-                                <span class="dir-ltr-hide">{{#pix}}t/blocks_drawer_rtl, core{{/pix}}</span>
+                                <span class="visually-hidden">{{#str}}opendrawerblocks, core{{/str}}</span>
+                                <span class="dir-rtl-hide">{{#pix}} e/sidebar_right, core {{/pix}}</span>
+                                <span class="dir-ltr-hide">{{#pix}} e/sidebar_left, core {{/pix}}</span>
                             </button>
                         </div>
                     {{/showrightsidebar}}
                 {{/hasblocks}}
             </div>
-            <!-- No Full-Header -->
-            {{> theme_boost_union/infobanners }}
+
+            {{> theme_boost_union/infobannersabove }}
             {{#incourse}}
-            {{{ output.full_header }}}
+                {{{ output.full_header }}}
             {{/incourse}}
             {{#userisediting}}
                 {{{ output.full_header }}}
             {{/userisediting}}
+            {{> theme_boost_union/infobannersbelow }}
             {{#canseesecondarymoremenu}}
                 {{#secondarymoremenu}}
                     <div class="secondary-navigation d-print-none">
@@ -146,39 +160,44 @@
                     </div>
                 {{/secondarymoremenu}}
             {{/canseesecondarymoremenu}}
-            <div id="page-content" class="d-print-block">
+
+            {{{ output.course_content_header_notifications }}}
+
+            <div id="page-content" class="pb-3 d-print-block">
                 <div id="region-main-box">
                     {{#hasregionmainsettingsmenu}}
                     <div id="region-main-settings-menu" class="d-print-none">
                         <div> {{{ regionmainsettingsmenu }}} </div>
                     </div>
                     {{/hasregionmainsettingsmenu}}
-                    <section id="region-main" aria-label="{{#str}}content{{/str}}">
+                    <div id="region-main">
 
                         {{#hasregionmainsettingsmenu}}
                             <div class="region_main_settings_menu_proxy"></div>
                         {{/hasregionmainsettingsmenu}}
-                        {{{ output.course_content_header }}}
+                        {{{ output.course_content_header_coursecontent }}}
                         {{#headercontent}}
                             {{> core/activity_header }}
                         {{/headercontent}}
                         {{#overflow}}
                             <div class="container-fluid tertiary-navigation">
                                 <div class="navitem">
-                                    {{> core/url_select}}
+                                    {{> core/tertiary_navigation_selector}}
                                 </div>
                             </div>
                         {{/overflow}}
-                        
+                        {{{courserelatedhints}}}
+
                         {{{ output.main_content }}}
                         <!-- {{{ output.activity_navigation }}} -->
                         {{{ output.course_content_footer }}}
 
-                    </section>
+                    </div>
                 </div>
             </div>
         </div>
         {{> theme_boost/footer }}
+        {{> theme_boost_union/footnote }}
     </div>
     {{{ output.standard_after_main_region_html }}}
 </div>

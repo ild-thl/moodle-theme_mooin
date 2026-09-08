@@ -932,11 +932,16 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
 
   .larrow,
   .rarrow {
-    font-size: 2rem;
+    font-size: 2.5rem !important;
 
     @include media-breakpoint-up(md) {
       font-size: 3rem;
     }
+  }
+
+  .prevsection a,
+  .nextsection a {
+    border: none !important;
   }
 
   h3.sectionname {
