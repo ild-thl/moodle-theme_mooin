@@ -966,6 +966,8 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       width: 740px;
       margin: 0 1rem;
       margin-top: 10px;
+      margin-left: 25px !important;
+      margin-right: 1rem
     }
   }
 }
@@ -1473,4 +1475,36 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   background-color: var(--secondary-color) !important;
   color: #fff !important;
   text-decoration: none;
+}
+
+#navigationtitle,
+.navigationtitle {
+
+  .prevsection a,
+  .nextsection a,
+  a.dimmed_text {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0 !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: transparent !important;
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      outline: none !important;
+    }
+
+    span.rarrow,
+    span.larrow,
+    i {
+      color: var(--secondary-color) !important;
+      background: transparent !important;
+    }
+  }
 }
