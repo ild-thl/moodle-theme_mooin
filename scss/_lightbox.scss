@@ -83,9 +83,14 @@
             max(1rem, env(safe-area-inset-bottom))
             max(1rem, env(safe-area-inset-left));
 
+        .mooin4-image-lightbox-previous,
+        .mooin4-image-lightbox-next {
+            display: none;
+        }
+
         img {
-            max-width: calc(100vw - 5rem);
-            max-height: calc(100dvh - 5rem);
+            max-width: calc(100vw - 2rem) !important;
+            max-height: calc(100dvh - 2rem) !important;
         }
 
         .mooin4-image-lightbox-close,
