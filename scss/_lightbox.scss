@@ -43,4 +43,35 @@
         color: white;
         cursor: pointer;
     }
+
+    .mooin4-image-lightbox-previous,
+    .mooin4-image-lightbox-next {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+
+        padding: 1rem;
+        border: 0;
+        background: transparent;
+
+        color: white;
+        font-size: 3rem;
+        line-height: 1;
+        cursor: pointer;
+        transform: translateY(-50%);
+    }
+
+    .mooin4-image-lightbox-previous {
+        left: 1rem;
+    }
+
+    .mooin4-image-lightbox-next {
+        right: 1rem;
+    }
+
+    .mooin4-image-lightbox-previous:hover,
+    .mooin4-image-lightbox-next:hover,
+    .mooin4-image-lightbox-close:hover {
+        color: #ddd;
+    }
 }
