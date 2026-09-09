@@ -91,8 +91,15 @@ const openLightbox = (images, startIndex) => {
     overlay.appendChild(close);
     document.body.appendChild(overlay);
 
+    const originalBodyOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+
     const closeLightbox = () => {
         overlay.remove();
+        document.body.style.overflow = originalBodyOverflow;
         document.removeEventListener('keydown', keyHandler);
     };
 
@@ -115,6 +122,35 @@ const openLightbox = (images, startIndex) => {
             closeLightbox();
         }
     });
+
+    overlay.addEventListener('touchstart', (event) => {
+        if (event.touches.length === 1) {
+            touchStartX = event.touches[0].clientX;
+            touchStartY = event.touches[0].clientY;
+        }
+    }, {passive: true});
+
+    overlay.addEventListener('touchend', (event) => {
+        if (event.changedTouches.length !== 1 || images.length < 2) {
+            return;
+        }
+
+        const touchEndX = event.changedTouches[0].clientX;
+        const touchEndY = event.changedTouches[0].clientY;
+        const deltaX = touchEndX - touchStartX;
+        const deltaY = touchEndY - touchStartY;
+
+        // Only handle clear horizontal swipes, not taps or vertical scrolling.
+        if (Math.abs(deltaX) < 50 || Math.abs(deltaX) < Math.abs(deltaY)) {
+            return;
+        }
+
+        if (deltaX > 0) {
+            showPrevious();
+        } else {
+            showNext();
+        }
+    }, {passive: true});
 
     document.addEventListener('keydown', keyHandler);
     updateImage();
