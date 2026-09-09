@@ -88,7 +88,7 @@ if (!empty($scsspre)) {
 }
 unset($scsspre);
 
-$THEME->javascripts = ['custom'];
+$THEME->javascripts = ['lightbox'];
 
 // Integrate settings.php.
 if (is_siteadmin()) {

@@ -229,4 +229,33 @@ function theme_mooin4_page_init(moodle_page $page) {
             $CFG->additionalhtmlhead .= "\n" . $customcss;
         }
     }
+
+    // H5P verwendet in h5p.js zunächst about:blank und befüllt anschließend das
+    // iframe. Safari unterstützt dieses Vorgehen bei Cross-Site-Inhalten wie aus YouTube nicht
+    // zuverlässig. Deshalb wird H5P.init vorübergehend überschrieben um srcdoc zu nutzen.
+    // das mod/hvp enthält diese Anpassung bereits aber das Moodle native h5p nutzt nicht den gleichen h5plib branch.
+    // Leider gilt der iverride an dieser Stelle dann für h5p und hvp da beide H5P.init nutzen.
+    // Das ist aber kein Problem, da hvp die Anpassung bereits enthalten würde.
+
+    // Der vollständige Override verarbeitet die Iframes nur einmal und ist
+    // dadurch etwas performanter als der Fallback wrapper. Er dupliziert jedoch große Teile der
+    // H5P-Core-Implementierung und muss bei H5P-Updates mitgepflegt werden.
+
+    // H5P-Override nur für Safari laden.
+    $useragent = $_SERVER['HTTP_USER_AGENT'] ?? '';
+
+    $issafari = stripos($useragent, 'Safari') !== false
+            && !preg_match(
+                '/Chrome|Chromium|CriOS|FxiOS|Edg|EdgiOS|OPR|Opera|Android/i',
+                $useragent
+            );
+
+    if ($issafari) {
+        $page->requires->js(new moodle_url('/theme/mooin4/javascript/h5p-override-h5pinit.js'));
+        // Fallback bei Konflikten mit dem vollständigen Override: Der Wrapper ruft
+        // die originale H5P.init-Funktion auf und passt anschließend nur die
+        // iframe-Erzeugung an. Er überschreibt nicht H5P.jQuery:
+        //$PAGE->requires->js(new moodle_url('/theme/mooin4/javascript/h5p-init-wrapper.js'));
+    }
+
 }

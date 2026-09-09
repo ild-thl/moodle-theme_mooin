@@ -1,0 +1,119 @@
+.mooin4-image-lightbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+    box-sizing: border-box;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    cursor: zoom-out;
+
+    img {
+        max-width: 95vw;
+        max-height: 95vh;
+
+        width: auto;
+        height: auto;
+
+        object-fit: contain;
+
+        cursor: default;
+    }
+
+    .mooin4-image-lightbox-close {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+
+        border: 0;
+        background: transparent;
+
+        font-size: 3rem;
+        line-height: 1;
+
+        color: white;
+        cursor: pointer;
+    }
+
+    .mooin4-image-lightbox-previous,
+    .mooin4-image-lightbox-next {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+
+        padding: 1rem;
+        border: 0;
+        background: transparent;
+
+        color: white;
+        font-size: 3rem;
+        line-height: 1;
+        cursor: pointer;
+        transform: translateY(-50%);
+    }
+
+    .mooin4-image-lightbox-previous {
+        left: 1rem;
+    }
+
+    .mooin4-image-lightbox-next {
+        right: 1rem;
+    }
+
+    .mooin4-image-lightbox-previous:hover,
+    .mooin4-image-lightbox-next:hover,
+    .mooin4-image-lightbox-close:hover {
+        color: #ddd;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .mooin4-image-lightbox {
+        padding: max(1rem, env(safe-area-inset-top))
+            max(1rem, env(safe-area-inset-right))
+            max(1rem, env(safe-area-inset-bottom))
+            max(1rem, env(safe-area-inset-left));
+
+        .mooin4-image-lightbox-previous,
+        .mooin4-image-lightbox-next {
+            display: none;
+        }
+
+        img {
+            max-width: calc(100vw - 2rem) !important;
+            max-height: calc(100dvh - 2rem) !important;
+        }
+
+        .mooin4-image-lightbox-close,
+        .mooin4-image-lightbox-previous,
+        .mooin4-image-lightbox-next {
+            width: 3rem;
+            height: 3rem;
+            padding: 0;
+
+            font-size: 2.25rem;
+        }
+
+        .mooin4-image-lightbox-close {
+            top: max(0.5rem, env(safe-area-inset-top));
+            right: max(0.5rem, env(safe-area-inset-right));
+        }
+
+        .mooin4-image-lightbox-previous {
+            left: max(0.25rem, env(safe-area-inset-left));
+        }
+
+        .mooin4-image-lightbox-next {
+            right: max(0.25rem, env(safe-area-inset-right));
+        }
+    }
+}
