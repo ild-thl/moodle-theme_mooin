@@ -234,6 +234,12 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       }
     }
 
+    // Fix mobile header image
+    .header-image.d-block.d-sm-none {
+      width: 100%;
+      height: auto;
+    }
+
     // Default (mobile <576px): show mobile image/placeholder, hide desktop ones
     .header-image-desktop,
     .desktop-placeholder {
