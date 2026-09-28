@@ -902,10 +902,10 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
 
   .progress-container {
-    margin: 1.5rem 1rem 0rem;
+    margin: 0 1rem;
 
     @include media-breakpoint-up(md) {
-      margin: 1rem 130px 0rem;
+      margin: 0 130px;
     }
 
     .progress-text {
@@ -914,10 +914,11 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
 }
 
-.navigationtitle {
+.section-navigation.navigationtitle {
   align-items: center;
   margin: 0 1rem;
-  height: 3rem;
+  min-height: 3rem;
+  padding-top: 0 !important;
 
   @include media-breakpoint-up(md) {
     margin: 0 4rem;
@@ -965,7 +966,7 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
       text-align: left;
       width: 740px;
       margin: 0 1rem;
-      margin-top: 10px;
+      margin-top: 0px;
       margin-left: 25px !important;
       margin-right: 1rem
     }
@@ -1029,10 +1030,10 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
 
   .progress-container {
-    margin-top: 0.5rem;
+    margin-top: 0rem;
 
     @include media-breakpoint-up(md) {
-      margin-top: 1.5rem;
+      margin-top: 0rem;
     }
 
     transition: margin 0.2s;
@@ -1059,10 +1060,10 @@ body.limitedwidth #page.drawers.coursefrontpagelayout .main-inner {
   }
 
   .progress-container {
-    margin-top: 1.5rem;
+    margin-top: 0rem;
 
     @include media-breakpoint-up(md) {
-      margin-top: 2.5rem;
+      margin-top: 0rem;
     }
 
     transition: margin 0.2s;
